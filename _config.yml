@@ -1,0 +1,60 @@
+title: "Geonmin Lee"
+description: "Multimodal AI Engineer — LLM/VLM post-training, dataset curation, evaluation"
+url: "https://geonmin0607.github.io"
+baseurl: ""     # 사용자 페이지는 빈 값
+locale: "en-US"
+
+# ✅ Minimal Mistakes 원격 테마
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+
+# ✅ GitHub Pages에서 허용되는 플러그인
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 내비게이션
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+paginate: 6
+paginate_path: /page:num/
+
+author:
+  name: "Geonmin Lee"
+  avatar: "/assets/images/avatar.png"   # 없으면 자동으로 무시됨
+  bio: "LLM/VLM post-training · dataset curation · evaluation"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/geonmin0607"
+    - label: "Hugging Face"
+      icon: "fas fa-robot"
+      url: "https://huggingface.co/"     # 본인 프로필로 교체
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:you@domain.com"
+
+# 테마 옵션
+theme_settings:
+  # 다크 모드 기본값
+  skin: "dark"   # (light, dark, contrast 등 선택 가능)
+
+# Minimal Mistakes 기본값
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      share: false
+      comments: false
+
+# 메뉴 구성 (_data/navigation.yml 사용)
+navbar:
+  sticky: true
