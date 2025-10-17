@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — GEONMIN LEE</title>
+  <meta name="description" content="Projects by GEONMIN LEE">
+  <meta name="theme-color" content="#2563EB">
+  <meta property="og:title" content="Projects — GEONMIN LEE">
+  <meta property="og:description" content="Projects by GEONMIN LEE">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-strong">GEONMIN</span> <span class="brand-faint">LEE</span></a>
+    <nav class="menu" id="menu">
+      <a href="/projects.html">Projects</a>
+      <a href="/about.html">About</a>
+      <a href="/blog.html">Blog</a>
+      <a class="btn" href="mailto:contact@example.com">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container section">
+  <div class="section-head">
+    <h1>Projects</h1>
+    <p>실제 결과물 중심으로 정리했습니다. 각 프로젝트 페이지에서 개요, 데이터/모델, 평가 지표를 확인할 수 있습니다.</p>
+  </div>
+
+  <div class="filters">
+    <button class="chip active" data-tag="all">All</button>
+    <button class="chip" data-tag="vlm">VLM</button>
+    <button class="chip" data-tag="ocr">OCR</button>
+    <button class="chip" data-tag="retrieval">Retrieval</button>
+  </div>
+
+  <div class="grid projects-grid" id="projectsGrid">
+    <!-- Cards (same style as index) -->
+    <article class="card" data-tags="vlm ocr">
+      <a href="/posts/post-multimodal-table.html">
+        <img src="/assets/img/project1.svg" alt="Table extraction">
+        <h3>Multimodal Table Extraction</h3>
+        <p>표 구조 복원 및 정량 평가 세트.</p>
+        <p class="meta">VLM · OCR</p>
+      </a>
+    </article>
+
+    <article class="card" data-tags="vlm">
+      <a href="/posts/post-mermaid.html">
+        <img src="/assets/img/project2.svg" alt="Mermaid dataset">
+        <h3>Mermaid Diagram Generation</h3>
+        <p>Mermaid 코드 생성 데이터셋/파이프라인.</p>
+        <p class="meta">VLM</p>
+      </a>
+    </article>
+
+    <article class="card" data-tags="retrieval">
+      <a href="/posts/post-embedding.html">
+        <img src="/assets/img/project3.svg" alt="Embedding retrieval">
+        <h3>Any‑to‑Any Embedding & Retrieval</h3>
+        <p>세그먼트 통합 임베딩과 검색.</p>
+        <p class="meta">Retrieval</p>
+      </a>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>About this site</h4>
+        <p>Nomod-inspired minimal portfolio. Built with plain HTML/CSS/JS and hosted on GitHub Pages.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://github.com/geonmin0607" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:contact@example.com">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>Seoul, Korea (UTC+9)</p>
+      </div>
+    </div>
+    <p class="copy">© 2025 GEONMIN LEE. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
+

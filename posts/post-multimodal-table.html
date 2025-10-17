@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>표 구조 복원 — Vision‑Prior 전략</title>
+  <meta name="description" content="표 구조 복원: Vision‑Prior 전략">
+  <meta name="theme-color" content="#2563EB">
+  <meta property="og:title" content="표 구조 복원 — Vision‑Prior 전략">
+  <meta property="og:description" content="표 구조 복원: Vision‑Prior 전략">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-strong">GEONMIN</span> <span class="brand-faint">LEE</span></a>
+    <nav class="menu" id="menu">
+      <a href="/projects.html">Projects</a>
+      <a href="/about.html">About</a>
+      <a href="/blog.html">Blog</a>
+      <a class="btn" href="mailto:contact@example.com">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container section prose">
+  <h1>표 구조 복원: Vision‑Prior를 높이는 4가지 전략</h1>
+  <p class="dim">2025‑10‑01 · VLM · Qwen2.5‑VL 32B</p>
+
+  <h2>요약</h2>
+  <ul>
+    <li>해상도 커리큘럼(448→896→1232)로 선두 token alignment 개선</li>
+    <li>Loss masking: <code>&lt;image&gt;</code> 이후만 감독</li>
+    <li>Vision token 주입: 중간 반복 삽입(실험 B)</li>
+    <li>프롬프트 튜닝: 스타일 토큰 최소화로 Hallucination 억제</li>
+  </ul>
+
+  <h2>지표</h2>
+  <table>
+    <tr><th>실험</th><th>구조 정확도</th><th>텍스트 정합도</th></tr>
+    <tr><td>Baseline</td><td>78.1%</td><td>84.2%</td></tr>
+    <tr><td>+Curriculum</td><td>82.3%</td><td>85.9%</td></tr>
+    <tr><td>+LossMask</td><td>84.0%</td><td>86.1%</td></tr>
+    <tr><td>+VisionToken</td><td><strong>86.5%</strong></td><td><strong>87.4%</strong></td></tr>
+  </table>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>About this site</h4>
+        <p>Nomod-inspired minimal portfolio. Built with plain HTML/CSS/JS and hosted on GitHub Pages.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://github.com/geonmin0607" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:contact@example.com">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>Seoul, Korea (UTC+9)</p>
+      </div>
+    </div>
+    <p class="copy">© 2025 GEONMIN LEE. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
+

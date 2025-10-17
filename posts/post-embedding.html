@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>세그먼트 임베딩 & Retrieval</title>
+  <meta name="description" content="세그먼트 임베딩 & Retrieval">
+  <meta name="theme-color" content="#2563EB">
+  <meta property="og:title" content="세그먼트 임베딩 & Retrieval">
+  <meta property="og:description" content="세그먼트 임베딩 & Retrieval">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-strong">GEONMIN</span> <span class="brand-faint">LEE</span></a>
+    <nav class="menu" id="menu">
+      <a href="/projects.html">Projects</a>
+      <a href="/about.html">About</a>
+      <a href="/blog.html">Blog</a>
+      <a class="btn" href="mailto:contact@example.com">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main class="container section prose">
+  <h1>세그먼트 임베딩: Query‑centric 평가 세트 설계기</h1>
+  <p class="dim">2025‑10‑09 · Retrieval</p>
+
+  <h2>설계 포인트</h2>
+  <ul>
+    <li>bbox_norm(0–1000) + bbox_px 병기</li>
+    <li>heading/paragraph/table/figure/equation 세그먼트 통합</li>
+    <li>dot‑product 기반 FAISS IndexFlatIP</li>
+  </ul>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>About this site</h4>
+        <p>Nomod-inspired minimal portfolio. Built with plain HTML/CSS/JS and hosted on GitHub Pages.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://github.com/geonmin0607" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:contact@example.com">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>Seoul, Korea (UTC+9)</p>
+      </div>
+    </div>
+    <p class="copy">© 2025 GEONMIN LEE. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
+
