@@ -1,27 +1,36 @@
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
-if (hamburger) {
-  hamburger.addEventListener('click', () => {
-    if (menu.style.display === 'flex') { menu.style.display = 'none'; }
-    else { menu.style.display = 'flex'; }
-  });
-}
-// Theme toggle
+// Theme: auto + toggle persist
 const root = document.documentElement;
+const stored = localStorage.getItem('theme');
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (stored) { root.setAttribute('data-theme', stored); }
+else if (prefersDark) { root.setAttribute('data-theme', 'dark'); }
+
 const themeToggle = document.getElementById('themeToggle');
 function setTheme(v){ root.setAttribute('data-theme', v); localStorage.setItem('theme', v); }
-const saved = localStorage.getItem('theme'); if(saved){ setTheme(saved); }
 if (themeToggle){
   themeToggle.addEventListener('click', ()=>{
-    const now = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    setTheme(now);
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(next);
   });
 }
-// Simple project filter
+
+// Mobile menu (slide-toggle)
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+if (hamburger && menu){
+  hamburger.addEventListener('click', ()=>{
+    const isOpen = menu.style.display === 'flex';
+    menu.style.display = isOpen ? 'none' : 'flex';
+    menu.style.flexDirection = 'column';
+    menu.style.gap = '14px';
+    menu.style.padding = '12px 0';
+  });
+}
+
+// Filters
 const chips = document.querySelectorAll('.chip');
-const grid = document.getElementById('projectsGrid');
+const grid = document.getElementById('projectsGrid') || document.querySelector('.projects-grid');
 if (chips && grid){
   chips.forEach(ch=>{
     ch.addEventListener('click', ()=>{
@@ -31,6 +40,7 @@ if (chips && grid){
         const tags = (card.dataset.tags || '').split(' ');
         card.style.display = (tag==='all' || tags.includes(tag)) ? '' : 'none';
       });
+      window.scrollTo({top: grid.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth'});
     });
   });
 }
