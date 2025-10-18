@@ -4,7 +4,11 @@ title: ""
 classes: wide
 ---
 
-<section class="hello-hero">
+<section class="hello-hero two-col">
+  <div class="hello-photo">
+    <!-- Put your hero image at /assets/images/hero/profile.jpg -->
+    <img src="/assets/images/hero/profile.jpg" alt="GEONMIN LEE portrait">
+  </div>
   <div class="hello-card">
     <div class="hello-left">
       <p class="eyebrow">Hello, I'm</p>
