@@ -1,49 +1,48 @@
-title: "Geonmin Lee"
-description: "Multimodal AI Engineer — LLM/VLM post-training, dataset curation, evaluation"
+title: "GEONMIN LEE — AI/Multimodal Portfolio"
+subtitle: "문서 AI · 표 구조 복원 · Qwen 계열 멀티모달"
+description: "Qwen2.5/3-VL 기반 표 구조 복원, 문서 임베딩·검색, Mermaid 코드화 파이프라인 포트폴리오"
+lang: ko
+timezone: Asia/Seoul
 url: "https://geonmin0607.github.io"
-baseurl: ""     # 사용자 페이지는 빈 값
-locale: "en-US"
+baseurl: ""
 
-# ✅ Minimal Mistakes 원격 테마
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# ✅ GitHub Pages에서 허용되는 플러그인
 plugins:
-  - jekyll-include-cache
-  - jekyll-paginate
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-include-cache
 
-# 내비게이션
+search: true
+
+author:
+  name: "GEONMIN LEE"
+  avatar: "/assets/images/avatar.png"
+  bio: "Document AI · Multimodal · Table HTML Extraction · QLoRA"
+  location: "Seoul, Korea"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/geonmin0607"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:"
+
 collections:
   projects:
     output: true
     permalink: /projects/:name/
+  pocs:
+    output: true
+    permalink: /pocs/:name/
+  patents:
+    output: true
+    permalink: /patents/:name/
 
-paginate: 6
-paginate_path: /page:num/
-
-author:
-  name: "Geonmin Lee"
-  avatar: "/assets/images/avatar.png"   # 없으면 자동으로 무시됨
-  bio: "LLM/VLM post-training · dataset curation · evaluation"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/geonmin0607"
-    - label: "Hugging Face"
-      icon: "fas fa-robot"
-      url: "https://huggingface.co/"     # 본인 프로필로 교체
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:you@domain.com"
-
-# 테마 옵션
-theme_settings:
-  # 다크 모드 기본값
-  skin: "dark"   # (light, dark, contrast 등 선택 가능)
-
-# Minimal Mistakes 기본값
 defaults:
   - scope:
       path: ""
@@ -51,10 +50,55 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      share: false
-      comments: false
+      toc: true
+      toc_sticky: true
+      classes: wide
+      sidebar:
+        nav: "main"
+  - scope:
+      path: ""
+      type: "pocs"
+    values:
+      layout: single
+      author_profile: true
+      toc: true
+      toc_sticky: true
+      classes: wide
+      sidebar:
+        nav: "main"
+  - scope:
+      path: ""
+      type: "patents"
+    values:
+      layout: single
+      author_profile: true
+      toc: false
+      classes: wide
+      sidebar:
+        nav: "main"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+      toc: true
 
-# 메뉴 구성 (_data/navigation.yml 사용)
-navbar:
-  sticky: true
+collections_dir: ""
+permalink: /:categories/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: "katex"
+
+exclude:
+  - "node_modules"
+  - "README.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+
+logo: "/assets/images/logo.png"

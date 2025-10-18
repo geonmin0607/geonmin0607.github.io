@@ -3,5 +3,11 @@ main:
     url: /
   - title: "Projects"
     url: /projects/
+  - title: "PoC"
+    url: /pocs/
+  - title: "Patents"
+    url: /patents/
+  - title: "Blog"
+    url: /year-archive/
   - title: "About"
     url: /about/
