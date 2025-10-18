@@ -14,7 +14,7 @@ classes: wide
       <h1 class="hello-title">GEONMIN LEE</h1>
       <p class="hello-sub">AI Engineer — LLM & Multimodal</p>
       <p class="hello-desc">
-        <strong>문서 이해가 어려운 현업 문제를 데이터·모델·시스템 관점에서 동시에 해결</strong>합니다.
+        <strong>문서 이해가 어려운 현업 문제를 데이터·모델·시스템 관점에서 동시에 해결</strong>합니다.<br>
         도메인 스키마 설계와 Chunking 기준 수립 → <strong>멀티모달 추출(표·그림·차트·다이어그램)</strong> → 지식 구조화 → 질의해결까지 반복 가능한 파이프라인을 만듭니다.
       </p>
       <p class="hello-desc">
