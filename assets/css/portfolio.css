@@ -94,3 +94,21 @@ img{ max-width:100%; height:auto; display:block; }
   margin-right: auto;
   padding: 0;
 }
+
+
+/* === Header title/subtitle: add a tiny extra left padding only === */
+:root{
+  --header-offset: calc(var(--gutter) / 2); /* 또는 16px, 20px 등 원하는 값 */
+}
+
+@media (min-width: 900px){
+  .masthead__inner-wrap .wrap .site-title,
+  .masthead__inner-wrap .wrap .site-subtitle{
+    padding-left: var(--header-offset) !important;
+    margin-left: 0 !important;
+  }
+  .masthead__inner-wrap .wrap .site-title a{
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
