@@ -4,19 +4,21 @@ title: ""
 classes: wide
 ---
 
-<section class="feature-row">
-  <article class="feature-intro">
-    <h1 class="feature-title">AI Engineer — GEONMIN LEE</h1>
-    <p class="feature-desc">
-      LLM · Multimodal Portfolio — 문서·표·다이어그램·차트를 이해하는 모델과
-      RAG 파이프라인을 설계·구현하고, 데이터 전처리·파인튜닝·강화학습·평가까지
-      엔드투엔드로 수행합니다.
-    </p>
-    <div class="feature-author">
-      <span class="label">Written by</span>
-      <span class="name">GEONMIN LEE</span>
+<section class="hello-hero">
+  <div class="hello-card">
+    <div class="hello-left">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="hello-title">GEONMIN LEE</h1>
+      <p class="hello-sub">AI Engineer — LLM & Multimodal</p>
+      <p class="hello-desc">
+        문서·표·다이어그램·차트를 이해하는 모델과 RAG 파이프라인을 설계·구현합니다.
+        데이터 전처리 → 파인튜닝/강화학습 → 평가까지 엔드투엔드로 수행합니다.
+      </p>
+      <div class="hello-tags">
+        <span>LLM</span><span>Multimodal</span><span>RAG</span><span>LoRA/DPO</span><span>Qwen‑VL</span>
+      </div>
     </div>
-  </article>
+  </div>
 </section>
 
 <section class="section">
