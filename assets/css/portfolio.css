@@ -1,12 +1,11 @@
 :root{
   --container: 1360px;
   --gutter: 32px;
+  --left: clamp(var(--gutter), calc((100vw - var(--container))/2), 100vw);
   --bg:#ffffff; --text:#0f172a; --muted:#475569;
   --bd:#e5e7eb; --bd-strong:#d1d5db; --panel:#ffffff;
   --shadow:0 1px 2px rgba(15,23,42,.06);
   --shadow-lg:0 14px 28px rgba(15,23,42,.10);
-  /* Computed left baseline used by both nav and body */
-  --left: clamp(var(--gutter), calc((100vw - var(--container))/2), 100vw);
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -15,26 +14,46 @@ body{ color:var(--text); font-family:'Inter',system-ui,-apple-system,Segoe UI,Ro
 a{ color:#111827; text-decoration:none; } a:hover{ text-decoration:underline; text-underline-offset:3px; }
 img{ max-width:100%; height:auto; display:block; }
 
-/* === Global container rules (left-anchored & balanced) === */
+/* === Absolute left-lock for header & body === */
+/* Masthead containers */
+.masthead,
+.masthead__inner-wrap{
+  max-width: none !important;
+  margin: 0 !important;
+  padding-left: var(--left) !important;
+  padding-right: 12px !important;
+}
+
+/* Site title/subtitle block (if present) */
+.site-title, .site-title a,
+.site-subtitle{
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Greedy nav / menu list also on the same baseline */
+.greedy-nav,
+.nav__list{
+  padding-left: 0 !important; /* parent already has var(--left) */
+  margin-left: 0 !important;
+}
+
+/* Breadcrumbs + footer align to the same left edge */
+.breadcrumbs,
+.footer,
+.footer__inner-wrap,
+.page__footer-follow,
+.page__footer-copyright{
+  padding-left: var(--left);
+  padding-right: 12px;
+}
+
+/* Main page container */
 .page{
   width: min(calc(100vw - var(--gutter)*2), var(--container));
   margin-left: var(--left);
   margin-right: auto;
   padding: 0 6px;
-}
-
-/* Align ALL top bars/wrappers to the same left baseline */
-.masthead, .masthead__inner-wrap, .initial-content, .page__inner{
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.nav__list, .greedy-nav,
-.breadcrumbs,
-.footer,
-.footer__inner-wrap{
-  padding-left: var(--left);
-  padding-right: 12px;
 }
 
 /* === Hero: left photo + right text === */
@@ -67,7 +86,7 @@ img{ max-width:100%; height:auto; display:block; }
 .section-head{ display:flex; align-items:center; justify-content:space-between; margin:6px 0 16px; }
 .section-head h2{ margin:0; font-size:1.18rem; font-weight:800; color:#0f172a; }
 
-/* === Grids: wider 3-col desktop === */
+/* === Grids: 3-col desktop for wider cards === */
 .cards-grid,
 .grid__wrapper, .entries-grid{
   display:grid;
@@ -95,9 +114,5 @@ img{ max-width:100%; height:auto; display:block; }
 .card-meta{ color:#64748b; font-size:.86rem; margin-top:10px; display:flex; align-items:center; }
 .card-meta .dot{ color:#94a3b8; }
 
-/* === Footer alignment === */
+/* === Footer baseline === */
 .site-footer{ background:transparent; border-top:1px solid var(--bd); }
-.site-footer .page__footer-follow, .site-footer .page__footer-copyright{
-  padding-left: var(--left);
-  padding-right: 12px;
-}
