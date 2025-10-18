@@ -33,7 +33,8 @@ classes: wide
         <strong>모델 경험</strong>: GPT·Claude·Mistral·Phi·LLaMA·Gemma·Qwen/Qwen-VL 등 다양한 계열을 다뤄왔으며, <em>최신 기법과 멀티모달 스택</em>을 적극적으로 탐색·실험합니다.
       </p>
       <div class="hello-tags">
-        <span>LLM</span><span>Multimodal</span><span>LoRA/DPO</span><span>Qwen-VL</span>
+        <span>NLP·LLM</span><span>VLM</span><span>LoRA·FT</span><span>DPO</span>
+        <span>Table HTML</span><span>Mermaid</span><span>LLM-as-a-Judge</span><span>LaTeX</span>
       </div>
     </div>
   </div>
