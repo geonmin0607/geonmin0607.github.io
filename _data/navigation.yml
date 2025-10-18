@@ -7,6 +7,8 @@ main:
     url: /pocs/
   - title: "Patents"
     url: /patents/
+  - title: "기술"
+    url: /skills/
   - title: "Blog"
     url: /year-archive/
   - title: "About"
