@@ -1,6 +1,0 @@
-Delete these files from the repo (they override the new homepage and hide cards):
-- index.html
-- projects.html
-- about.html
-- blog.html
-Also ensure you don't have duplicate pages under /projects/ that conflict with the collection index.
