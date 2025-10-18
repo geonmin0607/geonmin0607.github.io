@@ -1,41 +1,52 @@
 :root{
   --container: 1360px;
-  --gutter: 32px; /* was 24px → give a bit more breathing room */
+  --gutter: 32px;
   --bg:#ffffff; --text:#0f172a; --muted:#475569;
   --bd:#e5e7eb; --bd-strong:#d1d5db; --panel:#ffffff;
   --shadow:0 1px 2px rgba(15,23,42,.06);
   --shadow-lg:0 14px 28px rgba(15,23,42,.10);
+  /* Computed left baseline used by both nav and body */
+  --left: clamp(var(--gutter), calc((100vw - var(--container))/2), 100vw);
 }
+
 *,*::before,*::after{ box-sizing:border-box; }
 html,body{ background:var(--bg)!important; }
 body{ color:var(--text); font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 a{ color:#111827; text-decoration:none; } a:hover{ text-decoration:underline; text-underline-offset:3px; }
 img{ max-width:100%; height:auto; display:block; }
 
-/* Balanced gutters:
-   - On narrow screens: page width = 100vw - 2*gutter → left/right gutters both = gutter
-   - On wide screens (width hits container): left margin becomes (100vw - container)/2 → perfectly centered */
+/* === Global container rules (left-anchored & balanced) === */
 .page{
   width: min(calc(100vw - var(--gutter)*2), var(--container));
-  margin-left: clamp(var(--gutter), calc((100vw - var(--container))/2), 100vw);
+  margin-left: var(--left);
   margin-right: auto;
   padding: 0 6px;
 }
 
-/* Align masthead/nav with the same left baseline */
+/* Align ALL top bars/wrappers to the same left baseline */
 .masthead, .masthead__inner-wrap, .initial-content, .page__inner{
   max-width: none !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.nav__list, .greedy-nav{
-  padding-left: clamp(var(--gutter), calc((100vw - var(--container))/2), 100vw);
+.nav__list, .greedy-nav,
+.breadcrumbs,
+.footer,
+.footer__inner-wrap{
+  padding-left: var(--left);
   padding-right: 12px;
 }
 
-/* Hero split */
-.hello-hero.two-col{ display:grid; grid-template-columns: 420px 1fr; gap:20px; align-items:stretch; margin:26px 0 10px; }
-.hello-photo{ border:1px solid var(--bd); border-radius:24px; overflow:hidden; box-shadow:var(--shadow); background:#f1f5f9; display:flex; align-items:center; justify-content:center; }
+/* === Hero: left photo + right text === */
+.hello-hero.two-col{
+  display:grid; grid-template-columns: 420px 1fr; gap:20px;
+  align-items:stretch; margin:26px 0 10px;
+}
+.hello-photo{
+  border:1px solid var(--bd); border-radius:24px; overflow:hidden;
+  box-shadow:var(--shadow); background:#f1f5f9;
+  display:flex; align-items:center; justify-content:center;
+}
 .hello-photo img{ width:100%; height:100%; object-fit:cover; object-position:center; }
 .hello-card{ background:var(--panel); border:1px solid var(--bd); border-radius:24px; box-shadow:var(--shadow); padding:28px; }
 .hello-left{ max-width:860px; }
@@ -45,24 +56,33 @@ img{ max-width:100%; height:auto; display:block; }
 .hello-desc{ color:var(--muted); margin:0 0 12px; }
 .hello-tags{ display:flex; flex-wrap:wrap; gap:8px; }
 .hello-tags span{ background:#f8fafc; border:1px solid var(--bd); padding:6px 10px; border-radius:9999px; font-size:.84rem; color:#0f172a; }
+
 @media (max-width:899px){
   .hello-hero.two-col{ grid-template-columns:1fr; }
   .hello-photo{ height:260px; }
 }
 
-/* Sections */
+/* === Sections === */
 .section{ margin-top:28px; }
 .section-head{ display:flex; align-items:center; justify-content:space-between; margin:6px 0 16px; }
 .section-head h2{ margin:0; font-size:1.18rem; font-weight:800; color:#0f172a; }
 
-/* Wider cards: 3 cols desktop */
-.cards-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:18px; }
-@media (min-width:640px){ .cards-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; } }
-@media (min-width:980px){ .cards-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; } }
-@media (min-width:1280px){ .cards-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; } }
+/* === Grids: wider 3-col desktop === */
+.cards-grid,
+.grid__wrapper, .entries-grid{
+  display:grid;
+  grid-template-columns:repeat(1,minmax(0,1fr));
+  gap:18px;
+}
+@media (min-width:640px){ .cards-grid, .grid__wrapper, .entries-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; } }
+@media (min-width:980px){ .cards-grid, .grid__wrapper, .entries-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; } }
+@media (min-width:1280px){ .cards-grid, .grid__wrapper, .entries-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; } }
 
-/* Cards */
-.card.giana{ background:#ffffff; border:1px solid var(--bd); border-radius:16px; box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease; }
+/* === Cards (horizontal, image optional) === */
+.card.giana{
+  background:#ffffff; border:1px solid var(--bd); border-radius:16px; box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
 .card.giana:hover{ transform:translateY(-2px); border-color:var(--bd-strong); box-shadow:var(--shadow-lg); background:#fbfcff; }
 .card.giana .card-inner{ display:flex; gap:16px; padding:16px; min-height:170px; }
 .card.giana .card-inner.has-media{ min-height:190px; }
@@ -75,8 +95,9 @@ img{ max-width:100%; height:auto; display:block; }
 .card-meta{ color:#64748b; font-size:.86rem; margin-top:10px; display:flex; align-items:center; }
 .card-meta .dot{ color:#94a3b8; }
 
-/* Minimal Mistakes list wrappers */
-.grid__wrapper, .entries-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:18px; }
-@media (min-width:640px){ .grid__wrapper, .entries-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; } }
-@media (min-width:980px){ .grid__wrapper, .entries-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; } }
-@media (min-width:1280px){ .grid__wrapper, .entries-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; } }
+/* === Footer alignment === */
+.site-footer{ background:transparent; border-top:1px solid var(--bd); }
+.site-footer .page__footer-follow, .site-footer .page__footer-copyright{
+  padding-left: var(--left);
+  padding-right: 12px;
+}
