@@ -1,25 +1,29 @@
-{% comment %}Unified card (title, excerpt, meta, author). Pass `post`.{% endcomment %}
-<article class="card">
-  {% if post.header and post.header.teaser %}
-    <div class="card-teaser">
+{% comment %}Giana-style horizontal card. Pass `post`.{% endcomment %}
+<article class="card giana">
+  {% assign has_teaser = false %}
+  {% if post.header and post.header.teaser %}{% assign has_teaser = true %}{% endif %}
+  <div class="card-inner {% if has_teaser %}has-media{% endif %}">
+    {% if has_teaser %}
+    <div class="card-media">
       <img src="{{ post.header.teaser | relative_url }}" alt="">
     </div>
-  {% endif %}
-  <div class="card-body">
-    <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    {% if post.excerpt %}
-      <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
     {% endif %}
-    <div class="card-meta">
-      <span class="card-cat">
-        {% assign coll = post.collection | default: '' %}
-        {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
-      </span>
-      {% if post.date %}<span class="dot">&nbsp;•&nbsp;</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}
-    </div>
-    <div class="card-author">
-      <span class="label">Written by</span>
-      <span class="name">GEONMIN LEE</span>
+    <div class="card-content">
+      <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.excerpt %}
+        <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+      {% endif %}
+      <div class="card-meta">
+        <span class="card-cat">
+          {% assign coll = post.collection | default: '' %}
+          {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
+        </span>
+        {% if post.date %}<span class="dot">&nbsp;•&nbsp;</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}
+      </div>
+      <div class="card-author">
+        <span class="label">Written by</span>
+        <span class="name">GEONMIN LEE</span>
+      </div>
     </div>
   </div>
 </article>
