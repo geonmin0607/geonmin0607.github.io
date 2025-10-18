@@ -1,4 +1,4 @@
-{% comment %}Horizontal card without author line. Pass `post`.{% endcomment %}
+{% comment %}Horizontal card without author/date. Pass `post`.{% endcomment %}
 <article class="card giana">
   {% assign has_teaser = false %}
   {% if post.header and post.header.teaser %}{% assign has_teaser = true %}{% endif %}
@@ -18,7 +18,6 @@
           {% assign coll = post.collection | default: '' %}
           {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
         </span>
-        {% if post.date %}<span class="dot">&nbsp;•&nbsp;</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}
       </div>
     </div>
   </div>
