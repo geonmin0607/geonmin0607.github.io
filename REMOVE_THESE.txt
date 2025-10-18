@@ -1,0 +1,7 @@
+Delete these from the existing repo before merge:
+- projects.html
+- about.html
+- blog.html
+- index.html
+- projects/* (except index.md)
+- posts/ (legacy folder; not used by Jekyll)
