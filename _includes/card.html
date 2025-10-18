@@ -1,11 +1,11 @@
-{% comment %}Giana-style horizontal card (no author line). Pass `post`.{% endcomment %}
+{% comment %}Horizontal card without author line. Pass `post`.{% endcomment %}
 <article class="card giana">
   {% assign has_teaser = false %}
   {% if post.header and post.header.teaser %}{% assign has_teaser = true %}{% endif %}
   <div class="card-inner {% if has_teaser %}has-media{% endif %}">
     {% if has_teaser %}
     <div class="card-media">
-      <img src="{{ post.header.teaser | relative_url }}" alt="">
+      <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title | escape }}">
     </div>
     {% endif %}
     <div class="card-content">
