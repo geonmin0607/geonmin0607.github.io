@@ -1,0 +1,18 @@
+:root{
+  /* Adjust this to control only the header title/subtitle's extra left padding */
+  --header-offset: 16px;
+}
+
+/* Desktop-only nudge: add a bit of left padding ONLY to the title/subtitle block */
+@media (min-width: 900px){
+  .masthead__inner-wrap .wrap .site-title,
+  .masthead__inner-wrap .wrap .site-subtitle{
+    padding-left: var(--header-offset) !important;
+    margin-left: 0 !important;  /* ensure we don't conflict with other patches */
+  }
+  /* If title text is wrapped in an <a>, don't double-indent */
+  .masthead__inner-wrap .wrap .site-title a{
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
