@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://geonmin0607.github.io/sitemap.xml
