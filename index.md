@@ -1,38 +1,34 @@
 ---
-layout: splash
-title: "AI/Multimodal Portfolio"
-header:
-  overlay_filter: 0.2
-  overlay_color: "#000"
-  actions:
-    - label: "Projects"
-      url: "/projects/"
-    - label: "기술"
-      url: "/skills/"
-excerpt: >
-  문서 AI · 표 구조 복원 · Qwen 계열 멀티모달 — 프로젝트/PoC/연구 성과를 정리합니다.
-feature_row:
-  - image_path: 
-    alt: "Projects"
-    title: "Projects"
-    excerpt: "프로젝트 카드 모음"
-    url: "/projects/"
-    btn_label: "보기"
-    btn_class: "btn--primary"
-  - image_path:
-    alt: "PoC"
-    title: "PoC"
-    excerpt: "기관 PoC 정리"
-    url: "/pocs/"
-    btn_label: "보기"
-    btn_class: "btn--primary"
-  - image_path:
-    alt: "기술"
-    title: "기술"
-    excerpt: "모델링/데이터/평가 역량"
-    url: "/skills/"
-    btn_label: "보기"
-    btn_class: "btn--primary"
+layout: single
+title: "Home"
+classes: wide
 ---
 
-{% include feature_row %}
+<div style="text-align:center; margin: 24px 0 36px;">
+  <h1 style="margin-bottom:8px;">GEONMIN LEE — AI 엔지니어</h1>
+  <p style="font-size:1.15rem; color:#4b5563;">LLM · Multimodal Portfolio — 문서·표·다이어그램 이해와 RAG까지, 엔드투엔드로 다룹니다.</p>
+</div>
+
+## Projects
+<div class="grid__wrapper">
+{% assign items = site.projects | sort: 'date' | reverse %}
+{% for post in items limit: 8 %}
+  {% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
+
+## Tech
+<div class="grid__wrapper">
+{% assign items = site.tech | sort: 'date' | reverse %}
+{% for post in items limit: 6 %}
+  {% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
+
+## Patents
+<div class="grid__wrapper">
+{% assign items = site.patents | sort: 'date' | reverse %}
+{% for post in items limit: 6 %}
+  {% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
