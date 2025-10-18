@@ -5,10 +5,9 @@
   --shadow-lg:0 14px 28px rgba(15,23,42,.10);
   --container:1280px;
 }
-
 *,*::before,*::after{ box-sizing:border-box; }
 html,body{ background:var(--bg)!important; }
-body{ color:var(--text); font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; font-size:16px; line-height:1.75; }
+body{ color:var(--text); font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 a{ color:#111827; text-decoration:none; } a:hover{ text-decoration:underline; text-underline-offset:3px; }
 img{ max-width:100%; height:auto; display:block; }
 .page{ max-width:var(--container); margin:0 auto; padding:0 18px; }
@@ -24,11 +23,7 @@ img{ max-width:100%; height:auto; display:block; }
   display:flex; align-items:center; justify-content:center;
 }
 .hello-photo img{ width:100%; height:100%; object-fit:cover; object-position:center; }
-
-.hello-card{
-  background:var(--panel); border:1px solid var(--bd); border-radius:24px;
-  box-shadow:var(--shadow); padding:28px;
-}
+.hello-card{ background:var(--panel); border:1px solid var(--bd); border-radius:24px; box-shadow:var(--shadow); padding:28px; }
 .hello-left{ max-width:860px; }
 .eyebrow{ color:#64748b; letter-spacing:.2em; text-transform:uppercase; font-size:.78rem; margin:0 0 8px; }
 .hello-title{ font-size:2.4rem; line-height:1.1; margin:0 0 4px; font-weight:800; color:#0f172a; }
@@ -36,7 +31,6 @@ img{ max-width:100%; height:auto; display:block; }
 .hello-desc{ color:var(--muted); margin:0 0 12px; }
 .hello-tags{ display:flex; flex-wrap:wrap; gap:8px; }
 .hello-tags span{ background:#f8fafc; border:1px solid var(--bd); padding:6px 10px; border-radius:9999px; font-size:.84rem; color:#0f172a; }
-
 @media (max-width:899px){
   .hello-hero.two-col{ grid-template-columns:1fr; }
   .hello-photo{ height:260px; }
@@ -47,28 +41,25 @@ img{ max-width:100%; height:auto; display:block; }
 .section-head{ display:flex; align-items:center; justify-content:space-between; margin:6px 0 16px; }
 .section-head h2{ margin:0; font-size:1.18rem; font-weight:800; color:#0f172a; }
 
-/* Wider cards: 3 cols on desktop (previously 4) */
+/* Wider cards: 3 cols desktop (content-first layout, images optional) */
 .cards-grid{ display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:18px; }
 @media (min-width:640px){ .cards-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; } }
-@media (min-width:980px){ .cards-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; } }  /* keep 2 cols for more width */
-@media (min-width:1280px){ .cards-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; } } /* desktop 3 cols */
+@media (min-width:980px){ .cards-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; } }
+@media (min-width:1280px){ .cards-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; } }
 
-/* Horizontal rectangle cards (without images below hero) */
-.card.giana{
-  background:#ffffff; border:1px solid var(--bd); border-radius:16px;
-  box-shadow:var(--shadow);
-  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
-}
+/* Card frame + hover */
+.card.giana{ background:#ffffff; border:1px solid var(--bd); border-radius:16px; box-shadow:var(--shadow); transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease; }
 .card.giana:hover{ transform:translateY(-2px); border-color:var(--bd-strong); box-shadow:var(--shadow-lg); background:#fbfcff; }
+
+/* Horizontal inner layout */
 .card.giana .card-inner{ display:flex; gap:16px; padding:16px; min-height:170px; }
 .card.giana .card-inner.has-media{ min-height:190px; }
 
-/* If a post has teaser image it will show, otherwise content fills full width */
-.card-media{
-  flex:0 0 36%; max-width:36%; border-radius:12px; overflow:hidden; background:#f1f5f9;
-  border:1px solid var(--bd); display:flex; align-items:center; justify-content:center;
-}
+/* Optional media slot (if header.teaser exists) */
+.card-media{ flex:0 0 36%; max-width:36%; border-radius:12px; overflow:hidden; background:#f1f5f9; border:1px solid var(--bd); display:flex; align-items:center; justify-content:center; }
 .card-media img{ width:100%; height:100%; object-fit:cover; }
+
+/* Content */
 .card-content{ flex:1 1 auto; min-width:0; display:flex; flex-direction:column; }
 .card-title{ margin:2px 0 8px; font-size:1rem; font-weight:800; color:#0f172a; }
 .card-title a{ color:#0f172a; }
@@ -76,6 +67,7 @@ img{ max-width:100%; height:auto; display:block; }
 .card-meta{ color:#64748b; font-size:.86rem; margin-top:10px; display:flex; align-items:center; }
 .card-meta .dot{ color:#94a3b8; }
 
+/* Mobile: stack media on top if exists */
 @media (max-width:639px){
   .card.giana .card-inner{ flex-direction:column; }
   .card-media{ flex:0 0 auto; max-width:100%; height:190px; }
