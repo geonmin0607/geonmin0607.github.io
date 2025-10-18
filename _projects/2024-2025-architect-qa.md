@@ -6,6 +6,7 @@ show_date: false
 categories: [Projects]
 tags: [Prompt Tuning, LLM-as-a-Judge, Domain QA]
 institution: "지자체(<기관명 교체: 예_경기도청/강남구청>)"
+excerpt: "민원 QA 자동응답 모델 — 질문 자동 분리와 LLM-as-a-Judge 평가"
 ---
 
 ## 1. 진행기간

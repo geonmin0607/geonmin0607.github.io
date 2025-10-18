@@ -1,6 +1,6 @@
 title: "GEONMIN LEE —  AI 엔지니어"
 subtitle: "LLM, Multimodal Portfolio"
-description: "LLM 및 멀티모달(문서·표·차트·다이어그램) 기반 프로젝트/PoC 포트폴리오"
+description: "LLM 및 멀티모달(문서·표·차트·다이어그램) 기반 프로젝트/특허 포트폴리오"
 lang: ko
 timezone: Asia/Seoul
 url: "https://geonmin0607.github.io"
@@ -35,9 +35,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
-  pocs:
-    output: true
-    permalink: /pocs/:name/
   patents:
     output: true
     permalink: /patents/:name/
@@ -46,18 +43,6 @@ defaults:
   - scope:
       path: ""
       type: "projects"
-    values:
-      layout: single
-      author_profile: true
-      toc: true
-      toc_sticky: true
-      classes: wide
-      sidebar:
-        nav: "main"
-      show_date: false
-  - scope:
-      path: ""
-      type: "pocs"
     values:
       layout: single
       author_profile: true
@@ -102,3 +87,7 @@ exclude:
   - "README.md"
   - "Gemfile"
   - "Gemfile.lock"
+
+# Custom CSS
+sass:
+  style: compressed

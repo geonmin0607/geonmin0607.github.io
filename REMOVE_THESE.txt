@@ -1,7 +1,6 @@
-Delete these from the existing repo before merge:
-- projects.html
-- about.html
-- blog.html
-- index.html
-- projects/* (except index.md)
-- posts/ (legacy folder; not used by Jekyll)
+Delete these in your current repo before/after applying this patch (to avoid conflicts):
+- `_pocs/` directory
+- `pocs/index.md`
+- `_pages/skills.md` (기술 탭 제거 요청에 따라)
+- `_data/navigation.yml` (will be replaced)
+- any other files that recreate a PoC tab

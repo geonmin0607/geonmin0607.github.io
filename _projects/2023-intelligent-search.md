@@ -6,6 +6,7 @@ show_date: false
 categories: [Projects]
 tags: [FastAPI, Elasticsearch, Vector Similarity, Airflow, Prometheus, Grafana, Crawling]
 institution: "<기관명>"
+excerpt: "의미 기반(Vector Similarity) 검색과 수집·모니터링 파이프라인을 결합한 지능형 검색 서비스"
 ---
 
 ## 1. 진행기간
