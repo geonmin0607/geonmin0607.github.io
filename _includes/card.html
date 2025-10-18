@@ -1,4 +1,4 @@
-{% comment %}Giana-style horizontal card. Pass `post`.{% endcomment %}
+{% comment %}Giana-style horizontal card (no author line). Pass `post`.{% endcomment %}
 <article class="card giana">
   {% assign has_teaser = false %}
   {% if post.header and post.header.teaser %}{% assign has_teaser = true %}{% endif %}
@@ -19,10 +19,6 @@
           {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
         </span>
         {% if post.date %}<span class="dot">&nbsp;•&nbsp;</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}
-      </div>
-      <div class="card-author">
-        <span class="label">Written by</span>
-        <span class="name">GEONMIN LEE</span>
       </div>
     </div>
   </div>
