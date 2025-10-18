@@ -1,8 +1,0 @@
----
-layout: collection
-title: "Projects"
-collection: projects
-entries_layout: grid
-permalink: /projects/
-classes: wide
----
