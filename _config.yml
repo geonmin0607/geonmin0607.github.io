@@ -1,0 +1,67 @@
+title: "GEONMIN LEE —  AI 엔지니어"
+subtitle: "LLM, Multimodal Portfolio"
+description: "문서·표·다이어그램 이해와 RAG까지, 엔드투엔드 LLM/멀티모달 포트폴리오"
+lang: ko
+timezone: Asia/Seoul
+url: "https://geonmin0607.github.io"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  patents:
+    output: true
+    permalink: /patents/:name/
+  tech:
+    output: true
+    permalink: /tech/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: single
+      author_profile: false
+      toc: true
+      toc_sticky: true
+      classes: wide
+      show_date: false
+  - scope:
+      path: ""
+      type: "patents"
+    values:
+      layout: single
+      author_profile: false
+      toc: false
+      classes: wide
+      show_date: false
+  - scope:
+      path: ""
+      type: "tech"
+    values:
+      layout: single
+      author_profile: false
+      toc: true
+      toc_sticky: true
+      classes: wide
+      show_date: false
+
+permalink: /:categories/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: "katex"
+
+exclude:
+  - "node_modules"
