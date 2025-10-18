@@ -1,2 +1,5 @@
-{% comment %}Load nomod-clone theme last to override any previous styles{% endcomment %}
-<link rel="stylesheet" href="{{ '/assets/css/nomod-clone.css' | relative_url }}">
+{% comment %}Load Inter + nomod-light CSS LAST (remove other custom CSS links){% endcomment %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/nomod-light.css' | relative_url }}">
