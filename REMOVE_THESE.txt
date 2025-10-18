@@ -1,6 +1,6 @@
-Delete these in your current repo before/after applying this patch (to avoid conflicts):
-- `_pocs/` directory
-- `pocs/index.md`
-- `_pages/skills.md` (기술 탭 제거 요청에 따라)
-- `_data/navigation.yml` (will be replaced)
-- any other files that recreate a PoC tab
+Delete these files from the repo (they override the new homepage and hide cards):
+- index.html
+- projects.html
+- about.html
+- blog.html
+Also ensure you don't have duplicate pages under /projects/ that conflict with the collection index.
