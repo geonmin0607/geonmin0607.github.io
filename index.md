@@ -5,7 +5,7 @@ classes: wide
 permalink: /
 ---
 
-<section class="hello-hero two-col">
+<section class="hello-hero two-col"> 
   <div class="hello-photo">
     <img src="{{ '/assets/images/hero/profile.jpg' | relative_url }}" alt="GEONMIN LEE portrait">
   </div>
