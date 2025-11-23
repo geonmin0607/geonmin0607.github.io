@@ -2,6 +2,7 @@
 layout: single
 title: ""
 classes: wide
+permalink: /
 ---
 
 <section class="hello-hero two-col">
