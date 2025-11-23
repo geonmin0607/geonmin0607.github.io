@@ -52,15 +52,6 @@ img{ max-width:100%; height:auto; display:block; }
 .hello-title{ font-size:2.4rem; line-height:1.1; margin:0 0 4px; font-weight:800; color:#0f172a; }
 .hello-sub{ color:#334155; margin:0 0 10px; font-weight:600; }
 .hello-desc{ color:#475569; margin:0 0 12px; }
-.hello-desc.lead{ font-size:1.04rem; color:#0f172a; margin-bottom:14px; }
-.hello-list{ color:#475569; padding-left:20px; margin:0 0 14px; display:grid; gap:8px; }
-.hello-list li{ line-height:1.55; }
-.hello-actions{ display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 16px; }
-.button{ display:inline-flex; align-items:center; justify-content:center; gap:6px; height:38px; padding:0 14px; border-radius:10px; border:1px solid var(--bd); background:#fff; color:#0f172a; font-weight:700; font-size:.92rem; line-height:1; box-shadow:var(--shadow); transition:all .18s ease; }
-.button:hover{ text-decoration:none; border-color:var(--bd-strong); box-shadow:var(--shadow-lg); transform:translateY(-1px); }
-.button.primary{ background:#0f172a; color:#fff; border-color:#0f172a; }
-.button.primary:hover{ background:#111827; }
-.button.ghost{ background:transparent; }
 .hello-tags{ display:flex; flex-wrap:wrap; gap:8px; }
 .hello-tags span{ background:#f8fafc; border:1px solid var(--bd); padding:6px 10px; border-radius:9999px; font-size:.84rem; color:#0f172a; }
 
