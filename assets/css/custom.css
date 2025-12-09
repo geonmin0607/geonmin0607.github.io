@@ -151,3 +151,69 @@ body {
   margin-top: 0.5rem;
 }
 
+
+
+/* ===== Hero 아래 3개 섹션을 가로 그리드로 ===== */
+.sections-row {
+  max-width: 1200px;
+  margin: 3rem auto 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* 데스크탑 이상에서 3칸 가로 배치 */
+@media (min-width: 1024px) {
+  .sections-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 패널 공통 스타일 (이미 일부 정의했다면 겹치는 부분은 합쳐도 됨) */
+.section-panel {
+  position: relative;
+  padding: 1.8rem 1.8rem 2.4rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 55%, #fdf2ff 100%);
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.10);
+  height: 100%;      /* 세 칸 높이 맞추기 */
+}
+
+/* 홈 화면에서만 좌우 여백/마진을 없애기 */
+.sections-row .section-panel {
+  margin: 0;
+}
+
+/* 섹션 제목 배지 스타일 (이미 있다면 중복 부분은 생략) */
+.section-panel .section-head h2 {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-panel .section-head h2::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4f46e5, #f97316);
+  box-shadow: 0 0 16px rgba(79, 70, 229, 0.6);
+}
+
+.section-panel .section-head h2::after {
+  content: "";
+  height: 1px;
+  width: 56px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.7), transparent);
+}
+
+/* 안쪽 카드 그리드는 기존 간격 유지 */
+.section-panel .cards-grid {
+  margin-top: 0.2rem;
+}
