@@ -16,7 +16,7 @@
       <div class="card-meta">
         <span class="card-cat">
           {% assign coll = post.collection | default: '' %}
-          {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
+          {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech Notes{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
         </span>
       </div>
     </div>
