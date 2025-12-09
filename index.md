@@ -14,7 +14,8 @@ permalink: /
       <p class="eyebrow">Hello, I'm</p>
       <h1 class="hello-title">GEONMIN LEE</h1>
       <p class="hello-sub">AI Engineer — LLM & Multimodal</p>
-      <p class="hello-desc lead">
+      <br>
+      <p class="hello-desc">
         <strong>텍스트 기반 검색·QA에서 시작해, 지금은 멀티모달 문서(표·차트·이미지)까지 다루는 AI 엔지니어</strong>입니다.<br>
         규정·법령·민원 문서를 이해하는 LLM/RAG 파이프라인을 설계해 왔고,<br>
         표→HTML, 다이어그램·차트→Mermaid, 화학 구조→SMILES로 문서를 구조화하고 있습니다.
