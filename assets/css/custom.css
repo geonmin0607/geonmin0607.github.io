@@ -1,0 +1,71 @@
+/* ===== 공통: 살짝 더 부드러운 느낌 ===== */
+body {
+  background: #f9fafb;
+}
+
+/* ===== Hero 섹션 배경에 그라데이션 구름 깔기 ===== */
+.hello-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 3rem 3rem;
+  background:
+    radial-gradient(circle at 0% 0%, #e5f0ff 0, rgba(229,240,255,0) 55%),
+    radial-gradient(circle at 100% 20%, #ffe7ff 0, rgba(255,231,255,0) 55%),
+    linear-gradient(135deg, #f5f7ff 0%, #ffffff 60%, #fef6ff 100%);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+/* 흐릿한 색 덩어리 2개 (구름 느낌) */
+.hello-hero::before,
+.hello-hero::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hello-hero::before {
+  background: #a5b4fc;   /* 연보라 */
+  top: -80px;
+  left: -40px;
+}
+
+.hello-hero::after {
+  background: #f9a8d4;   /* 연핑크 */
+  bottom: -120px;
+  right: -40px;
+}
+
+/* 사진/텍스트를 내용 위로 올리기 */
+.hello-photo,
+.hello-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Hero 카드에 살짝 글라스 느낌 ===== */
+.hello-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+/* Projects / Tech / Patents 카드도 살짝 띄워주기 */
+.cards-grid .card {
+  border-radius: 20px;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+}
+
+.cards-grid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+}
