@@ -39,29 +39,72 @@ permalink: /
   </div>
 </section>
 
-<!-- Hero 섹션 바로 아래에 넣기 -->
-<div class="sections-row">
-  <section class="section section-panel" id="projects">
-    <div class="section-head"><h2>Projects</h2></div>
-    <div class="cards-grid">
-      {% assign items = site.projects | sort: 'date' | reverse %}
-      {% for post in items %}{% include card.html post=post %}{% endfor %}
-    </div>
-  </section>
 
-  <section class="section section-panel" id="tech">
-    <div class="section-head"><h2>Tech Notes</h2></div>
-    <div class="cards-grid">
-      {% assign items = site.tech | sort: 'date' | reverse %}
-      {% for post in items %}{% include card.html post=post %}{% endfor %}
-    </div>
-  </section>
 
-  <section class="section section-panel" id="patents">
-    <div class="section-head"><h2>Patents</h2></div>
-    <div class="cards-grid">
-      {% assign items = site.patents | sort: 'date' | reverse %}
-      {% for post in items %}{% include card.html post=post %}{% endfor %}
+
+<section class="section section-hub" id="home-hub">
+  <div class="hub-tabs">
+    <button class="hub-tab is-active" data-target="projects">Projects</button>
+    <button class="hub-tab" data-target="tech">Tech Notes</button>
+    <button class="hub-tab" data-target="patents">Patents</button>
+  </div>
+
+  <div class="hub-panels">
+    <!-- Projects 패널 -->
+    <div class="hub-panel is-active" data-panel="projects">
+      <div class="hub-carousel">
+        <button class="hub-nav hub-prev" type="button" aria-label="Previous">‹</button>
+        <div class="hub-carousel-window">
+          <div class="hub-carousel-track">
+            {% assign items = site.projects | sort: 'date' | reverse %}
+            {% for post in items %}
+            <div class="hub-slide">
+              {% include card.html post=post %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <button class="hub-nav hub-next" type="button" aria-label="Next">›</button>
+      </div>
+      <div class="hub-dots"></div>
     </div>
-  </section>
-</div>
+
+    <!-- Tech Notes 패널 -->
+    <div class="hub-panel" data-panel="tech">
+      <div class="hub-carousel">
+        <button class="hub-nav hub-prev" type="button" aria-label="Previous">‹</button>
+        <div class="hub-carousel-window">
+          <div class="hub-carousel-track">
+            {% assign items = site.tech | sort: 'date' | reverse %}
+            {% for post in items %}
+            <div class="hub-slide">
+              {% include card.html post=post %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <button class="hub-nav hub-next" type="button" aria-label="Next">›</button>
+      </div>
+      <div class="hub-dots"></div>
+    </div>
+
+    <!-- Patents 패널 -->
+    <div class="hub-panel" data-panel="patents">
+      <div class="hub-carousel">
+        <button class="hub-nav hub-prev" type="button" aria-label="Previous">‹</button>
+        <div class="hub-carousel-window">
+          <div class="hub-carousel-track">
+            {% assign items = site.patents | sort: 'date' | reverse %}
+            {% for post in items %}
+            <div class="hub-slide">
+              {% include card.html post=post %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <button class="hub-nav hub-next" type="button" aria-label="Next">›</button>
+      </div>
+      <div class="hub-dots"></div>
+    </div>
+  </div>
+</section>
