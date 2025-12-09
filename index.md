@@ -28,9 +28,8 @@ permalink: /
       </ul>
       <div class="hello-actions">
         <a class="button primary" href="#projects">Projects</a>
-        <a class="button" href="#tech">Tech</a>
+        <a class="button" href="#tech">Tech Notes</a>
         <a class="button ghost" href="#patents">Patents</a>
-        <a class="button" href="/about/">Resume</a>
       </div>
       <div class="hello-tags">
         <span>NLP·LLM</span><span>VLM</span><span>LoRA·FT</span><span>DPO</span>
@@ -49,7 +48,7 @@ permalink: /
 </section>
 
 <section class="section" id="tech">
-  <div class="section-head"><h2>Tech</h2></div>
+  <div class="section-head"><h2>Tech Notes</h2></div>
   <div class="cards-grid">
     {% assign items = site.tech | sort: 'date' | reverse %}
     {% for post in items %}{% include card.html post=post %}{% endfor %}
