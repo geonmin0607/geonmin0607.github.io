@@ -39,26 +39,29 @@ permalink: /
   </div>
 </section>
 
-<section class="section section-panel" id="projects">
-  <div class="section-head"><h2>Projects</h2></div>
-  <div class="cards-grid">
-    {% assign items = site.projects | sort: 'date' | reverse %}
-    {% for post in items %}{% include card.html post=post %}{% endfor %}
-  </div>
-</section>
+<!-- Hero 섹션 바로 아래에 넣기 -->
+<div class="sections-row">
+  <section class="section section-panel" id="projects">
+    <div class="section-head"><h2>Projects</h2></div>
+    <div class="cards-grid">
+      {% assign items = site.projects | sort: 'date' | reverse %}
+      {% for post in items %}{% include card.html post=post %}{% endfor %}
+    </div>
+  </section>
 
-<section class="section section-panel" id="tech">
-  <div class="section-head"><h2>Tech Notes</h2></div>
-  <div class="cards-grid">
-    {% assign items = site.tech | sort: 'date' | reverse %}
-    {% for post in items %}{% include card.html post=post %}{% endfor %}
-  </div>
-</section>
+  <section class="section section-panel" id="tech">
+    <div class="section-head"><h2>Tech Notes</h2></div>
+    <div class="cards-grid">
+      {% assign items = site.tech | sort: 'date' | reverse %}
+      {% for post in items %}{% include card.html post=post %}{% endfor %}
+    </div>
+  </section>
 
-<section class="section section-panel" id="patents">
-  <div class="section-head"><h2>Patents</h2></div>
-  <div class="cards-grid">
-    {% assign items = site.patents | sort: 'date' | reverse %}
-    {% for post in items %}{% include card.html post=post %}{% endfor %}
-  </div>
-</section>
+  <section class="section section-panel" id="patents">
+    <div class="section-head"><h2>Patents</h2></div>
+    <div class="cards-grid">
+      {% assign items = site.patents | sort: 'date' | reverse %}
+      {% for post in items %}{% include card.html post=post %}{% endfor %}
+    </div>
+  </section>
+</div>
