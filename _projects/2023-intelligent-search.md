@@ -7,8 +7,8 @@ categories: [Projects]
 tags: [FastAPI, Elasticsearch, Vector Similarity, Airflow, Prometheus, Grafana, Crawling]
 excerpt: |
   <ul class="excerpt-list">
-    <li><strong>기간:</strong> 2023.07.01 ~ 2023.12.31</li><br>
-    <li>의미 기반(Vector) 검색 + 데이터 수집/모니터링</li><br>
+    <li><strong>기간:</strong> 2023.07.01 ~ 2023.12.31</li>
+    <li>의미 기반(Vector) 검색 + 데이터 수집/모니터링</li>
     <li>FastAPI · Elasticsearch · Airflow · Prometheus · Grafana</li>
   </ul>
 ---
