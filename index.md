@@ -15,7 +15,10 @@ permalink: /
       <h1 class="hello-title">GEONMIN LEE</h1>
       <p class="hello-sub">AI Engineer — LLM & Multimodal</p>
       <p class="hello-desc lead">
-        <strong>문서·표·다이어그램을 한 번에 이해하는 LLM/멀티모달 파이프라인</strong>을 설계·구현하며, 데이터 설계→모델링→평가→배포까지 한 흐름으로 책임집니다.
+        <strong>텍스트 기반 검색·QA에서 시작해, 멀티모달 문서(표·차트·이미지)까지 확장한 AI 엔지니어</strong>입니다.<br>
+        규정·법령·민원 문서를 이해하는 LLM/RAG 파이프라인을 만들고,<br>
+        이제는 표→HTML, 다이어그램·차트→Mermaid, 화학 구조→SMILES까지 다루는<br>
+        멀티모달·Agent 기반 문서 이해 플랫폼을 설계·구현하고 있습니다.
       </p>
       <ul class="hello-list">
         <li><strong>NLP·LLM</strong>: 규정·법령·기술문서에 특화된 스키마/프롬프트 설계, LoRA/Full-FT, DPO 및 스타일 보존(LaTeX/수식) 처리.</li>
