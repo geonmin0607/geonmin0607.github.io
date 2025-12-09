@@ -10,12 +10,22 @@
     {% endif %}
     <div class="card-content">
       <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      {% if post.excerpt %}
-        {% assign coll = post.collection | default: '' %}
+      {% assign coll = post.collection | default: '' %}
       
-        {% if coll == 'projects' %}
+      {% if coll == 'projects' %}
+        {% if post.excerpt %}
           {{ post.excerpt | markdownify }}
-        {% else %}
+        {% endif %}
+      
+      {% elsif coll == 'tech' %}
+        {% if post.tags %}
+          {{ post.tags | join: " · " }}
+        {% elsif post.excerpt %}
+          {{ post.excerpt | strip_html | truncatewords: 50 }}
+        {% endif %}
+      
+      {% else %}
+        {% if post.excerpt %}
           {{ post.excerpt | strip_html | truncatewords: 50 }}
         {% endif %}
       {% endif %}
