@@ -4,7 +4,7 @@ main:
   - title: "Projects"
     url: /projects/
   - title: "Tech Notes"
-    url: /#tech
+    url: /tech/
   - title: "Patents"
     url: /patents/
   - title: "About"
