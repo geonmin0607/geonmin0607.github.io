@@ -15,17 +15,15 @@ permalink: /
       <h1 class="hello-title">GEONMIN LEE</h1>
       <p class="hello-sub">AI Engineer — LLM & Multimodal</p>
       <p class="hello-desc lead">
-        <strong>텍스트 기반 검색·QA에서 시작해, 멀티모달 문서(표·차트·이미지)까지 확장해 온 AI 엔지니어</strong>입니다.<br>
-        규정·법령·민원 문서를 이해하는 LLM/RAG 파이프라인을 설계·구현해 왔으며,<br>
-        현재는 표→HTML, 다이어그램·차트→Mermaid, 화학 구조→SMILES까지 다루는<br>
-        멀티모달·에이전트 기반 문서 이해 플랫폼을 만들고 있습니다.
+        <strong>텍스트 기반 검색·QA에서 시작해, 지금은 멀티모달 문서(표·차트·이미지)까지 다루는 AI 엔지니어</strong>입니다.<br>
+        규정·법령·민원 문서를 이해하는 LLM/RAG 파이프라인을 설계해 왔고,<br>
+        표→HTML, 다이어그램·차트→Mermaid, 화학 구조→SMILES로 문서를 구조화하고 있습니다.
       </p>
       <ul class="hello-list">
-        <li><strong>NLP·LLM</strong>: 규정·법령·기술문서에 특화된 스키마·프롬프트 설계, LoRA/Full-FT, DPO 및 스타일 보존(LaTeX/수식) 처리.</li>
-        <li><strong>Multimodal/VLM</strong>: <em>표 구조 복원(HTML)</em>, <em>차트·다이어그램 → Mermaid</em>, <em>이미지 Captioning</em> 등 시각-텍스트 결합으로 문서 구조화·검색성 향상.</li>
-        <li><strong>평가·개선</strong>: 데이터 샘플을 직접 확인해 오류 유형을 나누고 평가지표를 설계한 뒤, LLM-as-a-Judge와 자동 채점·오답 분석·재학습 <em>Close-the-Loop</em>로 정확도와 일관성을 반복적으로 개선.</li>
-        <li><strong>운영·신뢰성</strong>: Airflow 파이프라인 자동화, ClearML 실험·모델 관리, Prometheus·Grafana 모니터링·알림으로 재현성과 안정성 확보.</li>
-        <li><strong>모델 스택</strong>: GPT·Claude·Mistral·Phi·LLaMA·Gemma·Qwen/Qwen-VL·DeepSeek/DeepSeek-OCR·PaddleOCR 등 다양한 계열을 검증하며 최신 기법을 적극 실험.</li>
+        <li><strong>NLP·LLM</strong>: 규정·법령·기술문서용 스키마·프롬프트 설계, LoRA/Full-FT, DPO, LaTeX/수식 처리.</li>
+        <li><strong>Multimodal/VLM</strong>: 표 구조 HTML 복원, 차트·다이어그램→Mermaid, 이미지 Captioning으로 문서 구조화·검색성 개선.</li>
+        <li><strong>평가·개선</strong>: 데이터 샘플을 직접 확인해 오류 유형을 나누고 평가지표를 설계한 뒤, LLM-as-a-Judge·자동 채점·재학습 Close-the-Loop로 품질을 반복적으로 개선.</li>
+        <li><strong>운영·모니터링</strong>: Airflow·ClearML·Prometheus·Grafana로 파이프라인 자동화, 실험·모델 관리, 모니터링·알림 운영.</li>
       </ul>
       <div class="hello-actions">
         <a class="button primary" href="#projects">Projects</a>
