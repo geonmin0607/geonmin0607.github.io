@@ -11,7 +11,13 @@
     <div class="card-content">
       <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       {% if post.excerpt %}
-        <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+        {% assign coll = post.collection | default: '' %}
+      
+        {% if coll == 'projects' %}
+          {{ post.excerpt | markdownify }}
+        {% else %}
+          {{ post.excerpt | strip_html | truncatewords: 50 }}
+        {% endif %}
       {% endif %}
       <div class="card-meta">
         <span class="card-cat">
