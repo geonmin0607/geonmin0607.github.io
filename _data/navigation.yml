@@ -3,9 +3,9 @@ main:
     url: /
   - title: "Projects"
     url: /projects/
+  - title: "Tech Notes"
+    url: /#tech/
   - title: "Patents"
     url: /patents/
-  - title: "Blog"
-    url: /year-archive/
   - title: "About"
     url: /about/
