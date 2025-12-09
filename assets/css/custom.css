@@ -104,3 +104,50 @@ body {
   right: -160px;
 }
 
+
+/* ===== 아래 섹션(Projects / Tech Notes / Patents) 큰 카드 느낌 ===== */
+.section-panel {
+  position: relative;
+  margin: 3rem auto 3.5rem;
+  padding: 2.5rem 2.5rem 3rem;
+  max-width: 1120px;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, #f9fafb 0%, #ffffff 55%, #fdf2ff 100%);
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.10);
+}
+
+/* 섹션 제목을 작은 배지처럼 */
+.section-panel .section-head h2 {
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-panel .section-head h2::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4f46e5, #f97316);
+  box-shadow: 0 0 18px rgba(79, 70, 229, 0.6);
+}
+
+.section-panel .section-head h2::after {
+  content: "";
+  height: 1px;
+  width: 72px;
+  background: linear-gradient(90deg, rgba(148, 163, 184, 0.7), transparent);
+}
+
+/* 섹션 안의 카드 그리드는 기존 여백 유지 */
+.section-panel .cards-grid {
+  margin-top: 0.5rem;
+}
+
