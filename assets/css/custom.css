@@ -378,3 +378,32 @@ body {
     gap: 0.4rem;
   }
 }
+
+
+
+/* ===== Hero 밑 3블럭 폭 다시 잡기 (Projects / Tech Notes / Patents) ===== */
+
+/* 전체 래핑: 화면을 더 넓게 쓰도록 */
+.hub-row {
+  max-width: 1400px;     /* 필요하면 1500px, 1600px 등으로 조정 가능 */
+  width: 100%;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;       /* 좌우 여백만 살짝 */
+}
+
+/* 3개 블럭을 균일한 너비로 가로 정렬 */
+.hub-grid {
+  max-width: none;       /* 1320px 제한 제거 */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));  /* 3칸 균등 분할 */
+  gap: 2.4rem;           /* 블럭 사이 간격 */
+}
+
+/* 각 블럭이 자기 칸을 가득 채우도록 */
+.hub-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
