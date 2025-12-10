@@ -220,48 +220,41 @@ body {
 
 
 
-/* ===== Hero 밑 3개 블럭 전체 레이아웃 ===== */
-/* Hero 밑 3블럭: 화면 전체 폭으로 펼치기 */
+/* ===== Hero 밑 3개 블럭: Projects / Tech Notes / Patents ===== */
+
+/* 전체 래핑 – Hero랑 비슷한 폭, 가운데 정렬 */
 .hub-row {
-  position: relative;
-  width: 100vw;          /* 화면 전체 폭 */
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;    /* 가운데 정렬된 page 밖으로 빼내기 */
-  margin-right: -50vw;
-  padding: 3rem 4vw 4rem;  /* 양쪽 여백(%)는 취향껏 조절) */
+  max-width: 1200px;
+  margin: 3rem auto 4rem;
+  padding: 0 1.5rem;
 }
 
-/* 3블럭 그리드는 다시 내용 폭만 제한 + 실제 그리드로 배치 */
+/* 3개의 블럭을 그리드로 배치 */
 .hub-grid {
-  max-width: 1120px;      /* Hero 카드와 비슷한 폭 */
-  margin: 0;              /* 왼쪽 정렬 유지 */
-  display: grid;          /* 그리드 선언 */
-  gap: 2rem;              /* 블럭 사이 간격 */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
 }
 
-/* 데스크탑에서 3칸 균등 분배 (내용 때문에 한 칸만 억지로 넓어지지 않게) */
 @media (min-width: 1024px) {
   .hub-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3등분 */
   }
 }
 
-
-/* ===== 각 블럭(Projects / Tech Notes / Patents) ===== */
+/* 각 블럭 패널 (Projects / Tech Notes / Patents) */
 .hub-panel {
   position: relative;
   padding: 1.8rem 1.6rem 2.4rem;
   border-radius: 24px;
   background: linear-gradient(135deg, #f9fafb 0%, #ffffff 55%, #fdf2ff 100%);
   box-shadow: 0 18px 48px rgba(15, 23, 42, 0.10);
-  height: 100%;
   display: flex;
   flex-direction: column;
-  min-width: 0; /* <-- 이 한 줄 추가 */
+  height: 100%;  /* 세 패널 높이 맞추기 */
 }
 
-/* 블럭 제목 */
+/* 패널 제목 (Projects / Tech Notes / Patents) */
 .hub-panel-head {
   font-size: 0.9rem;
   letter-spacing: 0.16em;
@@ -283,6 +276,7 @@ body {
 }
 
 /* ===== 슬라이더 공통 ===== */
+
 .hub-carousel {
   position: relative;
   display: flex;
@@ -291,29 +285,30 @@ body {
   margin-top: 0.2rem;
 }
 
-/* ===== 슬라이더 폭 강제 고정 (Projects / Tech / Patents 공통) ===== */
-/* 슬라이드 한 장이 항상 "창(window)" 가로폭 100%를 차지하도록 */
+/* 카드가 보이는 창 */
 .hub-carousel-window {
-  flex: 1 1 auto;
-  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
+/* 슬라이드 트랙 (옆으로 움직이는 부분) */
 .hub-carousel-track {
   display: flex;
+  transition: transform 0.35s ease;
 }
 
+/* 각 슬라이드가 정확히 패널 너비 100%를 차지하도록 */
 .hub-slide {
-  flex: 0 0 100%;   /* 콘텐츠 길이와 상관없이 항상 100% 폭 */
+  flex: 0 0 100%;
 }
 
-/* 슬라이드 안 카드도 꽉 차게 */
 .hub-slide .card {
   width: 100%;
-  max-width: none;
+  margin-bottom: 0;
 }
 
-
-/* 좌우 버튼 */
+/* 좌우 화살표 버튼 */
 .hub-nav {
   width: 28px;
   height: 28px;
@@ -341,7 +336,7 @@ body {
   background: #ffffff;
 }
 
-/* 아래 점(dot) */
+/* 아래 점(dots) */
 .hub-dots {
   display: flex;
   justify-content: center;
@@ -364,10 +359,11 @@ body {
   background: linear-gradient(135deg, #4f46e5, #f97316);
 }
 
-/* 모바일에서 여백 조금 줄이기 */
+/* 모바일에서 조금 더 컴팩트하게 */
 @media (max-width: 768px) {
   .hub-row {
-    margin: 2.2rem 1rem 3rem;
+    margin: 2.2rem auto 3rem;
+    padding: 0 1rem;
   }
 
   .hub-panel {
@@ -378,5 +374,3 @@ body {
     gap: 0.4rem;
   }
 }
-
-
