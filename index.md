@@ -42,16 +42,12 @@ permalink: /
 
 
 
-<section class="section section-hub" id="home-hub">
-  <div class="hub-tabs">
-    <button class="hub-tab is-active" data-target="projects">Projects</button>
-    <button class="hub-tab" data-target="tech">Tech Notes</button>
-    <button class="hub-tab" data-target="patents">Patents</button>
-  </div>
+<section class="section hub-row" id="home-hub">
+  <div class="hub-grid">
 
-  <div class="hub-panels">
-    <!-- Projects 패널 -->
-    <div class="hub-panel is-active" data-panel="projects">
+    <!-- Projects 블럭 -->
+    <div class="hub-panel">
+      <div class="hub-panel-head">Projects</div>
       <div class="hub-carousel">
         <button class="hub-nav hub-prev" type="button" aria-label="Previous">‹</button>
         <div class="hub-carousel-window">
@@ -69,8 +65,9 @@ permalink: /
       <div class="hub-dots"></div>
     </div>
 
-    <!-- Tech Notes 패널 -->
-    <div class="hub-panel" data-panel="tech">
+    <!-- Tech Notes 블럭 -->
+    <div class="hub-panel">
+      <div class="hub-panel-head">Tech Notes</div>
       <div class="hub-carousel">
         <button class="hub-nav hub-prev" type="button" aria-label="Previous">‹</button>
         <div class="hub-carousel-window">
@@ -88,8 +85,9 @@ permalink: /
       <div class="hub-dots"></div>
     </div>
 
-    <!-- Patents 패널 -->
-    <div class="hub-panel" data-panel="patents">
+    <!-- Patents 블럭 -->
+    <div class="hub-panel">
+      <div class="hub-panel-head">Patents</div>
       <div class="hub-carousel">
         <button class="hub-nav hub-prev" type="button" aria-label="Previous">‹</button>
         <div class="hub-carousel-window">
@@ -106,5 +104,7 @@ permalink: /
       </div>
       <div class="hub-dots"></div>
     </div>
+
   </div>
 </section>
+
