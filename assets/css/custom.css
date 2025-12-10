@@ -229,12 +229,16 @@ body {
   padding: 0 1.5rem;
 }
 
-/* 3개의 블럭을 그리드로 배치 */
+/* 3블럭 그리드: 폭을 더 넓게 / 3등분 */
 .hub-grid {
+  max-width: 1320px;        /* 1120px → 1320px 정도로 늘리기 (원하면 1360~1400도 가능) */
+  width: 100%;
+  margin: 0;                /* 왼쪽 정렬 유지 (가운데 정렬하고 싶으면 0 auto 로 바꾸면 됨) */
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;              /* 블럭 사이 간격 */
 }
+
 
 @media (min-width: 1024px) {
   .hub-grid {
