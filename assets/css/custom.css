@@ -221,16 +221,23 @@ body {
 
 
 /* ===== Hero 밑 3개 블럭 전체 레이아웃 ===== */
+/* Hero 밑 3블럭: 화면 전체 폭으로 펼치기 */
 .hub-row {
-  max-width: 1120px;
-  margin: 3rem auto 4rem;
+  position: relative;
+  width: 100vw;          /* 화면 전체 폭 */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;    /* 가운데 정렬된 page 밖으로 빼내기 */
+  margin-right: -50vw;
+  padding: 3rem 6vw 4rem;  /* 양쪽 여백(%)는 취향껏 조절) */
 }
 
+/* 3블럭 그리드는 다시 내용 폭만 제한 */
 .hub-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  max-width: 1120px;     /* Hero 카드와 비슷한 폭 */
+  margin: 0;             /* 가운데 정렬 안 하고 */
 }
+
 
 @media (min-width: 1024px) {
   .hub-grid {
