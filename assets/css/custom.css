@@ -385,7 +385,7 @@ body {
 
 /* 전체 래핑: 화면을 더 넓게 쓰도록 */
 .hub-row {
-  max-width: 1400px;     /* 필요하면 1500px, 1600px 등으로 조정 가능 */
+  max-width: 1800px;     /* 필요하면 1500px, 1600px 등으로 조정 가능 */
   width: 100%;
   margin: 3rem auto 4rem;
   padding: 0 2rem;       /* 좌우 여백만 살짝 */
