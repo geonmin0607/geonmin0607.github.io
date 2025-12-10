@@ -291,24 +291,27 @@ body {
   margin-top: 0.2rem;
 }
 
+/* ===== 슬라이더 폭 강제 고정 (Projects / Tech / Patents 공통) ===== */
+/* 슬라이드 한 장이 항상 "창(window)" 가로폭 100%를 차지하도록 */
 .hub-carousel-window {
-  flex: 1;
-  overflow: hidden;
-  border-radius: 20px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .hub-carousel-track {
   display: flex;
-  transition: transform 0.35s ease;
 }
 
 .hub-slide {
-  min-width: 100%;
+  flex: 0 0 100%;   /* 콘텐츠 길이와 상관없이 항상 100% 폭 */
 }
 
+/* 슬라이드 안 카드도 꽉 차게 */
 .hub-slide .card {
   width: 100%;
+  max-width: none;
 }
+
 
 /* 좌우 버튼 */
 .hub-nav {
