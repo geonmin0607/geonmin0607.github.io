@@ -382,14 +382,26 @@ body {
 
 
 /* ===== Hero 밑 3블럭 폭 다시 잡기 (Projects / Tech Notes / Patents) ===== */
-
+/* ===== Hero 밑 3블럭: 화면 거의 전체 폭 사용 ===== */
 /* 전체 래핑: 화면을 더 넓게 쓰도록 */
 .hub-row {
-  max-width: 2800px;     /* 필요하면 1500px, 1600px 등으로 조정 가능 */
-  width: 100%;
-  margin: 3rem auto 4rem;
-  padding: 0 2rem;       /* 좌우 여백만 살짝 */
+  position: relative;
+
+  /* 화면 전체 폭(100vw)에서 양쪽 2rem씩만 빼고 사용 */
+  width: calc(100vw - 4rem);
+  max-width: none;
+
+  /* 가운데 정렬 + 부모 컨테이너 폭 제한 탈출 트릭 */
+  left: 50%;
+  margin-left: calc(-50vw + 2rem);
+  margin-right: calc(-50vw + 2rem);
+
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+
+  padding: 0; /* 안쪽 여백은 카드 쪽에서 처리 */
 }
+
 
 /* 3개 블럭을 균일한 너비로 가로 정렬 */
 .hub-grid {
