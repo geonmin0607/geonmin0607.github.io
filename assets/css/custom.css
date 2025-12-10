@@ -232,19 +232,18 @@ body {
   padding: 3rem 4vw 4rem;  /* 양쪽 여백(%)는 취향껏 조절) */
 }
 
-/* 3블럭 그리드는 다시 내용 폭만 제한 */
+/* 3블럭 그리드는 다시 내용 폭만 제한 + 실제 그리드로 배치 */
 .hub-grid {
   max-width: 1120px;      /* Hero 카드와 비슷한 폭 */
-  margin: 0;              /* 가운데 정렬 안 하고 */
-  display: grid;          /* ← 이게 빠져 있어서 세로로만 쌓였던 거야 */
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  margin: 0;              /* 왼쪽 정렬 유지 */
+  display: grid;          /* 그리드 선언 */
+  gap: 2rem;              /* 블럭 사이 간격 */
 }
 
-/* 데스크탑 이상에서 3칸 가로 배치 */
+/* 데스크탑에서 3칸 균등 분배 (내용 때문에 한 칸만 억지로 넓어지지 않게) */
 @media (min-width: 1024px) {
   .hub-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -259,6 +258,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* <-- 이 한 줄 추가 */
 }
 
 /* 블럭 제목 */
