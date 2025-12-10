@@ -222,24 +222,6 @@ body {
 
 /* ===== Hero 밑 3개 블럭: Projects / Tech Notes / Patents ===== */
 
-/* 전체 래핑 – Hero랑 비슷한 폭, 가운데 정렬 */
-.hub-row {
-  max-width: 1200px;
-  margin: 3rem auto 4rem;
-  padding: 0 1.5rem;
-}
-
-/* 3블럭 그리드: 폭을 더 넓게 / 3등분 */
-.hub-grid {
-  max-width: 1320px;        /* 1120px → 1320px 정도로 늘리기 (원하면 1360~1400도 가능) */
-  width: 100%;
-  margin: 0;                /* 왼쪽 정렬 유지 (가운데 정렬하고 싶으면 0 auto 로 바꾸면 됨) */
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2.5rem;              /* 블럭 사이 간격 */
-}
-
-
 @media (min-width: 1024px) {
   .hub-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3등분 */
@@ -363,21 +345,6 @@ body {
   background: linear-gradient(135deg, #4f46e5, #f97316);
 }
 
-/* 모바일에서 조금 더 컴팩트하게 */
-@media (max-width: 768px) {
-  .hub-row {
-    margin: 2.2rem auto 3rem;
-    padding: 0 1rem;
-  }
-
-  .hub-panel {
-    padding: 1.6rem 1.4rem 2.1rem;
-  }
-
-  .hub-carousel {
-    gap: 0.4rem;
-  }
-}
 
 
 
@@ -388,12 +355,12 @@ body {
   position: relative;
 
   /* 화면 전체 폭(100vw)에서 양쪽 2rem씩만 빼고 사용 */
-  width: calc(100vw - 4rem);
+  width: calc(100vw - 8rem);
   max-width: none;
 
   /* 가운데 정렬 + 부모 컨테이너 폭 제한 탈출 트릭 */
   left: 50%;
-  margin-left: calc(-50vw + 2rem);
+  margin-left: calc(-50vw + 6rem);
   margin-right: calc(-50vw + 2rem);
 
   margin-top: 3rem;
