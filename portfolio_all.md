@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Portfolio – All in One"
 permalink: /portfolio_all/
 classes: wide
 ---
@@ -40,6 +40,18 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
   </div>
 </div>
 
+<style>
+  .section-card {
+    max-width: 960px;
+    margin: 1.5rem auto;
+    padding: 1.75rem 1.75rem;
+    background: #f9fafb;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+  }
+</style>
+
+<div class="section-card" markdown="1">
 
 ## 1. 소개 및 문제 해결 방식
 
@@ -86,7 +98,9 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
      평가 결과를 다시 데이터·학습에 반영하는 **Close-the-Loop 구조**를 유지합니다.
    - 이 과정을 반복하며 모델을 점점 “의도한 출력”에 수렴시키는 데 집중해 왔습니다.
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## 2. 도메인 데이터 경험 (정형/비정형)
 
@@ -129,7 +143,9 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
    - 특징: 표현이 자유롭고 노이즈·광고가 많음
    - 접근: 정제/필터링(중복/광고 제거), 검색·요약·QA에 맞는 구조로 재가공
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## 3. 주요 프로젝트
 
@@ -196,8 +212,9 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
 
 </div>
 
+</div>
 
----
+<div class="section-card" markdown="1">
 
 ## 4. PoC에서 다룬 도메인 (요약)
 
@@ -208,7 +225,9 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
 - 보험 약관 데이터(내부 자체 테스트)  
   → 조건/면책 조항 구조화 및 QA 가능성 검증
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## 5. 특허 출원 (총 4건)
 
@@ -220,8 +239,12 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
    - 생성형 모델 학습에 필요한 프롬프트를 자동 생성하여  
      데이터 구축 효율을 높이는 기술
 
----
+</div>
+
+<div class="section-card" markdown="1">
 
 ## 6. 연락처 & 링크
 
 - Portfolio: <https://geonmin0607.github.io/>
+
+</div>
