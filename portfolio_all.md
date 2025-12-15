@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Portfolio – All in One"
+title: ""
 permalink: /portfolio_all/
 classes: wide
 ---
