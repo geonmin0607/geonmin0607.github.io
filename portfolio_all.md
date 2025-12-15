@@ -20,24 +20,27 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
 
   <div style="flex: 1 1 260px; min-width: 260px;">
     <p style="margin: 0; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b;">
-      AI Engineer · LLM · Multimodal
+      AI Engineer · LLM · Multimodal · Agent
     </p>
     <h1 style="margin: 0.4rem 0 0.8rem; font-size: 2rem;">
       GEONMIN LEE
     </h1>
     <p style="margin: 0 0 0.8rem; font-size: 1rem; line-height: 1.6; color: #0f172a;">
-      문서·이미지 기반 멀티모달 AI와 LLM을 활용해,
-      <strong>“실제 업무에 쓰이는 출력”</strong>을 설계하고
-      데이터·튜닝·서빙까지 한 흐름으로 연결하는 AI 엔지니어입니다.
+      문서·이미지 기반 멀티모달 AI, 검색, 생성형 QA, 에이전트·서빙까지
+      <strong>데이터 → 모델 → 서비스</strong> 전 구간을 직접 설계·구현해 온 AI 연구원입니다.
+      법령·민원·부동산·발전·의약·화학 구조 등 여러 도메인의 정형·비정형 데이터를
+      모델이 쓰기 좋은 형태로 재구성하고, LoRA/QLoRA 튜닝과 RAG·Agent 오케스트레이션,
+      추론 엔진·모니터링·평가를 한 흐름으로 묶는 일을 해 왔습니다.
     </p>
     <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; line-height: 1.5; color: #1e293b;">
-      <li>규정·법령·민원 문서용 LLM/RAG 설계 및 파인튜닝</li>
-      <li>표·차트·다이어그램·이미지·화학 구조 구조화(HTML, 코드, 캡션, SMILES 등)</li>
-      <li>LoRA/QLoRA 기반 모델 튜닝, 추론엔진(vLLM/Transformers)·서빙 최적화</li>
-      <li>실험·모니터링·평가를 묶은 반복 가능한 개선 루프 설계</li>
+      <li>지능형 검색, 규정·법령·민원 QA, 문서 멀티모달 PoC까지 이어지는 프로젝트 경험</li>
+      <li>정형/비정형 데이터 설계·라벨링·품질검수와 평가 지표(구조 정합성, LLM-as-a-Judge 등) 설계</li>
+      <li>Qwen·DeepSeek 등 멀티모달 LLM LoRA/QLoRA 튜닝, 커리큘럼 학습, 환각 억제 실험</li>
+      <li>FastAPI·vLLM/Transformers·ClearML 기반 추론·모니터링·Tool-Agent/오케스트레이션 구축</li>
     </ul>
   </div>
 </div>
+
 
 ## 1. 소개 및 문제 해결 방식
 
