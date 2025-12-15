@@ -49,7 +49,20 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
     border: 1px solid #e2e8f0;
     border-radius: 16px;
   }
+
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .section-card {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
 </style>
+
 
 <div class="section-card" markdown="1">
 
