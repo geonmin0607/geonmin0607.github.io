@@ -3,7 +3,6 @@ layout: single
 title: "Portfolio – All in One"
 permalink: /portfolio_all/
 classes: wide
-toc: true
 ---
 
 <div style="border-radius: 24px; padding: 2.5rem 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 24px 60px rgba(15,23,42,0.12); background:
@@ -25,12 +24,12 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
     <h1 style="margin: 0.4rem 0 0.8rem; font-size: 2rem;">
       GEONMIN LEE
     </h1>
-    <p style="margin: 0 0 0.8rem; font-size: 1rem; line-height: 1.6; color: #0f172a;">
-      문서·이미지 기반 멀티모달 AI, 검색, 생성형 QA, 에이전트·서빙까지
-      <strong>데이터 → 모델 → 서비스</strong> 전 구간을 직접 설계·구현해 온 AI 연구원입니다.
+    <p style="margin: 0 0 0.8rem; font-size: 1rem; line-height: 1.7; color: #0f172a; max-width: 640px;">
+      문서·이미지 기반 멀티모달 AI를 중심으로 검색, 생성형 QA, 에이전트·서빙까지 다루는 AI 연구원입니다.<br />
       법령·민원·부동산·발전·의약·화학 구조 등 여러 도메인의 정형·비정형 데이터를
-      모델이 쓰기 좋은 형태로 재구성하고, LoRA/QLoRA 튜닝과 RAG·Agent 오케스트레이션,
-      추론 엔진·모니터링·평가를 한 흐름으로 묶는 일을 해 왔습니다.
+      모델이 학습하기 좋은 형태로 다시 설계해 왔습니다.<br />
+      데이터 설계 → LoRA/QLoRA 튜닝 → RAG·에이전트 오케스트레이션 → 추론 엔진·모니터링·평가까지
+      한 흐름으로 이어지는 전체 파이프라인을 직접 만들고 운영한 경험이 있습니다.
     </p>
     <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; line-height: 1.5; color: #1e293b;">
       <li>지능형 검색, 규정·법령·민원 QA, 문서 멀티모달 PoC까지 이어지는 프로젝트 경험</li>
@@ -134,69 +133,69 @@ display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
 
 ## 3. 주요 프로젝트
 
-### 3-1. 지능형 검색 서비스 개발 (2023.07–2023.12)
+<div style="display:flex;flex-direction:column;gap:1.5rem;">
 
-- **내용**  
-  특정 도메인 사이트 약 380개를 대상으로  
-  의미 기반 검색(Vector Similarity)과 대규모 수집·모니터링 시스템을 구축했습니다.
-- **역할**
-  - FastAPI 기반 검색 API 서버 개발 (벡터 유사도 검색 적용)
-  - 크롤러·스크래퍼 설계 및 수집·정제 파이프라인 구성
-  - Airflow 스케줄링, Prometheus·Grafana 기반 모니터링·알림 구성
-- **성과**
-  - 수집 장애를 빠르게 감지하고 대응할 수 있는 구조 확보
-  - 실제 서비스 환경에서 **안정적으로 동작하는 AI 검색 인프라** 구축 경험
+  <!-- 3-1. 지능형 검색 서비스 -->
+  <div style="border-radius:16px;padding:1.5rem 1.75rem;border:1px solid #e2e8f0;background:#ffffff;">
+    <p style="margin:0 0 0.25rem;font-size:0.85rem;color:#64748b;">2023.07 – 2023.12</p>
+    <h3 style="margin:0 0 0.5rem;font-size:1.15rem;">지능형 검색 서비스 개발</h3>
+    <p style="margin:0 0 0.5rem;font-size:0.95rem;line-height:1.6;">
+      특정 도메인 사이트 약 380개를 대상으로 의미 기반 검색(Vector Similarity)과
+      대규모 수집·모니터링 파이프라인을 구축한 프로젝트입니다.
+    </p>
+    <ul style="margin:0 0 0.25rem 1.1rem;font-size:0.95rem;line-height:1.5;">
+      <li><strong>역할</strong> · 검색 API, 크롤러, 스케줄링, 모니터링 파이프라인 설계·구현</li>
+      <li><strong>핵심 기술</strong> · Python, FastAPI, Elasticsearch(Vector), Airflow, Prometheus, Grafana</li>
+      <li><strong>성과</strong> · 운영 가능한 검색 인프라 구축, 수집 장애 감지·대응 속도 개선</li>
+    </ul>
+  </div>
 
----
+  <!-- 3-2. 발전 산업 QA LLM -->
+  <div style="border-radius:16px;padding:1.5rem 1.75rem;border:1px solid #e2e8f0;background:#ffffff;">
+    <p style="margin:0 0 0.25rem;font-size:0.85rem;color:#64748b;">2024.05 – 2024.12</p>
+    <h3 style="margin:0 0 0.5rem;font-size:1.15rem;">발전 산업 업무 지원 생성형 AI 연구</h3>
+    <p style="margin:0 0 0.5rem;font-size:0.95rem;line-height:1.6;">
+      내부 규정·법령·업무 매뉴얼을 활용해 RAG 기반 QA 도우미 챗봇을 연구한 프로젝트입니다.
+      조문 구조와 버전 정보를 살려 규정·내규 질의에 근거 있는 답변을 주는 것이 목표였습니다.
+    </p>
+    <ul style="margin:0 0 0.25rem 1.1rem;font-size:0.95rem;line-height:1.5;">
+      <li><strong>역할</strong> · 도메인 문서 분석, 청킹·메타데이터 설계, RAG·파인튜닝·DPO 실험</li>
+      <li><strong>핵심 기술</strong> · Python, PyTorch, Hugging Face, RAG, TRL(DPO), Markdown·LaTeX 처리</li>
+      <li><strong>성과</strong> · 규정·내규 QA 정확도 및 표현(수식·기호) 정확도 개선 방향 검증, PoC 수준 성과 도출</li>
+    </ul>
+  </div>
 
-### 3-2. 발전 산업 업무 지원 생성형 AI 연구 (2024.05–2024.12)
+  <!-- 3-3. 건축 민원 QA -->
+  <div style="border-radius:16px;padding:1.5rem 1.75rem;border:1px solid #e2e8f0;background:#ffffff;">
+    <p style="margin:0 0 0.25rem;font-size:0.85rem;color:#64748b;">2024.09 – 2025.02</p>
+    <h3 style="margin:0 0 0.5rem;font-size:1.15rem;">건축민원 AI 답변 생성 서비스</h3>
+    <p style="margin:0 0 0.5rem;font-size:0.95rem;line-height:1.6;">
+      건축법·지침·사례 데이터를 학습해 건축 민원에 대한 답변을 자동 작성/보조하는 모델을 만든 프로젝트입니다.
+    </p>
+    <ul style="margin:0 0 0.25rem 1.1rem;font-size:0.95rem;line-height:1.5;">
+      <li><strong>역할</strong> · QA 데이터 구축, 질문 자동 분리 프롬프트, LLM-as-a-Judge 평가 체계 설계</li>
+      <li><strong>핵심 기술</strong> · Python, PyTorch, Hugging Face, Prompt Tuning, LLM-as-a-Judge</li>
+      <li><strong>성과</strong> · 답변 일관성·정확도 개선, 담당자 답변 작성 시간 단축 가능성 확인(PoC)</li>
+    </ul>
+  </div>
 
-- **내용**  
-  발전 관련 내부 규정·법령·업무 매뉴얼을 활용한  
-  RAG 기반 QA 도우미 챗봇 연구를 수행했습니다.
-- **역할**
-  - 도메인 문서 분석 및 청킹 기준·메타데이터 스키마 설계
-  - Markdown·LaTeX 포함 문서 데이터셋 구축
-  - RAG 기반 QA 모델 학습 데이터 구축 및 품질 개선
-  - TRL 기반 DPO(선호 학습) 실험
-- **성과**
-  - 규정·내규 질문에 대한 답변 정확도 및 문서 표현(수식/기호) 정확도 개선 방향 확인
-  - PoC 단계에서 실제 적용 가능성을 검증
+  <!-- 3-4. 문서 멀티모달 PoC -->
+  <div style="border-radius:16px;padding:1.5rem 1.75rem;border:1px solid #e2e8f0;background:#ffffff;">
+    <p style="margin:0 0 0.25rem;font-size:0.85rem;color:#64748b;">2025.03 – 진행 중</p>
+    <h3 style="margin:0 0 0.5rem;font-size:1.15rem;">문서 분석 기반 Multimodal PoC</h3>
+    <p style="margin:0 0 0.5rem;font-size:0.95rem;line-height:1.6;">
+      문서 이미지 수천 장에서 표·차트·다이어그램·이미지·도식을 분석해
+      HTML·코드·캡션·SMILES 등 구조화된 포맷으로 변환하는 멀티모달 PoC입니다.
+    </p>
+    <ul style="margin:0 0 0.25rem 1.1rem;font-size:0.95rem;line-height:1.5;">
+      <li><strong>역할</strong> · 데이터셋 설계·라벨링 기준 수립, Qwen·DeepSeek 멀티모달 LoRA/QLoRA 튜닝, 멀티 에이전트 API 설계</li>
+      <li><strong>핵심 기술</strong> · Python, PyTorch, Hugging Face, LoRA/QLoRA, Vision-Language, RAG, FastAPI, vLLM, ClearML</li>
+      <li><strong>성과</strong> · 문서 요소별 구조화 파이프라인 PoC 구축, 이후 서비스 확장 가능한 멀티모달·에이전트 아키텍처 확보</li>
+    </ul>
+  </div>
 
----
+</div>
 
-### 3-3. 건축민원 AI 답변 생성 서비스 (2024.09–2025.02)
-
-- **내용**  
-  건축법·지침·사례 데이터를 학습한  
-  건축 민원 자동 응답(작성 보조) 모델을 구축했습니다.
-- **역할**
-  - 도메인 QA 학습 데이터 구축 및 질문 유형 정리
-  - 민원 문장에서 질문을 자동 분리하는 프롬프트 설계
-  - LLM-as-a-Judge 평가 데이터셋 및 자동 채점 파이프라인 구성
-  - 평가 결과를 다시 데이터·학습으로 환류하는 개선 루프 운영
-- **성과**
-  - 답변 일관성과 정확도 개선
-  - 민원 담당자의 답변 작성 시간 단축 가능성 확인(PoC)
-
----
-
-### 3-4. 문서 분석 기반 Multimodal PoC (2025.03–진행 중)
-
-- **내용**  
-  문서 이미지 수천 장에서 표·차트·다이어그램·이미지·도식·화학 구조를 분석하여  
-  업무 목적에 맞는 구조화 포맷(HTML, 코드, 캡션, SMILES 등)으로 변환하는 PoC입니다.
-- **역할**
-  - 데이터셋 설계·라벨링 기준 수립부터 모델링까지 **E2E 파이프라인 주도**
-  - Qwen·DeepSeek 계열 멀티모달 모델의 LoRA/QLoRA 튜닝
-  - 해상도 커리큘럼 학습, loss 마스킹, Vision Prior 강화 등으로
-    구조 오류·환각 감소
-  - Transformers·vLLM 기반 추론 파이프라인 구축과 성능·속도 비교
-  - DeepSeek-OCR, Qwen-VL, Classifier, Chem 모델 등을
-    FastAPI Tool-Agent로 분리하고 상위 오케스트레이션 구조 설계
-- **성과**
-  - 문서 요소별 구조화 파이프라인의 PoC 완성
-  - 이후 서비스로 확장 가능한 **멀티모달 AI·에이전트 아키텍처** 기반 확보
 
 ---
 
