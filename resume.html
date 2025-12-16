@@ -7,20 +7,20 @@ classes: wide
 
 <style>
   .resume-wrapper {
-    max-width: 1120px;               /* 더 넓게 (A4에 가깝게) */
+    max-width: 980px;
     margin: 0 auto;
     background: #ffffff;
     border-radius: 16px;
-    padding: 20px 28px 28px;
-    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
-    font-size: 0.78rem;              /* 기본 글씨 더 축소 */
-    line-height: 1.45;
+    padding: 22px 30px 30px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    font-size: 0.8rem;
+    line-height: 1.5;
     color: #111827;
   }
 
   @media print {
     .resume-wrapper {
-      max-width: 210mm;              /* A4 폭 */
+      max-width: 210mm;      /* A4 폭 */
       margin: 0 auto;
       box-shadow: none;
       border-radius: 0;
@@ -33,8 +33,8 @@ classes: wide
     flex-wrap: wrap;
     gap: 20px;
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 10px;
-    margin-bottom: 16px;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
   }
 
   .resume-top-left {
@@ -45,35 +45,35 @@ classes: wide
   }
 
   .resume-photo {
-    flex: 0 0 78px;
+    flex: 0 0 80px;
   }
   .resume-photo img {
-    width: 78px;
-    height: 78px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 999px;
   }
 
   .resume-name-block h1 {
     margin: 0 0 2px;
-    font-size: 1.55rem;              /* 살짝 줄임 */
+    font-size: 1.6rem;
     font-weight: 700;
     color: #1f2937;
   }
   .resume-name-block p {
     margin: 0;
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     color: #6b7280;
   }
 
   .resume-top-right {
     flex: 1 1 260px;
     text-align: right;
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     color: #4b5563;
   }
   .resume-top-right div {
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
   .resume-top-right a {
     color: #2563eb;
@@ -84,10 +84,10 @@ classes: wide
   .resume-main {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 26px;
   }
   .resume-col-left {
-    flex: 0 0 43%;                   /* 왼쪽 조금 더 넓게 */
+    flex: 0 0 38%;
   }
   .resume-col-right {
     flex: 1 1 0;
@@ -98,9 +98,9 @@ classes: wide
     margin-bottom: 16px;
   }
   .resume-section h2 {
-    font-size: 0.95rem;              /* 섹션 타이틀 */
+    font-size: 0.95rem;
     font-weight: 700;
-    margin: 0 0 5px;
+    margin: 0 0 6px;
     padding-bottom: 3px;
     border-bottom: 2px solid #bfdbfe;
     color: #1d4ed8;
@@ -108,30 +108,29 @@ classes: wide
   }
   .resume-section h3 {
     font-size: 0.82rem;
-    margin: 7px 0 3px;
+    margin: 6px 0 3px;
     color: #111827;
     font-weight: 600;
   }
   .resume-section p {
-    margin: 2px 0;
-    font-size: 0.78rem;              /* 본문 */
+    margin: 2px 0 4px;
+    font-size: 0.8rem;
   }
   .resume-section ul {
-    margin: 2px 0 4px 1.0rem;
+    margin: 2px 0 4px 1rem;
     padding: 0;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
   }
   .resume-section li {
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
-  .resume-section p strong,
-  .resume-section li strong {
+  .resume-section strong {
     font-weight: 600;
   }
 
-  /* 프로젝트 블록 */
+  /* 프로젝트 블록 – 더 짧고 단순하게 */
   .proj-block {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid #e5e7eb;
   }
@@ -141,37 +140,18 @@ classes: wide
   }
   .proj-title {
     font-weight: 700;
-    font-size: 0.84rem;
+    font-size: 0.86rem;
     color: #111827;
   }
   .proj-period {
-    font-size: 0.74rem;
+    font-size: 0.76rem;
     color: #6b7280;
     margin-bottom: 2px;
-  }
-  .proj-label {
-    font-size: 0.76rem;
-    font-weight: 600;
-    color: #4b5563;
-    margin-top: 2px;
-  }
-
-  /* 프로젝트 2단 컬럼으로 나누기 */
-  .projects-columns {
-    column-count: 2;
-    column-gap: 18px;
-  }
-  .projects-columns .proj-block {
-    break-inside: avoid;
   }
 
   @media (max-width: 900px) {
     .resume-wrapper {
       padding: 18px 16px 22px;
-    }
-    .resume-top-right {
-      text-align: left;
-      margin-top: -4px;
     }
     .resume-main {
       flex-direction: column;
@@ -180,8 +160,9 @@ classes: wide
     .resume-col-left {
       flex: 1 1 100%;
     }
-    .projects-columns {
-      column-count: 1;               /* 모바일에서는 다시 한 줄로 */
+    .resume-top-right {
+      text-align: left;
+      margin-top: -4px;
     }
   }
 </style>
@@ -216,16 +197,12 @@ classes: wide
         <h2>자기소개</h2>
         <p>
           문서·이미지 기반 멀티모달 AI와 생성형 QA를 중심으로
-          <strong>데이터 설계 → 모델 튜닝 → 서빙·운영</strong>까지 전 과정을 직접 경험한 AI 엔지니어입니다.
+          <strong>데이터 설계 → 모델 튜닝 → 서빙·운영</strong>까지 직접 다루는 AI 엔지니어입니다.
         </p>
         <p>
-          민원·법령·부동산·발전·의약·화학 구조 등 여러 도메인의 정형/비정형 데이터를
-          모델이 쓰기 좋은 형태로 재구성하고, LoRA/QLoRA 튜닝과 RAG·Agent 오케스트레이션을 통해
-          실제 업무에 활용 가능한 구조화 출력과 QA 서비스를 만들어 왔습니다.
-        </p>
-        <p>
-          FastAPI·vLLM/Transformers·ClearML 기반 실험·서빙 파이프라인을 운영하며,
-          모델 성능뿐 아니라 <strong>속도·안정성·운영 편의성</strong>까지 함께 개선해 왔습니다.
+          민원·법령·부동산·발전·의약·화학 구조 등 도메인의 정형/비정형 데이터를
+          모델이 쓰기 좋은 형태로 재구성하고, LoRA/QLoRA 튜닝과 RAG·에이전트로
+          실제 업무에 활용 가능한 구조화 출력과 QA 서비스를 구현해 왔습니다.
         </p>
       </section>
 
@@ -241,9 +218,9 @@ classes: wide
         <h3>머신러닝 / LLM / 멀티모달</h3>
         <ul>
           <li>PyTorch, Hugging Face Transformers</li>
-          <li>Qwen / Qwen2.5 / Qwen3-VL, DeepSeek-OCR 등 멀티모달·LLM 활용</li>
-          <li>LoRA / QLoRA 파인튜닝, 커리큘럼 학습, loss 마스킹, Vision Prior 설계</li>
-          <li>RAG, LLM-as-a-Judge, DPO(선호 학습) 실험</li>
+          <li>Qwen / Qwen2.5 / Qwen3-VL, DeepSeek-OCR 활용</li>
+          <li>LoRA·QLoRA 파인튜닝, 커리큘럼 학습, loss 마스킹, Vision Prior 설계</li>
+          <li>RAG, LLM-as-a-Judge, DPO(선호 학습)</li>
         </ul>
 
         <h3>데이터 엔지니어링 / 검색</h3>
@@ -255,7 +232,7 @@ classes: wide
         <h3>서빙 / MLOps</h3>
         <ul>
           <li>FastAPI 기반 모델 서빙 및 멀티 엔드포인트 구성</li>
-          <li>vLLM·Transformers 추론 엔진 비교·최적화</li>
+          <li>vLLM·Transformers 추론 파이프라인 설계·최적화</li>
           <li>ClearML 기반 실험 관리·로그·모니터링</li>
         </ul>
 
@@ -270,7 +247,7 @@ classes: wide
       <section class="resume-section">
         <h2>자격·특허 및 활동</h2>
 
-        <h3>특허 출원 (총 4건)</h3>
+        <h3>특허 출원 (4건)</h3>
         <ul>
           <li>데이터 증강·검수 자동화 관련 방법/시스템 2건</li>
           <li>프롬프트 자동 생성 기반 학습데이터 구축 관련 방법/장치 2건</li>
@@ -278,14 +255,12 @@ classes: wide
 
         <h3>인턴</h3>
         <ul>
-          <li>광주은행 본사 인턴 (신탁연금 관련 부서, 2021.12 ~ 2022.03)</li>
-          <li>지점·본사 업무 프로세스 보조, 금융 상품·채널 운영 기초 이해 확보</li>
+          <li>광주은행 본사 인턴 (신탁연금 부서, 2021.12 ~ 2022.03)</li>
         </ul>
 
         <h3>대외/봉사 활동</h3>
         <ul>
           <li>한국법무보호복지공단 대학생 위원회 활동</li>
-          <li>출소자 및 가족 지원 프로그램 참여, 사회 복귀 지원 활동 경험</li>
         </ul>
       </section>
 
@@ -305,91 +280,54 @@ classes: wide
         <p>재직기간: 2023.01 ~ 현재</p>
         <ul>
           <li>도메인 문서 기반 검색·QA·문서 멀티모달 PoC 기획 및 모델링</li>
-          <li>LLM·멀티모달 모델 파인튜닝(LoRA/QLoRA) 및 추론 파이프라인 구축</li>
+          <li>LLM·멀티모달 모델 파인튜닝 및 추론 파이프라인 구축</li>
           <li>FastAPI 기반 AI 서비스(툴 에이전트) 설계·구현 및 운영</li>
-          <li>데이터 수집/정제/라벨링·품질검수 프로세스 설계 및 운영</li>
         </ul>
       </section>
 
       <section class="resume-section">
         <h2>주요 프로젝트 경험</h2>
 
-        <div class="projects-columns">
-
-          <div class="proj-block">
-            <div class="proj-title">1) 지능형 검색 서비스 개발</div>
-            <div class="proj-period">2023.07 ~ 2023.12</div>
-            <p>약 380개 사이트를 대상으로 의미 기반(Vector) 검색과 수집·모니터링 시스템을 구축한 프로젝트.</p>
-            <div class="proj-label">역할</div>
-            <ul>
-              <li>사이트별 Python 크롤러·스크래퍼 설계 및 수집/정제 파이프라인 구축</li>
-              <li>Elasticsearch 인덱스 설계, FastAPI 검색 API 및 검색 옵션 구성</li>
-              <li>Airflow 스케줄링, Prometheus·Grafana 기반 모니터링·알림 연동</li>
-            </ul>
-            <div class="proj-label">성과</div>
-            <ul>
-              <li>여러 사이트 개별 탐색 업무를 단일 검색창으로 통합</li>
-              <li>벡터 검색으로 키워드가 달라도 유사 문서 탐색 가능</li>
-              <li>수집 장애·사이트 구조 변경을 조기 감지해 운영 안정성 향상</li>
-            </ul>
-          </div>
-
-          <div class="proj-block">
-            <div class="proj-title">2) 발전 산업 업무 지원 생성형 AI 연구</div>
-            <div class="proj-period">2024.05 ~ 2024.12</div>
-            <p>발전 관련 규정·법령·업무 매뉴얼을 활용한 RAG 기반 QA 도우미 챗봇 연구.</p>
-            <div class="proj-label">역할</div>
-            <ul>
-              <li>규정·법령·사규·OJT 문서 구조 분석, 청킹 기준·메타데이터 스키마 설계</li>
-              <li>Markdown·LaTeX 포함 문서 정제 및 QA 파인튜닝용 질문-답변·근거 쌍 데이터 구축</li>
-              <li>DPO 기반 선호 학습 실험 설계 및 “좋은 답변” 기준 데이터화</li>
-            </ul>
-            <div class="proj-label">성과</div>
-            <ul>
-              <li>규정·법령 문서를 질문에 바로 활용 가능한 지식 베이스 형태로 재구성</li>
-              <li>규정성 QA에서 근거 인용·조건/예외 언급 비율 향상</li>
-              <li>도메인 특화 선호 답변 기준을 팀 내 공통 규칙으로 정립</li>
-            </ul>
-          </div>
-
-          <div class="proj-block">
-            <div class="proj-title">3) 건축민원 AI 답변 생성 서비스</div>
-            <div class="proj-period">2024.09 ~ 2025.02</div>
-            <p>건축법·지침·사례 데이터를 기반으로 건축 민원 답변을 자동 작성·보조하는 생성형 AI 모델 구축.</p>
-            <div class="proj-label">역할</div>
-            <ul>
-              <li>건축 민원 데이터 분석, 질문 유형 정의 및 QA 데이터 구축</li>
-              <li>복수 질문 자동 분리를 위한 프롬프트·파이프라인 설계</li>
-              <li>LLM-as-a-Judge 기반 자동 평가 체계 설계 및 개선 루프 운영</li>
-            </ul>
-            <div class="proj-label">성과</div>
-            <ul>
-              <li>담당자 답변 대비 답변 일관성과 근거 명시 비율 향상</li>
-              <li>질문 분리·근거 매핑 구조를 통해 타 민원/규제 도메인으로 확장 가능한 템플릿 확보</li>
-              <li>규제·공공 영역에서 생성형 AI 적용 시 필요한 평가·검증 프로세스 정립</li>
-            </ul>
-          </div>
-
-          <div class="proj-block">
-            <div class="proj-title">4) 문서 분석 기반 Multimodal PoC</div>
-            <div class="proj-period">2025.03 ~ 진행 중</div>
-            <p>문서 이미지 수천 장에서 표·차트·다이어그램·이미지·도식·화학 구조를 인식해 HTML·코드·캡션·SMILES로 변환하는 멀티모달 PoC.</p>
-            <div class="proj-label">역할</div>
-            <ul>
-              <li>레이아웃·OCR·표·차트·도식·화학 구조를 포괄하는 라벨 체계·데이터셋 설계</li>
-              <li>Qwen·DeepSeek 멀티모달 LoRA/QLoRA 튜닝, 해상도 커리큘럼·loss 마스킹·Vision Prior 설계</li>
-              <li>표/차트/다이어그램/SMILES 역할별 FastAPI 엔드포인트 및 추론 파이프라인 구현</li>
-              <li>vLLM·Transformers 비교·최적화, ClearML 기반 실험/모델/로그 관리</li>
-            </ul>
-            <div class="proj-label">성과</div>
-            <ul>
-              <li>문서 요소별 구조화 파이프라인과 공통 데이터 포맷 정의로 확장성 높은 아키텍처 확보</li>
-              <li>LoRA/QLoRA·커리큘럼 학습·환각 억제 전략으로 구조/내용 오류 단계적 감소</li>
-              <li>실제 서비스에 연결 가능한 멀티모달 AI·Agent 인프라 설계 역량 강화</li>
-            </ul>
-          </div>
-
+        <div class="proj-block">
+          <div class="proj-title">1) 지능형 검색 서비스 개발</div>
+          <div class="proj-period">2023.07 ~ 2023.12</div>
+          <ul>
+            <li><strong>개요</strong> · 약 380개 사이트 대상 의미 기반(Vector) 검색·수집·모니터링 시스템 구축</li>
+            <li><strong>주요 역할</strong> · Python 크롤러·스크래퍼, Elasticsearch 인덱스, FastAPI 검색 API, Airflow·Prometheus·Grafana 파이프라인 구현</li>
+            <li><strong>주요 성과</strong> · 여러 사이트 개별 탐색 업무를 단일 검색창으로 통합, 장애 조기 감지로 운영 안정성 향상</li>
+          </ul>
         </div>
+
+        <div class="proj-block">
+          <div class="proj-title">2) 발전 산업 업무 지원 생성형 AI 연구</div>
+          <div class="proj-period">2024.05 ~ 2024.12</div>
+          <ul>
+            <li><strong>개요</strong> · 발전 규정·법령·업무 매뉴얼 기반 RAG QA 도우미 PoC</li>
+            <li><strong>주요 역할</strong> · 규정/사규/OJT 문서 구조 분석, 청킹·메타데이터 설계, QA·DPO 데이터 구축 및 실험</li>
+            <li><strong>주요 성과</strong> · 규정성 QA에서 근거 인용·조건/예외 언급 비율 향상, 도메인 특화 “선호 답변” 기준 정립</li>
+          </ul>
+        </div>
+
+        <div class="proj-block">
+          <div class="proj-title">3) 건축민원 AI 답변 생성 서비스</div>
+          <div class="proj-period">2024.09 ~ 2025.02</div>
+          <ul>
+            <li><strong>개요</strong> · 건축법·지침·사례 데이터를 활용한 건축 민원 자동 답변/작성 보조 모델</li>
+            <li><strong>주요 역할</strong> · 민원 질문 유형 정의, 질문 자동 분리 프롬프트, LLM-as-a-Judge 평가 파이프라인 구축</li>
+            <li><strong>주요 성과</strong> · 담당자 답변 대비 일관성과 근거 명시 비율 향상, 타 민원/규제 도메인 확장 템플릿 확보</li>
+          </ul>
+        </div>
+
+        <div class="proj-block">
+          <div class="proj-title">4) 문서 분석 기반 Multimodal PoC</div>
+          <div class="proj-period">2025.03 ~ 진행 중</div>
+          <ul>
+            <li><strong>개요</strong> · 문서 이미지에서 표·차트·다이어그램·이미지·도식·화학 구조를 추출해 HTML·코드·캡션·SMILES로 변환하는 멀티모달 PoC</li>
+            <li><strong>주요 역할</strong> · 라벨 체계·데이터셋 설계, Qwen·DeepSeek LoRA/QLoRA 튜닝, 역할별 FastAPI 엔드포인트 및 vLLM/Transformers 추론 파이프라인 구현</li>
+            <li><strong>주요 성과</strong> · 모듈형 문서 이해 아키텍처 확보, 구조/내용 오류 감소, 실제 서비스로 확장 가능한 멀티모달 AI·Agent 인프라 설계 경험 축적</li>
+          </ul>
+        </div>
+
       </section>
 
     </div>
