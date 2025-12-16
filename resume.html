@@ -38,7 +38,7 @@ classes: wide
   }
 
   .resume-top-left {
-    flex: 0 0 260px;
+    flex: 0 0 280px;  /* 살짝 넓게 */
     display: flex;
     gap: 14px;
     align-items: center;
@@ -64,6 +64,7 @@ classes: wide
     margin: 0;
     font-size: 0.78rem;
     color: #6b7280;
+    white-space: nowrap;  /* 한 줄 고정 */
   }
 
   .resume-top-right {
@@ -128,7 +129,7 @@ classes: wide
     font-weight: 600;
   }
 
-  /* 프로젝트 블록 – 더 짧고 단순하게 */
+  /* 프로젝트 블록 */
   .proj-block {
     margin-bottom: 10px;
     padding-bottom: 8px;
@@ -163,6 +164,9 @@ classes: wide
     .resume-top-right {
       text-align: left;
       margin-top: -4px;
+    }
+    .resume-name-block p {
+      white-space: normal;  /* 모바일에서는 줄바꿈 허용 */
     }
   }
 </style>
@@ -264,11 +268,6 @@ classes: wide
         </ul>
       </section>
 
-      <section class="resume-section">
-        <h2>학력</h2>
-        <p>조선대학교 수학과 졸업 (2014년)</p>
-      </section>
-
     </div>
 
     <!-- RIGHT COLUMN -->
@@ -294,7 +293,7 @@ classes: wide
           <ul>
             <li><strong>개요</strong> · 약 380개 사이트 대상 의미 기반(Vector) 검색·수집·모니터링 시스템 구축</li>
             <li><strong>주요 역할</strong> · Python 크롤러·스크래퍼, Elasticsearch 인덱스, FastAPI 검색 API, Airflow·Prometheus·Grafana 파이프라인 구현</li>
-            <li><strong>주요 성과</strong> · 여러 사이트 개별 탐색 업무를 단일 검색창으로 통합, 장애 조기 감지로 운영 안정성 향상</li>
+            <li><strong>주요 성과</strong> · 다수 사이트 탐색 업무를 단일 검색창으로 통합, 장애 조기 감지로 운영 안정성 향상</li>
           </ul>
         </div>
 
@@ -314,7 +313,7 @@ classes: wide
           <ul>
             <li><strong>개요</strong> · 건축법·지침·사례 데이터를 활용한 건축 민원 자동 답변/작성 보조 모델</li>
             <li><strong>주요 역할</strong> · 민원 질문 유형 정의, 질문 자동 분리 프롬프트, LLM-as-a-Judge 평가 파이프라인 구축</li>
-            <li><strong>주요 성과</strong> · 담당자 답변 대비 일관성과 근거 명시 비율 향상, 타 민원/규제 도메인 확장 템플릿 확보</li>
+            <li><strong>주요 성과</strong> · 답변 일관성과 근거 명시 비율 향상, 타 민원/규제 도메인 확장 템플릿 확보</li>
           </ul>
         </div>
 
@@ -328,6 +327,12 @@ classes: wide
           </ul>
         </div>
 
+      </section>
+
+      <!-- 학력: 오른쪽으로 이동 -->
+      <section class="resume-section">
+        <h2>학력</h2>
+        <p>조선대학교 수학과 졸업 (2014년)</p>
       </section>
 
     </div>
