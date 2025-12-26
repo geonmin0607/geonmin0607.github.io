@@ -1,0 +1,399 @@
+---
+layout: single
+title: "Resume – Miri"
+permalink: /resume-miri/
+classes: wide
+---
+
+
+<style>
+  .resume-wrapper {
+    max-width: 1080px;             /* 가로 폭 조금 더 넓게 (A4 인쇄 대비) */
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 32px 32px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+    font-size: 0.8rem;             /* 전체 글씨 더 작게 */
+    line-height: 1.55;
+    color: #111827;
+  }
+
+  /* 상단 영역 */
+  .resume-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  .resume-top-left {
+    flex: 0 0 260px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .resume-photo {
+    flex: 0 0 86px;
+  }
+  .resume-photo img {
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+    border-radius: 999px;
+  }
+
+  .resume-name-block h1 {
+    margin: 0 0 3px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .resume-name-block p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6b7280;
+    white-space: nowrap;           /* 태그라인 한 줄 고정 */
+  }
+
+  .resume-top-right {
+    flex: 1 1 260px;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #4b5563;
+  }
+  .resume-top-right a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  /* 메인 2열 */
+  .resume-main {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 28px;
+  }
+  .resume-col-left {
+    flex: 0 0 35%;
+    border-right: 1px solid #e5e7eb;
+    padding-right: 18px;
+  }
+  .resume-col-right {
+    flex: 1 1 0;
+    padding-left: 4px;
+  }
+
+  /* 섹션 공통 */
+  .resume-section {
+    margin-bottom: 22px;
+  }
+  .resume-section h2 {
+    font-size: 0.78rem;          /* 섹션 타이틀 */
+    font-weight: 700;
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #bfdbfe;
+    color: #1d4ed8;
+    letter-spacing: 0.04em;
+  }
+  .resume-section h3 {
+    font-size: 0.66rem;          /* 소제목은 본문보다 살짝만 크게 */
+    margin: 8px 0 3px;
+    color: #111827;
+    font-weight: 600;
+  }
+  .resume-section p {
+    margin: 2px 0;
+    font-size: 0.57rem;          /* 본문 한 단계 더 작게 */
+  }
+  .resume-section ul {
+    margin: 2px 0 4px 1.05rem;
+    padding: 0;
+    font-size: 0.66rem;
+  }
+  .resume-section li {
+    margin-bottom: 3px;          /* 항목 간 여백 조금 */
+  }
+  .resume-section p strong,
+  .resume-section li strong {
+    font-weight: 600;            /* 크기 변화 없이 굵기만 */
+  }
+  .resume-col-right .resume-section {
+    margin-bottom: 24px;   /* 오른쪽 섹션들만 조금 더 여유 있게 */
+  }
+
+  /* 프로젝트 블록 */
+  .proj-block {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .proj-block:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .proj-title {
+    font-weight: 700;
+    font-size: 0.72rem;
+    color: #111827;
+  }
+  .proj-period {
+    font-size: 0.72rem;
+    color: #6b7280;
+    margin-bottom: 3px;
+  }
+  .proj-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .resume-wrapper {
+      max-width: 100%;
+      padding: 20px 16px 24px;
+    }
+    .resume-main {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .resume-col-left {
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 12px;
+    }
+    .resume-col-right {
+      padding-left: 0;
+      padding-top: 4px;
+    }
+    .resume-top-right {
+      text-align: left;
+      margin-top: -4px;
+    }
+  }
+</style>
+
+<div class="resume-wrapper">
+
+  <!-- 상단 헤더 -->
+  <div class="resume-top">
+    <div class="resume-top-left">
+      <div class="resume-photo">
+        <img src="/assets/images/hero/profile.jpg" alt="GEONMIN LEE">
+      </div>
+      <div class="resume-name-block">
+        <h1>이건민</h1>
+        <p>LLM · Multimodal · 프롬프트 엔지니어</p>
+      </div>
+    </div>
+    <div class="resume-top-right">
+      <div>이메일: rjsals25@naver.com</div>
+      <div>연락처: 010-4623-3305</div>
+      <div>Portfolio: <a href="https://geonmin0607.github.io" target="_blank">geonmin0607.github.io</a></div>
+    </div>
+  </div>
+
+  <div class="resume-main">
+
+    <!-- LEFT COLUMN -->
+    <div class="resume-col-left">
+
+      <!-- 자기소개 -->
+      <section class="resume-section">
+        <h2>자기소개</h2>
+        <p>
+          문서·이미지 기반 멀티모달 AI와 생성형 QA를 중심으로,
+          <strong>데이터 설계 · 모델 튜닝 · 프롬프트 설계 · 서빙·운영</strong>까지 맡아 온 AI 엔지니어입니다.
+        </p>
+        <p>
+          문서·이미지 데이터를 정제하고 LLM·멀티모달 모델을 학습·튜닝해
+          검색·QA·문서 분석 서비스로 연결하는 역할을 하고 있습니다.
+        </p>
+        <ul>
+          <li>민원·법령·부동산·발전·의약·화학 구조 등 문서 도메인 데이터 설계·구조화 경험</li>
+          <li>Qwen 계열·DeepSeek-OCR 등 멀티모달·LLM의 LoRA/QLoRA 튜닝 및 평가</li>
+          <li>질문 자동 분리, LLM-as-a-Judge, 오류 패턴 기반 프롬프트 템플릿·컨텍스트 설계 경험</li>
+          <li>FastAPI·vLLM/Transformers·ClearML 기반 추론·모니터링·Tool-Agent 오케스트레이션 구축</li>
+        </ul>
+      </section>
+
+      <!-- 숙련 기술 -->
+      <section class="resume-section">
+        <h2>숙련 기술</h2>
+
+        <h3>프로그래밍</h3>
+        <ul>
+          <li>Python (데이터 처리, 웹 크롤링, API 서버, ML 파이프라인)</li>
+        </ul>
+
+        <h3>머신러닝 / LLM / 멀티모달</h3>
+        <ul>
+          <li>PyTorch, Hugging Face Transformers</li>
+          <li>Qwen / Qwen2.5 / Qwen3-VL, DeepSeek-OCR 등 멀티모달·LLM 활용</li>
+          <li>LoRA / QLoRA 파인튜닝, 커리큘럼 학습, loss 마스킹, Vision Prior 설계</li>
+        </ul>
+
+        <h3>프롬프트 / 컨텍스트 엔지니어링</h3>
+        <ul>
+          <li>GPT/Claude 계열 프롬프트 템플릿 설계 및 버전 관리</li>
+          <li>질문 자동 분리, 시스템·유저·툴 프롬프트 역할 분리 설계</li>
+          <li>LLM-as-a-Judge 평가 프롬프트, 오류 패턴 기반 Few-shot 예시 설계</li>
+          <li>문서·멀티모달 구조 추출(HTML, Mermaid, SMILES 등)을 위한 모델별 프롬프트 실험</li>
+        </ul>
+
+        <h3>데이터 엔지니어링 / 검색</h3>
+        <ul>
+          <li>웹 크롤링·스크래핑 설계, 대규모 수집 파이프라인 구축</li>
+          <li>Elasticsearch 기반 Vector Similarity Search</li>
+        </ul>
+
+        <h3>서빙 / MLOps</h3>
+        <ul>
+          <li>FastAPI 기반 모델 서빙 및 멀티 엔드포인트 구성</li>
+          <li>vLLM·Transformers 추론 엔진 비교·최적화</li>
+          <li>ClearML 기반 실험 관리·로그·모니터링</li>
+        </ul>
+
+        <h3>기타</h3>
+        <ul>
+          <li>문서 도메인 데이터 설계(민원·법령·규정·약관·약전·화학 구조 등)</li>
+          <li>구조 정합성·문자열 거리 등 정량 평가 지표 설계</li>
+        </ul>
+      </section>
+
+      <!-- 자격 / 활동 -->
+      <section class="resume-section">
+        <h2>자격·특허 및 활동</h2>
+
+        <h3>특허 출원 (총 4건)</h3>
+        <ul>
+          <li>데이터 증강·검수 자동화 관련 방법/시스템 2건</li>
+          <li>프롬프트 자동 생성 기반 학습데이터 구축 관련 방법/장치 2건</li>
+        </ul>
+
+        <h3>인턴</h3>
+        <ul>
+          <li>광주은행 본사 인턴 (신탁연금 관련 부서, 2021.12 ~ 2022.03)</li>
+          <li>지점·본사 업무 프로세스 보조, 금융 상품·채널 운영 기초 이해 확보</li>
+        </ul>
+
+        <h3>대외/봉사 활동</h3>
+        <ul>
+          <li>한국법무보호복지공단 대학생 위원회 활동</li>
+          <li>출소자 및 가족 지원 프로그램 참여, 사회 복귀 지원 활동 경험</li>
+        </ul>
+      </section>
+
+      <!-- 학력 -->
+      <section class="resume-section">
+        <h2>학력</h2>
+        <p>조선대학교 수학과 졸업 (2014년)</p>
+      </section>
+
+      <!-- 경력 -->
+      <section class="resume-section">
+        <h2>경력</h2>
+        <h3>AI 연구원 / (유알피)</h3>
+        <p>재직기간: 2023.01 ~ 현재</p>
+        <ul>
+          <li>도메인 문서 기반 검색·QA·문서 멀티모달 PoC 기획 및 모델링</li>
+          <li>LLM·멀티모달 모델 LoRA/QLoRA 튜닝 및 추론 파이프라인 구축</li>
+          <li>질문 자동 분리·평가 프롬프트 등 프롬프트/컨텍스트 엔지니어링 수행</li>
+          <li>FastAPI 기반 AI 서비스(툴 에이전트) 설계·구현 및 운영</li>
+          <li>데이터 수집/정제/라벨링·품질검수 프로세스 설계 및 운영</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="resume-col-right">
+
+      <!-- 주요 프로젝트 경험 -->
+      <section class="resume-section">
+        <h2>주요 프로젝트 경험</h2>
+
+        <div class="proj-block">
+          <div class="proj-title">1) 지능형 검색 서비스 개발</div>
+          <div class="proj-period">2023.07 ~ 2023.12</div>
+          <p>약 380개 도메인 사이트를 대상으로 의미 기반(Vector) 검색과 수집·모니터링 시스템을 구축한 프로젝트.</p>
+          <div class="proj-label">주요 역할</div>
+          <ul>
+            <li>Python 크롤러·스크래퍼와 수집/정제·색인 파이프라인 설계·구현</li>
+            <li>Elasticsearch 인덱스 설계, FastAPI 검색 API 구현 및 검색 옵션 구성</li>
+            <li>Airflow 스케줄링, Prometheus·Grafana 모니터링·알림 연동</li>
+          </ul>
+          <div class="proj-label">성과</div>
+          <ul>
+            <li>여러 사이트를 직접 탐색하던 업무를 단일 검색창으로 통합</li>
+            <li>벡터 검색으로 키워드가 달라도 유사 문서 탐색 가능</li>
+            <li>수집 장애·사이트 구조 변경을 조기 감지하여 운영 안정성 향상</li>
+          </ul>
+        </div>
+
+        <div class="proj-block">
+          <div class="proj-title">2) 발전 산업 업무 지원 생성형 AI 연구</div>
+          <div class="proj-period">2024.05 ~ 2024.12</div>
+          <p>발전 규정·법령·업무 매뉴얼을 활용해 근거 기반 RAG QA 도우미를 연구한 프로젝트.</p>
+          <div class="proj-label">주요 역할</div>
+          <ul>
+            <li>규정·법령·사규·OJT 문서 구조 분석, 청킹 기준·메타데이터 스키마 설계</li>
+            <li>Markdown·LaTeX 포함 문서 정제, QA 학습용 질문-답변·근거 쌍 데이터 구축</li>
+            <li>DPO 기반 선호 학습 실험 설계 및 “좋은 답변” 기준 데이터화</li>
+            <li>규정성 QA에 맞는 시스템·유저 프롬프트 템플릿 및 평가용 프롬프트 초안 설계</li>
+          </ul>
+          <div class="proj-label">성과</div>
+          <ul>
+            <li>규정·법령 문서를 질문에 바로 활용 가능한 지식 베이스 형태로 재구성</li>
+            <li>근거 인용·조건/예외 언급 비율 향상으로 규정성 QA 품질 개선</li>
+            <li>도메인 특화 선호 답변 기준을 팀 내 공통 규칙으로 정립</li>
+          </ul>
+        </div>
+
+        <div class="proj-block">
+          <div class="proj-title">3) 건축민원 AI 답변 생성 서비스</div>
+          <div class="proj-period">2024.09 ~ 2025.02</div>
+          <p>건축법·지침·사례 데이터를 활용해 건축 민원 답변을 자동 작성·보조하는 생성형 AI 모델 구축.</p>
+          <div class="proj-label">주요 역할</div>
+          <ul>
+            <li>건축 민원 데이터 분석, 질문 유형 정의 및 QA 학습 데이터 구축</li>
+            <li>복수 질문 자동 분리 프롬프트·파이프라인 설계, 유형별 프롬프트 템플릿 관리</li>
+            <li>LLM-as-a-Judge 기반 자동 평가·개선 루프 설계 및 운영</li>
+          </ul>
+          <div class="proj-label">성과</div>
+          <ul>
+            <li>담당자 답변 대비 답변 일관성 및 근거 명시 비율 향상</li>
+            <li>질문 분리·근거 매핑 구조를 통해 타 규제/민원 도메인으로 확장 가능한 템플릿 확보</li>
+            <li>규제·공공 영역에 맞는 보수적인 평가·검증 프로세스 정립</li>
+          </ul>
+        </div>
+
+        <div class="proj-block">
+          <div class="proj-title">4) 문서 분석 기반 Multimodal PoC</div>
+          <div class="proj-period">2025.03 ~ 진행 중</div>
+          <p>문서 이미지에서 표·차트·도식·이미지·화학 구조를 인식해 HTML·코드·캡션·SMILES로 변환하는 멀티모달 PoC.</p>
+          <div class="proj-label">주요 역할</div>
+          <ul>
+            <li>레이아웃·OCR·표·차트·도식·화학 구조를 포괄하는 라벨 체계·데이터셋 설계</li>
+            <li>Qwen·DeepSeek 멀티모달 LoRA/QLoRA 튜닝, 해상도 커리큘럼·loss 마스킹·Vision Prior 설계</li>
+            <li>표/차트/다이어그램/SMILES용 FastAPI 엔드포인트 및 vLLM·Transformers 추론 파이프라인 구현</li>
+            <li>모델별·태스크별 프롬프트 템플릿을 나눠 구조 오류·환각을 줄이는 프롬프트 실험 수행</li>
+            <li>ClearML 기반 실험·모델·로그 관리 및 멀티 에이전트 오케스트레이션 구조 설계</li>
+          </ul>
+          <div class="proj-label">성과</div>
+          <ul>
+            <li>문서 요소별 구조화 파이프라인과 공통 데이터 포맷 정의로 확장성 높은 아키텍처 확보</li>
+            <li>LoRA/QLoRA·커리큘럼 학습·환각 억제 전략과 프롬프트 개선을 통해 구조/내용 오류 단계적 감소</li>
+            <li>실제 서비스에 연결 가능한 멀티모달 AI·Agent 인프라 설계 역량 강화</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>
