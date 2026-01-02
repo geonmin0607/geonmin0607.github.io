@@ -180,7 +180,7 @@ classes: wide
           저는 <strong>데이터(로그/지표) 분석 → 모델 실험/검증 → 서비스 운영</strong>을 한 흐름으로 연결해 온 AI 엔지니어입니다.
           대규모 수집·운영 환경에서 <strong>지표(오류율/지연/커버리지)</strong>를 정의하고, <strong>SQL 기반 분석</strong>으로 원인을 찾아 개선해 왔습니다.
           또한 LLM/RAG 및 멀티모달 모델을 다루며 <strong>근거(grounding)·자동 평가(LLM-as-a-Judge)</strong>로 “블랙박스”를 줄이는 방식에 익숙합니다.
-          금융 도메인은 신규이지만, <strong>데이터 전처리/특징 설계/검증 체계</strong>를 바탕으로 고객·행동·거래 데이터에서도 빠르게 적응할 수 있습니다.
+          금융 도메인은 신규이지만, 지표 기반 검증(데이터 품질·모델 성능·드리프트)과 재현 가능한 분석 프로세스로 고객/행동/거래 데이터에서도 빠르게 성과를 만들 수 있습니다.
         </p>
         <ul>
           <li><strong>데이터 분석/인사이트</strong>: SQL 기반 로그/지표 탐색으로 품질 저하·이상 징후 원인 추적</li>
@@ -222,7 +222,7 @@ classes: wide
         <h3>GenAI / LLM / RAG</h3>
         <ul>
           <li>RAG (청킹 정책, 메타데이터 스키마, 근거(grounding) 매핑)</li>
-          <li>LoRA / QLoRA 실험, DPO 실험(프로젝트 기반)</li>
+          <li>LoRA/QLoRA 실험, 자동 평가(LLM-as-a-Judge) 기반 품질 개선, (필요 시) DPO 실험</li>
           <li>민원 QA: <strong>Llama</strong>, <strong>Gemma</strong>, <strong>Phi</strong> 등 모델 기반 프롬프트/품질 비교 및 적용</li>
         </ul>
 
@@ -238,6 +238,7 @@ classes: wide
           <li>VLM: Qwen2.5-VL, Qwen3-VL, DeepSeek-OCR 기반 태스크 실험/튜닝</li>
           <li>OCR/레이아웃: PaddleOCR 계열 모듈 연계 및 문서 요소 기반 파이프라인 구성</li>
           <li>서빙/추론: FastAPI, vLLM·Transformers 비교, ClearML 실험/로그 관리</li>
+          <li>비정형 데이터(문서/이미지)를 모델 입력 가능한 형태로 구조화하여 분석/서빙에 연결</li>
         </ul>
       </section>
 
