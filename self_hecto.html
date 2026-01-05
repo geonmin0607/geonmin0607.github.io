@@ -1,0 +1,335 @@
+---
+layout: single
+title: ""
+permalink: /self_hecto/
+classes: wide
+---
+
+<style>
+  .resume-wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 32px 32px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: #111827;
+  }
+
+  .resume-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  .resume-top-left {
+    flex: 0 0 260px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .resume-photo {
+    flex: 0 0 86px;
+  }
+  .resume-photo img {
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+    border-radius: 999px;
+  }
+
+  .resume-name-block h1 {
+    margin: 0 0 3px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+  .resume-name-block p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6b7280;
+    white-space: nowrap;
+  }
+
+  .resume-top-right {
+    flex: 1 1 260px;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #4b5563;
+  }
+  .resume-top-right a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .resume-main {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 28px;
+  }
+  .resume-col-left {
+    flex: 0 0 35%;
+    border-right: 1px solid #e5e7eb;
+    padding-right: 18px;
+  }
+  .resume-col-right {
+    flex: 1 1 0;
+    padding-left: 4px;
+  }
+
+  .resume-section {
+    margin-bottom: 22px;
+  }
+  .resume-section h2 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #bfdbfe;
+    color: #1d4ed8;
+    letter-spacing: 0.04em;
+  }
+  .resume-section h3 {
+    font-size: 0.66rem;
+    margin: 8px 0 3px;
+    color: #111827;
+    font-weight: 600;
+  }
+  .resume-section p {
+    margin: 2px 0;
+    font-size: 0.57rem;
+  }
+  .resume-section ul {
+    margin: 2px 0 4px 1.05rem;
+    padding: 0;
+    font-size: 0.66rem;
+  }
+  .resume-section li {
+    margin-bottom: 3px;
+  }
+  .resume-section p strong,
+  .resume-section li strong {
+    font-weight: 600;
+  }
+  .resume-col-right .resume-section {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .resume-wrapper {
+      max-width: 100%;
+      padding: 20px 16px 24px;
+    }
+    .resume-main {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .resume-col-left {
+      border-right: none;
+      padding-right: 0;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 12px;
+    }
+    .resume-col-right {
+      padding-left: 0;
+      padding-top: 4px;
+    }
+    .resume-top-right {
+      text-align: left;
+      margin-top: -4px;
+    }
+  }
+</style>
+
+<div class="resume-wrapper">
+
+  <!-- 상단 헤더 -->
+  <div class="resume-top">
+    <div class="resume-top-left">
+      <div class="resume-photo">
+        <img src="/assets/images/hero/profile.jpg" alt="GEONMIN LEE">
+      </div>
+      <div class="resume-name-block">
+        <h1>이건민</h1>
+        <p>AI 엔지니어 · LLM & Multimodal</p>
+      </div>
+    </div>
+    <div class="resume-top-right">
+      <div>이메일: rjsals25@naver.com</div>
+      <div>연락처: 010-4623-3305</div>
+      <div>Portfolio: <a href="https://geonmin0607.github.io" target="_blank">geonmin0607.github.io</a></div>
+    </div>
+  </div>
+
+  <div class="resume-main">
+
+    <!-- LEFT COLUMN -->
+    <div class="resume-col-left">
+
+      <!-- 지원 직무 요약 -->
+      <section class="resume-section">
+        <h2>지원 직무 요약</h2>
+        <p>
+          (주)헥토 AX SEED팀 <strong>AI 엔지니어</strong>로 지원합니다.
+          오픈소스·허깅페이스 모델을 기반으로 한 SFT/PEFT/DPO 실험과,
+          문서·이미지 도메인 데이터 전처리·파이프라인 설계 경험을 보유하고 있습니다.
+        </p>
+        <p>
+          특히 <strong>PyTorch + Hugging Face</strong> 스택에서
+          Qwen·DeepSeek 계열 모델을 활용해 태스크를 정의하고,
+          FastAPI 기반 API까지 연결해 내부 사용자가 바로 쓸 수 있는 형태의
+          도구를 만들어 왔습니다.
+        </p>
+      </section>
+
+      <!-- 핵심 역량 한눈에 -->
+      <section class="resume-section">
+        <h2>핵심 역량</h2>
+
+        <h3>모델 및 학습</h3>
+        <ul>
+          <li>PyTorch, Hugging Face Transformers 기반 LLM/VLM 실험</li>
+          <li>LoRA·QLoRA를 활용한 SFT/PEFT, 커리큘럼 학습 및 loss 마스킹</li>
+          <li>DPO, LLM-as-a-Judge를 활용한 선호 학습·자동 평가 루프 설계</li>
+        </ul>
+
+        <h3>데이터·파이프라인</h3>
+        <ul>
+          <li>380개 사이트 대상 크롤링·정제·색인 파이프라인 설계</li>
+          <li>청킹·메타데이터 스키마 설계로 RAG 검색 품질 개선</li>
+          <li>정량 지표·로그 기반 오류 분석 및 재수집/정제 정책 개선</li>
+        </ul>
+
+        <h3>API 및 실험 구조</h3>
+        <ul>
+          <li>FastAPI 기반 태스크별 엔드포인트 설계 및 내부 PoC API 구현</li>
+          <li>vLLM vs Transformers 추론 환경 비교 실험 (지연·비용 관점)</li>
+          <li>ClearML를 활용한 실험·모델·로그 관리</li>
+        </ul>
+      </section>
+
+      <!-- 주요 프로젝트 리스트 -->
+      <section class="resume-section">
+        <h2>주요 프로젝트</h2>
+        <ul>
+          <li>지능형 검색 서비스: 대규모 수집·정제·색인 파이프라인 및 벡터 검색</li>
+          <li>발전사 업무 지원 생성형 AI: 규정·법령 기반 RAG QA 및 DPO 실험</li>
+          <li>건축민원 답변 생성: LLM-as-a-Judge 평가 루프 및 품질 개선</li>
+          <li>문서 분석 멀티모달 PoC: VLM 기반 HTML/코드/SMILES 추출 파이프라인</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="resume-col-right">
+
+      <!-- 지원 동기 -->
+      <section class="resume-section">
+        <h2>1. 지원 동기</h2>
+        <p>
+          저는 모델 성능만 올리는 것보다, 데이터를 설계하고 학습·추론 구조를 만들어
+          <strong>업무 현장에서 바로 쓸 수 있는 AI 도구</strong>를 만드는 일에 가장 큰 보람을 느낍니다.
+          현재 회사에서는 검색·규정/법령·건축민원·문서 분석 등 여러 도메인에서
+          LLM·VLM을 활용한 서비스를 기획하고, 데이터·모델·API 구조를 설계하는 역할을 맡아 왔습니다.
+        </p>
+        <p>
+          헥토 AX SEED팀 공고에서 “오픈소스 및 허깅페이스 모델 리서치 및 서비스화”,
+          “Pretrain, SFT, PEFT, RLHF, DPO 등 다양한 방식의 모델 개발”을 요구하는 것을 보고
+          지금까지 제가 집중해 온 방향과 맞닿아 있다고 느꼈습니다.
+          저는 문서·이미지 도메인 중심으로 SFT/PEFT·DPO를 실제 프로젝트에 적용해 보았고,
+          아직 경험하지 못한 Pretraining·본격적인 RLHF·클라우드 환경 워크플로우는
+          앞으로 확장하고 싶은 영역입니다.
+        </p>
+        <p>
+          헥토에서는 모빌리티·금융·헬스케어·라이프 등 여러 서비스에서 발생하는 데이터를 기반으로,
+          Hugging Face 생태계의 모델들을 빠르게 검증하고,
+          실제 서비스에 녹일 수 있는 <strong>실행력 있는 AI 엔지니어</strong>로 기여하고자 합니다.
+        </p>
+      </section>
+
+      <!-- 직무 관련 경험 -->
+      <section class="resume-section">
+        <h2>2. 직무 관련 경험</h2>
+
+        <h3>1) 데이터 전처리 및 검색/QA 모델링</h3>
+        <p>
+          지능형 검색 서비스 프로젝트에서는 약 380개 웹사이트를 대상으로
+          크롤러·스크래퍼를 설계하고, 수집→정제→색인 파이프라인을 구축했습니다.
+          Airflow로 배치를 자동화하고, 오류율·지연·처리량 지표를 두어
+          수집 실패와 사이트 구조 변경을 조기에 발견했습니다.
+          Elasticsearch 기반으로 키워드와 벡터 검색을 결합해
+          사용자가 표현을 다르게 해도 유사 문서를 찾을 수 있도록 랭킹을 구성했습니다.
+        </p>
+
+        <h3>2) LLM 학습 및 평가 구조 설계</h3>
+        <p>
+          발전사 업무 지원 프로젝트에서는 규정·법령·매뉴얼을
+          AI가 읽기 좋은 단위로 청킹하고, 조항/개정일/적용대상 등의 메타데이터 스키마를 설계해
+          RAG 검색 품질을 높였습니다.
+          건축민원 프로젝트에서는 민원 데이터를 분석해 질문 유형을 정의하고,
+          복수 질문을 자동 분리하는 프롬프트와 파이프라인을 설계했습니다.
+          이후 LLM-as-a-Judge 기반 자동 평가와 오류 패턴 분석을 통해
+          데이터·프롬프트·모델 중 어디를 수정해야 효과적인지 반복적으로 실험했습니다.
+        </p>
+        <p>
+          멀티모달 PoC에서는 Qwen2.5-VL, Qwen3-VL, DeepSeek-OCR 등
+          허깅페이스 기반 모델에 LoRA·QLoRA를 적용해 표·차트·도식·화학 구조를
+          HTML·코드·SMILES로 변환하는 태스크를 학습했습니다.
+          이 과정에서 해상도별 커리큘럼 학습, loss 마스킹, Vision Prior 설계를 적용해
+          구조적 오류와 환각을 줄이는 실험을 진행했습니다.
+        </p>
+
+        <h3>3) API 설계 및 실험 환경</h3>
+        <p>
+          모델을 실제로 활용하기 위해 FastAPI 기반 태스크별 엔드포인트를 설계했습니다.
+          예를 들어 “표→HTML”, “차트→Mermaid”, “문서→캡션”과 같이
+          기능별로 분리된 API를 구성하고, 상위 오케스트레이터가 페이지 단위 요청을
+          각 엔드포인트로 라우팅해 결과를 합치는 구조를 설계했습니다.
+          vLLM과 Transformers 환경에서 동일 모델을 비교하며
+          지연·메모리 사용량을 측정했고, ClearML로 실험 결과와 로그를 관리했습니다.
+          아직 대규모 프로덕션 트래픽을 직접 운영한 경험은 없지만,
+          API 설계와 실험 환경 구성, 성능 관찰·분석에는 익숙합니다.
+        </p>
+      </section>
+
+      <!-- 일하는 방식과 성향 -->
+      <section class="resume-section">
+        <h2>3. 일하는 방식과 성향</h2>
+        <p>
+          저의 강점은 문제를 감으로 판단하지 않고
+          <strong>데이터와 로그를 기준으로 구조화해 보는 습관</strong>입니다.
+          수학 전공을 통해 벡터공간과 선형성에 대한 감각을 쌓았고,
+          이를 업무에서는 “현상을 변수와 지표로 표현해 보는 것”으로 확장해 왔습니다.
+          수집 실패나 모델 품질 저하가 발생하면,
+          데이터 분포 변화, 프롬프트/하이퍼파라미터, 추론 경로, 사용자 입력 패턴 등
+          여러 가설을 세워 로그와 샘플을 분석하며 원인을 좁혀 갑니다.
+        </p>
+        <p>
+          또 하나의 특징은 작은 단위의 실험을 빠르게 돌린 뒤,
+          결과를 문서와 코드로 남겨 팀과 공유하는 방식입니다.
+          “이 설정이 왜 효과가 있었는지/없었는지”를 정리해 두면,
+          이후 비슷한 문제를 만났을 때 팀 전체의 탐색 비용을 줄일 수 있다고 생각합니다.
+          반대로 한 번 몰입하면 범위를 넓히려는 경향이 있어,
+          최근에는 프로젝트 초반에 필수 목표와 마감 기준을 명확히 정하고
+          1차 릴리스 전까지는 그 범위 안에서만 움직이도록 스스로를 관리하고 있습니다.
+        </p>
+        <p>
+          헥토 AX SEED팀에 합류하게 된다면,
+          제가 가진 오픈소스 모델 실험 경험과 데이터·프롬프트·평가 설계 역량을 기반으로
+          허깅페이스 모델의 SFT/PEFT·DPO 실험을 주도하고,
+          아직 경험하지 못한 Pretraining·RLHF·클라우드 기반 배포 영역까지
+          책임감을 가지고 빠르게 학습해 나가겠습니다.
+        </p>
+      </section>
+
+    </div>
+
+  </div>
+</div>
