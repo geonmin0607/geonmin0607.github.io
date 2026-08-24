@@ -66,3 +66,5 @@ kramdown:
 
 exclude:
   - "node_modules"
+
+# Pages redeploy trigger: 2026-08-24
