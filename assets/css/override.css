@@ -8,21 +8,15 @@
   .masthead__inner-wrap .wrap .site-title,
   .masthead__inner-wrap .wrap .site-subtitle{
     padding-left: var(--header-offset) !important;
-    margin-left: 0 !important;  /* ensure we don't conflict with other patches */
+    margin-left: 0 !important;
   }
-  /* If title text is wrapped in an <a>, don't double-indent */
   .masthead__inner-wrap .wrap .site-title a{
     padding-left: 0 !important;
     margin-left: 0 !important;
   }
 }
 
-/* Resume: compact A3 landscape print layout without changing the screen design */
-@page {
-  size: A3 landscape;
-  margin: 6mm;
-}
-
+/* Resume print layout: keep user-selectable paper size and force the desktop 2-column layout */
 @media print {
   .masthead,
   .page__title,
@@ -55,13 +49,13 @@
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
-    padding: 7mm 8mm !important;
+    padding: 6mm 7mm !important;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     box-sizing: border-box !important;
-    font-size: 0.72rem !important;
-    line-height: 1.40 !important;
+    font-size: 0.74rem !important;
+    line-height: 1.42 !important;
   }
 
   .resume-top {
@@ -71,30 +65,39 @@
   }
 
   .resume-photo {
-    flex-basis: 70px !important;
+    flex-basis: 72px !important;
   }
 
   .resume-photo img {
-    width: 70px !important;
-    height: 70px !important;
+    width: 72px !important;
+    height: 72px !important;
     box-shadow: 0 0 0 1px #d8e0e6 !important;
   }
 
   .resume-name-block h1 {
-    font-size: 1.55rem !important;
+    font-size: 1.58rem !important;
   }
 
   .resume-name-block p {
-    font-size: 0.70rem !important;
+    font-size: 0.71rem !important;
   }
 
   .resume-top-right {
-    font-size: 0.63rem !important;
+    font-size: 0.64rem !important;
     line-height: 1.55 !important;
   }
 
+  /* Override the mobile one-column rule during print. */
   .resume-main {
-    gap: 22px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 34%) minmax(0, 66%) !important;
+    gap: 20px !important;
+    align-items: start !important;
+  }
+
+  .resume-col-left,
+  .resume-col-right {
+    min-width: 0 !important;
   }
 
   .resume-col-left {
@@ -119,15 +122,15 @@
 
   .resume-section p {
     margin: 2px 0 !important;
-    font-size: 0.54rem !important;
-    line-height: 1.38 !important;
+    font-size: 0.55rem !important;
+    line-height: 1.39 !important;
   }
 
   .resume-section ul {
     margin-top: 2px !important;
     margin-bottom: 3px !important;
-    font-size: 0.59rem !important;
-    line-height: 1.38 !important;
+    font-size: 0.60rem !important;
+    line-height: 1.39 !important;
   }
 
   .resume-section li {
@@ -149,14 +152,14 @@
 
   .proj-title {
     margin-bottom: 1px !important;
-    font-size: 0.70rem !important;
-    line-height: 1.30 !important;
+    font-size: 0.71rem !important;
+    line-height: 1.31 !important;
   }
 
   .proj-period {
     margin-bottom: 4px !important;
     padding: 1px 6px !important;
-    font-size: 0.55rem !important;
+    font-size: 0.56rem !important;
     line-height: 1.35 !important;
     background: #f3f4f6 !important;
   }
@@ -164,6 +167,6 @@
   .proj-label {
     margin-top: 4px !important;
     margin-bottom: 1px !important;
-    font-size: 0.57rem !important;
+    font-size: 0.58rem !important;
   }
 }
