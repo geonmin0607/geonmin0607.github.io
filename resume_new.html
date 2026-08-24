@@ -187,7 +187,7 @@ classes: wide
       </div>
       <div class="resume-name-block">
         <h1>이건민</h1>
-        <p>AI 연구원 · LLM/VLM · 파인튜닝</p>
+        <p>AI 연구원 · LLM/VLM · RAG · 파인튜닝</p>
       </div>
     </div>
     <div class="resume-top-right">
@@ -207,12 +207,12 @@ classes: wide
         <h2>자기소개</h2>
         <p>
           문서·이미지 기반 멀티모달 AI와 생성형 QA를 중심으로,
-          <strong>LLM/VLM 파인튜닝 · 도메인 특화 RAG/Agent 설계 · 서빙·운영</strong>을 한 흐름으로 수행해 온 AI 엔지니어입니다.
+          <strong>LLM/VLM 파인튜닝 · RAG 검색/추천 · 문서 구조화 · 서빙/운영</strong>을 End-to-End로 수행해 온 AI 연구원입니다.
         </p>
         <ul>
-          <li>민원·법령·부동산·발전·의약·화학 구조 등 문서 도메인 데이터 설계·구조화 경험</li>
-          <li>Qwen 계열·DeepSeek-OCR 등 LLM/VLM에 LoRA/QLoRA 기반 학습(SFT·커리큘럼·loss 마스킹·DPO)을 적용하고, 오류 패턴 분석·자동 평가로 성능을 반복 개선한 경험</li>
-          <li>FastAPI·vLLM/Transformers·ClearML 기반 추론·모니터링 환경에서 Tool-Agent 오케스트레이션을 설계·구현</li>
+          <li>규정·민원·엔지니어링 제안서 등 비정형 문서의 검색·QA·구조화 데이터 파이프라인 설계 경험</li>
+          <li>LoRA/QLoRA·DPO·LLM-as-a-Judge·Vision Prior 등 모델 학습·평가 및 개선 실험 경험</li>
+          <li>FastAPI·vLLM/Transformers·Azure AI 기반 추론 및 Claude 활용 AI-assisted Development 경험</li>
         </ul>
       </section>
 
@@ -222,34 +222,30 @@ classes: wide
 
         <h3>머신러닝 / LLM / 멀티모달</h3>
         <ul>
-          <li>LoRA / QLoRA 기반 LLM/VLM SFT, 커리큘럼 학습, loss 마스킹, Vision Prior 설계</li>
-          <li>RAG, LLM-as-a-Judge, DPO(선호 학습) 등 LLM 성능 개선 실험 설계·운영</li>
-          <li>PyTorch, Hugging Face Transformers</li>
-          <li>Qwen / Qwen2.5 / Qwen3-VL, DeepSeek-OCR 등 멀티모달·LLM 활용</li>
-        </ul>
-
-        <h3>프로그래밍</h3>
-        <ul>
-          <li>Python (데이터 처리, 웹 크롤링, API 서버, ML 파이프라인)</li>
+          <li>LoRA / QLoRA 기반 LLM/VLM SFT, 커리큘럼 학습, Loss Masking, Vision Prior 설계</li>
+          <li>RAG, LLM-as-a-Judge, DPO 기반 성능 개선 실험 설계·운영</li>
+          <li>PyTorch, Hugging Face Transformers, PP-DocLayoutV3, PaddleOCR</li>
+          <li>GPT 계열 VLM, Qwen, DeepSeek 기반 문서 이해·구조화</li>
         </ul>
 
         <h3>데이터 엔지니어링 / 검색</h3>
         <ul>
-          <li>웹 크롤링·스크래핑 설계, 대규모 수집 파이프라인 구축</li>
-          <li>Elasticsearch 기반 Vector Similarity Search</li>
+          <li>문서 OCR·구조화, JSON Schema 기반 데이터 모델링 및 품질 검증</li>
+          <li>RAG Retrieval, Vector Similarity Search, 검색·추천용 데이터 구축</li>
+          <li>웹 크롤링·스크래핑 및 수집·정제·색인 파이프라인 구축</li>
         </ul>
 
         <h3>서빙 / MLOps</h3>
         <ul>
           <li>FastAPI 기반 모델 서빙 및 멀티 엔드포인트 구성</li>
           <li>vLLM·Transformers 추론 엔진 비교·최적화</li>
-          <li>ClearML 기반 실험 관리·로그·모니터링</li>
+          <li>Azure AI, ClearML, Airflow, Prometheus, Grafana 활용</li>
         </ul>
 
-        <h3>기타</h3>
+        <h3>개발</h3>
         <ul>
-          <li>문서 도메인 데이터 설계(민원·법령·규정·약관·약전·화학 구조 등)</li>
-          <li>구조 정합성·문자열 거리 등 정량 평가 지표 설계</li>
+          <li>Python 기반 데이터 처리·API·ML 파이프라인 개발</li>
+          <li>Claude 기반 AI-assisted Development 및 코드 구현·리팩터링</li>
         </ul>
       </section>
 
@@ -285,13 +281,21 @@ classes: wide
       <!-- 경력 -->
       <section class="resume-section">
         <h2>경력</h2>
-        <h3>AI 연구원 / (유알피)</h3>
-        <p>재직기간: 2023.01 ~ 현재</p>
+
+        <h3>AI 연구원 / 도화엔지니어링</h3>
+        <p>재직기간: 2026.06 ~ 현재</p>
         <ul>
-          <li>도메인 문서 기반 검색·QA·문서 멀티모달 PoC 기획 및 모델링</li>
-          <li>LLM·멀티모달 모델 LoRA/QLoRA 파인튜닝 및 실험/지표 기반 개선 루프 구축</li>
-          <li>FastAPI 기반 AI 서비스(툴 에이전트) 설계·구현 및 추론 파이프라인 운영</li>
-          <li>데이터 수집/정제/라벨링·품질검수 프로세스 설계 및 운영</li>
+          <li>LLM/VLM 기반 엔지니어링 제안서 문서 구조화 및 검색·추천 데이터 파이프라인 개발</li>
+          <li>RAG Retrieval용 데이터 모델 설계 및 이미지 Detection/Mapping 파이프라인 구축</li>
+          <li>Azure LLM/VLM 및 Claude 기반 AI-assisted Development 활용</li>
+        </ul>
+
+        <h3>AI 연구원 / 유알피</h3>
+        <p>재직기간: 2023.01 ~ 2026.06</p>
+        <ul>
+          <li>도메인 문서 기반 검색·RAG·생성형 QA·멀티모달 PoC 기획 및 모델링</li>
+          <li>LLM/VLM LoRA/QLoRA Fine-tuning 및 DPO·자동 평가 기반 개선 루프 구축</li>
+          <li>FastAPI 기반 AI 서비스 및 추론·데이터 파이프라인 설계·운영</li>
         </ul>
       </section>
     </div>
@@ -304,38 +308,40 @@ classes: wide
         <h2>주요 프로젝트 경험</h2>
 
         <div class="proj-block">
-          <div class="proj-title">1) 지능형 검색 서비스 개발</div>
-          <div class="proj-period">2023.07 ~ 2023.12</div>
-          <p>약 380개 도메인 사이트를 대상으로 의미 기반(Vector) 검색과 수집·모니터링 시스템을 구축한 프로젝트.</p>
+          <div class="proj-title">1) LLM/VLM 기반 QBS 유사사업 검색·추천 데이터 파이프라인 개발</div>
+          <div class="proj-period">2026.06 ~ 2026.08</div>
+          <p>엔지니어링 제안서(QBS)의 유사사업 정보를 LLM/VLM으로 구조화하여 신규 RFP 기반 검색·추천 및 RAG Retrieval용 데이터베이스를 구축한 프로젝트.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>Python 크롤러·스크래퍼와 수집/정제·색인 파이프라인 설계·구현</li>
-            <li>Elasticsearch 인덱스 설계, FastAPI 검색 API 구현 및 검색 옵션 구성</li>
-            <li>Airflow 스케줄링, Prometheus·Grafana 모니터링·알림 연동</li>
+            <li>PyMuPDF·LLM 기반 섹션 탐지와 GPT 계열 VLM 기반 OCR·문서 구조 추출 파이프라인 구축</li>
+            <li>Rule-based 경계 분리와 LLM 정보 추출을 결합해 복수 유사사업을 개별 Retrieval 단위로 구조화</li>
+            <li>원문 비교 Validation·LLM 평가를 결합한 Hallucination·누락·경계 오류 검증 체계 구축</li>
+            <li>PP-DocLayoutV3 Fine-tuning 및 Layout·OCR Anchor 기반 유사사업-이미지 Mapping 구조 설계</li>
+            <li>Claude 기반 AI-assisted Development 및 Azure LLM/VLM 활용</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>여러 사이트를 직접 탐색하던 업무를 단일 검색창으로 통합</li>
-            <li>벡터 검색으로 키워드가 달라도 유사 문서 탐색 가능</li>
-            <li>수집 장애·사이트 구조 변경을 조기 감지하여 운영 안정성 향상</li>
+            <li>유사사업 2,418건과 연계 이미지 6,356장으로 구성된 검색·추천용 데이터셋 구축</li>
+            <li>신규 RFP 기반 의미 검색 및 Top-K 유사사업 추천에 활용 가능한 Retrieval 데이터 구조 확보</li>
+            <li>이미지 Detection 후처리를 통해 문서별 기대 이미지 수 대비 검출 일치율 54% → 84% 개선</li>
           </ul>
         </div>
 
         <div class="proj-block">
-          <div class="proj-title">2) 발전 산업 업무 지원 생성형 AI 연구</div>
-          <div class="proj-period">2024.05 ~ 2024.12</div>
-          <p>발전 규정·법령·업무 매뉴얼을 활용해 근거 기반 RAG QA 도우미를 연구한 프로젝트.</p>
+          <div class="proj-title">2) 문서 분석 기반 Multimodal PoC</div>
+          <div class="proj-period">2025.03 ~ 2026.06</div>
+          <p>문서 내 표·이미지·차트·다이어그램·화학 구조를 인식해 HTML·Mermaid·SMILES·Caption으로 변환하는 멀티모달 문서 분석 PoC.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>규정·법령·사규·OJT 문서 구조 분석, 청킹 기준·메타데이터 스키마 설계</li>
-            <li>Markdown·LaTeX 포함 문서 정제, QA 학습용 질문-답변·근거 쌍 데이터 구축</li>
-            <li>DPO 기반 선호 학습 실험 설계 및 “좋은 답변” 기준 데이터화</li>
+            <li>데이터 구축부터 모델 Fine-tuning·추론·서빙까지 전체 멀티모달 파이프라인 설계 및 주도</li>
+            <li>Qwen·DeepSeek 기반 LoRA/QLoRA Fine-tuning 및 해상도 Curriculum·Loss Masking·Vision Prior 설계</li>
+            <li>FastAPI 엔드포인트와 상위 모델 라우팅 구조, vLLM·Transformers 추론 파이프라인 구성</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>규정·법령 문서를 질문에 바로 활용 가능한 지식 베이스 형태로 재구성</li>
-            <li>근거 인용·조건/예외 언급 비율 향상으로 규정성 QA 품질 개선</li>
-            <li>도메인 특화 선호 답변 기준을 팀 내 공통 규칙으로 정립</li>
+            <li>문서 요소별 구조화 파이프라인과 공통 JSON/HTML 포맷을 정의하여 확장 가능한 문서 이해 아키텍처 확보</li>
+            <li>Vision Prior·Curriculum Learning·Hallucination 억제 전략으로 구조·내용 오류를 단계적으로 감소</li>
+            <li>실제 서비스 연계가 가능한 멀티모달 AI 추론·서빙 구조 설계 경험 확보</li>
           </ul>
         </div>
 
@@ -347,32 +353,49 @@ classes: wide
           <ul>
             <li>건축 민원 데이터 분석, 질문 유형 정의 및 QA 학습 데이터 구축</li>
             <li>복수 질문 자동 분리 프롬프트·파이프라인 설계</li>
-            <li>LLM-as-a-Judge 기반 자동 평가·개선 루프 설계 및 운영</li>
+            <li>LLM-as-a-Judge 기반 자동 평가 및 Fine-tuning 데이터 개선 루프 구축</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>담당자 답변 대비 답변 일관성 및 근거 명시 비율 향상</li>
-            <li>질문 분리·근거 매핑 구조를 통해 타 규제/민원 도메인으로 확장 가능한 템플릿 확보</li>
-            <li>규제·공공 영역에 맞는 보수적인 평가·검증 프로세스 정립</li>
+            <li>담당자 작성 답변 대비 응답 일관성 및 근거 명시 비율 개선</li>
+            <li>복수 질문 분리·근거 Mapping 구조를 통해 타 민원·규제 도메인으로 확장 가능한 템플릿 확보</li>
+            <li>오류 패턴을 학습 데이터에 반영하는 평가·재학습 루프 구축</li>
           </ul>
         </div>
 
         <div class="proj-block">
-          <div class="proj-title">4) 문서 분석 기반 Multimodal PoC</div>
-          <div class="proj-period">2025.03 ~ 진행 중</div>
-          <p>문서 이미지에서 표·차트·도식·이미지·화학 구조를 인식해 HTML·코드·캡션·SMILES로 변환하는 멀티모달 PoC.</p>
+          <div class="proj-title">4) 발전사 업무 지원을 위한 생성형 AI 연구</div>
+          <div class="proj-period">2024.05 ~ 2024.12</div>
+          <p>발전사 내부 규정·법령·업무 매뉴얼을 기반으로 근거 기반 RAG QA 챗봇의 적용 가능성을 검증한 프로젝트.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>레이아웃·OCR·표·차트·도식·화학 구조를 포괄하는 라벨 체계·데이터셋 설계</li>
-            <li>Qwen·DeepSeek 멀티모달 LoRA/QLoRA 튜닝, 해상도 커리큘럼·loss 마스킹·Vision Prior 설계</li>
-            <li>표/차트/다이어그램/SMILES용 FastAPI 엔드포인트 및 vLLM·Transformers 추론 파이프라인 구현</li>
-            <li>ClearML 기반 실험·모델·로그 관리 및 멀티 에이전트 오케스트레이션 구조 설계</li>
+            <li>규정·법령·사규·OJT 문서 분석 및 Chunking 기준·메타데이터 스키마 설계</li>
+            <li>Markdown·LaTeX 문서 정제와 QA Fine-tuning용 질문·답변·근거 데이터셋 구축</li>
+            <li>DPO 기반 선호 학습 실험 설계 및 규정 답변 품질 기준 정의</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>문서 요소별 구조화 파이프라인과 공통 데이터 포맷 정의로 확장성 높은 아키텍처 확보</li>
-            <li>LoRA/QLoRA·커리큘럼 학습·환각 억제 전략을 통해 구조/내용 오류 단계적 감소</li>
-            <li>실제 서비스에 연결 가능한 멀티모달 AI·Agent 인프라 설계 역량 강화</li>
+            <li>주요 규정·내규 질의에 대해 근거 문서와 함께 답변하는 PoC 모델 구현</li>
+            <li>Markdown·LaTeX 학습을 통해 수식·원소 기호·각주 등 문서 서식 정보를 유지한 응답 생성</li>
+            <li>내부 PoC에서 규정 검색 시간 단축과 근거 기반 답변 측면의 적용 가능성 확인</li>
+          </ul>
+        </div>
+
+        <div class="proj-block">
+          <div class="proj-title">5) 지능형 검색 서비스 개발</div>
+          <div class="proj-period">2023.07 ~ 2023.12</div>
+          <p>약 380개 웹사이트를 대상으로 Vector Similarity Search와 데이터 수집·색인·모니터링을 자동화한 검색 플랫폼 개발.</p>
+          <div class="proj-label">주요 역할</div>
+          <ul>
+            <li>FastAPI 검색 API 및 Keyword Search·Vector Similarity Search 쿼리 흐름 구성</li>
+            <li>웹 크롤러·스크래퍼와 Airflow 기반 수집·정제·색인 파이프라인 설계</li>
+            <li>Prometheus·Grafana 기반 수집량·오류율·응답시간 모니터링 및 장애 알림 체계 구축</li>
+          </ul>
+          <div class="proj-label">성과</div>
+          <ul>
+            <li>의미 기반 검색으로 키워드가 달라도 유사 문서를 탐색할 수 있는 검색 기반 구축</li>
+            <li>수집 실패 자동 감지·알림으로 데이터 수집 안정성과 운영 효율성 개선</li>
+            <li>수집 실패율 약 80% 이상 감소 및 검색 데이터 커버리지 향상</li>
           </ul>
         </div>
       </section>
