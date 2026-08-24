@@ -247,27 +247,102 @@ classes: wide
   }
 
   /* 인쇄 */
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
   @media print {
-    body,
-    .initial-content,
-    #main {
+    html,
+    body {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
       background: #ffffff !important;
     }
+
+    .initial-content,
+    #main,
+    #main .page,
+    #main .page__inner-wrap,
+    #main .page__content {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+      box-sizing: border-box !important;
+    }
+
     .resume-wrapper {
-      max-width: none;
-      margin: 0;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      padding: 0;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      box-sizing: border-box !important;
     }
+
+    .resume-top {
+      gap: 18px;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .resume-photo {
+      flex-basis: 76px;
+    }
+    .resume-photo img {
+      width: 76px;
+      height: 76px;
+      box-shadow: 0 0 0 1px #d8e0e6;
+    }
+
+    .resume-main {
+      display: grid !important;
+      grid-template-columns: minmax(0, 32%) minmax(0, 68%) !important;
+      gap: 20px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .resume-col-left,
+    .resume-col-right {
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
+
     .resume-col-left {
-      background: #ffffff;
-      border-color: #e5e7eb;
+      padding: 14px 14px 4px !important;
+      background: #ffffff !important;
+      border-color: #e5e7eb !important;
     }
+
+    .resume-section {
+      margin-bottom: 17px;
+    }
+
+    .proj-block {
+      margin-bottom: 15px;
+      padding-bottom: 12px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
     .proj-period {
-      background: #f3f4f6;
-      border-color: #e5e7eb;
+      background: #f3f4f6 !important;
+      border-color: #e5e7eb !important;
+    }
+
+    .resume-section h2,
+    .resume-section h3,
+    .proj-title,
+    .proj-period,
+    .proj-label {
+      break-after: avoid;
+      page-break-after: avoid;
     }
   }
 
