@@ -16,3 +16,154 @@
     margin-left: 0 !important;
   }
 }
+
+/* Resume: compact A3 landscape print layout without changing the screen design */
+@page {
+  size: A3 landscape;
+  margin: 6mm;
+}
+
+@media print {
+  .masthead,
+  .page__title,
+  .page__footer,
+  .page__meta,
+  .breadcrumbs,
+  .sidebar,
+  nav.greedy-nav {
+    display: none !important;
+  }
+
+  html,
+  body,
+  .initial-content,
+  #main {
+    background: #ffffff !important;
+  }
+
+  #main,
+  #main .page,
+  #main .page__inner-wrap,
+  #main .page__content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-wrapper {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 7mm 8mm !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    font-size: 0.72rem !important;
+    line-height: 1.40 !important;
+  }
+
+  .resume-top {
+    gap: 18px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .resume-photo {
+    flex-basis: 70px !important;
+  }
+
+  .resume-photo img {
+    width: 70px !important;
+    height: 70px !important;
+    box-shadow: 0 0 0 1px #d8e0e6 !important;
+  }
+
+  .resume-name-block h1 {
+    font-size: 1.55rem !important;
+  }
+
+  .resume-name-block p {
+    font-size: 0.70rem !important;
+  }
+
+  .resume-top-right {
+    font-size: 0.63rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .resume-main {
+    gap: 22px !important;
+  }
+
+  .resume-col-left {
+    padding: 14px 14px 4px !important;
+    background: #ffffff !important;
+  }
+
+  .resume-section {
+    margin-bottom: 13px !important;
+  }
+
+  .resume-section h2 {
+    margin-bottom: 7px !important;
+    padding-bottom: 5px !important;
+    font-size: 0.70rem !important;
+  }
+
+  .resume-section h3 {
+    margin: 6px 0 2px !important;
+    font-size: 0.61rem !important;
+  }
+
+  .resume-section p {
+    margin: 2px 0 !important;
+    font-size: 0.54rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .resume-section ul {
+    margin-top: 2px !important;
+    margin-bottom: 3px !important;
+    font-size: 0.59rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .resume-section li {
+    margin-bottom: 2px !important;
+  }
+
+  .resume-col-right .resume-section > h2 {
+    margin-bottom: 10px !important;
+  }
+
+  .proj-block {
+    margin-bottom: 11px !important;
+    padding: 0 0 9px 12px !important;
+  }
+
+  .proj-block::before {
+    bottom: 9px !important;
+  }
+
+  .proj-title {
+    margin-bottom: 1px !important;
+    font-size: 0.70rem !important;
+    line-height: 1.30 !important;
+  }
+
+  .proj-period {
+    margin-bottom: 4px !important;
+    padding: 1px 6px !important;
+    font-size: 0.55rem !important;
+    line-height: 1.35 !important;
+    background: #f3f4f6 !important;
+  }
+
+  .proj-label {
+    margin-top: 4px !important;
+    margin-bottom: 1px !important;
+    font-size: 0.57rem !important;
+  }
+}
