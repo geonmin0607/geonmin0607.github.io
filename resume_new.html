@@ -6,173 +6,300 @@ classes: wide
 ---
 
 <style>
+  :root {
+    --resume-ink: #172033;
+    --resume-muted: #6b7280;
+    --resume-line: #e6eaf0;
+    --resume-accent: #315b83;
+    --resume-accent-soft: #eef4f8;
+    --resume-panel: #f8fafc;
+  }
+
   .resume-wrapper {
-    max-width: 1080px;             /* 가로 폭 조금 더 넓게 (A4 인쇄 대비) */
+    max-width: 1100px;
     margin: 0 auto;
     background: #ffffff;
-    border-radius: 16px;
-    padding: 24px 32px 32px;
-    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
-    font-size: 0.8rem;             /* 전체 글씨 더 작게 */
-    line-height: 1.55;
-    color: #111827;
+    border: 1px solid var(--resume-line);
+    border-radius: 10px;
+    padding: 32px 36px 36px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.055);
+    font-size: 0.82rem;
+    line-height: 1.58;
+    color: var(--resume-ink);
   }
 
   /* 상단 영역 */
   .resume-top {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 14px;
-    margin-bottom: 18px;
+    align-items: center;
+    gap: 28px;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--resume-line);
   }
 
   .resume-top-left {
-    flex: 0 0 260px;
+    flex: 1 1 auto;
     display: flex;
-    gap: 16px;
+    gap: 18px;
     align-items: center;
+    min-width: 0;
   }
 
   .resume-photo {
-    flex: 0 0 86px;
+    flex: 0 0 90px;
   }
   .resume-photo img {
-    width: 86px;
-    height: 86px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
-    border-radius: 999px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 1px #dfe5eb;
   }
 
   .resume-name-block h1 {
-    margin: 0 0 3px;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1f2937;
+    margin: 0 0 5px;
+    font-size: 1.78rem;
+    line-height: 1.15;
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    color: #111827;
   }
   .resume-name-block p {
     margin: 0;
-    font-size: 0.8rem;
-    color: #6b7280;
-    white-space: nowrap;           /* 한 줄 고정 */
+    font-size: 0.78rem;
+    font-weight: 520;
+    color: var(--resume-muted);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
   }
 
   .resume-top-right {
-    flex: 1 1 260px;
+    flex: 0 0 auto;
     text-align: right;
-    font-size: 0.8rem;
-    color: #4b5563;
+    font-size: 0.7rem;
+    line-height: 1.75;
+    color: var(--resume-muted);
   }
   .resume-top-right a {
-    color: #2563eb;
+    color: var(--resume-accent);
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .resume-top-right a:hover {
+    border-bottom-color: var(--resume-accent);
   }
 
   /* 메인 2열 */
   .resume-main {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 28px;
+    display: grid;
+    grid-template-columns: minmax(290px, 34%) minmax(0, 1fr);
+    gap: 34px;
+    align-items: start;
   }
+
   .resume-col-left {
-    flex: 0 0 35%;
-    border-right: 1px solid #e5e7eb;
-    padding-right: 18px;
+    background: var(--resume-panel);
+    border: 1px solid #edf0f4;
+    border-radius: 8px;
+    padding: 20px 20px 8px;
   }
+
   .resume-col-right {
-    flex: 1 1 0;
-    padding-left: 4px;
+    min-width: 0;
+    padding-top: 1px;
   }
 
   /* 섹션 공통 */
   .resume-section {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }
+
   .resume-section h2 {
-    font-size: 0.78rem;
-    font-weight: 700;
-    margin: 0 0 8px;
-    padding-bottom: 4px;
-    border-bottom: 2px solid #bfdbfe;
-    color: #1d4ed8;
-    letter-spacing: 0.04em;
+    position: relative;
+    margin: 0 0 11px;
+    padding: 0 0 7px;
+    border-bottom: 1px solid var(--resume-line);
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.055em;
+    color: var(--resume-accent);
   }
+  .resume-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 30px;
+    height: 2px;
+    background: var(--resume-accent);
+  }
+
   .resume-section h3 {
-    font-size: 0.66rem;
-    margin: 8px 0 3px;
-    color: #111827;
-    font-weight: 600;
+    margin: 10px 0 4px;
+    font-size: 0.67rem;
+    line-height: 1.4;
+    color: #253147;
+    font-weight: 680;
   }
+
   .resume-section p {
-    margin: 2px 0;
-    font-size: 0.57rem;
+    margin: 3px 0;
+    font-size: 0.59rem;
+    color: #384152;
   }
+
   .resume-section ul {
-    margin: 2px 0 4px 1.05rem;
+    margin: 4px 0 5px 1rem;
     padding: 0;
-    font-size: 0.66rem;
+    font-size: 0.65rem;
   }
+
   .resume-section li {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    padding-left: 1px;
   }
+  .resume-section li::marker {
+    color: #93a4b7;
+  }
+
   .resume-section p strong,
   .resume-section li strong {
-    font-weight: 600;
+    font-weight: 680;
   }
-  .resume-col-right .resume-section {
-    margin-bottom: 24px;
+
+  .resume-col-left .resume-section:last-child,
+  .resume-col-right .resume-section:last-child {
+    margin-bottom: 8px;
   }
 
   /* 프로젝트 블록 */
   .proj-block {
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    margin-bottom: 22px;
+    padding: 0 0 18px 15px;
+    border-bottom: 1px solid var(--resume-line);
+  }
+  .proj-block::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 18px;
+    width: 2px;
+    border-radius: 2px;
+    background: #d9e4ec;
   }
   .proj-block:last-of-type {
+    margin-bottom: 0;
     border-bottom: none;
     padding-bottom: 0;
   }
-  .proj-title {
-    font-weight: 700;
-    font-size: 0.72rem;
-    color: #111827;
-  }
-  .proj-period {
-    font-size: 0.72rem;
-    color: #6b7280;
-    margin-bottom: 3px;
-  }
-  .proj-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #6b7280;
-    margin-top: 2px;
+  .proj-block:last-of-type::before {
+    bottom: 0;
   }
 
+  .proj-title {
+    margin-bottom: 2px;
+    font-weight: 760;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+    color: #111827;
+  }
+
+  .proj-period {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--resume-accent-soft);
+    font-size: 0.61rem;
+    line-height: 1.45;
+    font-weight: 600;
+    color: var(--resume-accent);
+  }
+
+  .proj-label {
+    margin-top: 7px;
+    margin-bottom: 2px;
+    font-size: 0.62rem;
+    font-weight: 720;
+    letter-spacing: 0.025em;
+    color: #475569;
+  }
+
+  .resume-col-right .resume-section > h2 {
+    margin-bottom: 16px;
+  }
+
+  /* 인쇄 */
+  @media print {
+    .resume-wrapper {
+      max-width: none;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+    }
+    .resume-col-left {
+      background: #ffffff;
+      border-color: #e5e7eb;
+    }
+    .proj-period {
+      background: #f3f4f6;
+    }
+  }
+
+  /* 모바일 */
   @media (max-width: 900px) {
     .resume-wrapper {
       max-width: 100%;
-      padding: 20px 16px 24px;
+      padding: 22px 16px 26px;
+      border-radius: 8px;
     }
-    .resume-main {
-      flex-direction: column;
-      gap: 20px;
-    }
-    .resume-col-left {
-      border-right: none;
-      padding-right: 0;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 12px;
-    }
-    .resume-col-right {
-      padding-left: 0;
-      padding-top: 4px;
+    .resume-top {
+      flex-wrap: wrap;
+      gap: 16px;
     }
     .resume-top-right {
+      width: 100%;
       text-align: left;
-      margin-top: -4px;
+      padding-left: 108px;
+    }
+    .resume-main {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .resume-col-left {
+      padding: 18px 16px 6px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .resume-top-left {
+      align-items: flex-start;
+    }
+    .resume-photo {
+      flex-basis: 72px;
+    }
+    .resume-photo img {
+      width: 72px;
+      height: 72px;
+    }
+    .resume-name-block h1 {
+      font-size: 1.52rem;
+    }
+    .resume-name-block p {
+      white-space: normal;
+      line-height: 1.45;
+    }
+    .resume-top-right {
+      padding-left: 0;
+    }
+    .proj-block {
+      padding-left: 12px;
     }
   }
 </style>
