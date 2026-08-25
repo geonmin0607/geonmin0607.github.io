@@ -22,7 +22,7 @@ classes: wide
 
 ## Career / Growth Timeline
 
-<div class="timeline">
+<div class="timeline" markdown="1">
 
 ### 2023 — Search & Data Pipeline
 
@@ -54,4 +54,3 @@ Chem OCR과 Agent Orchestration 역시 이 과정에서 다룬 세부 경험이�
 - 모델 성능만 보지 않고 원문 대조, 오류 유형, 데이터 품질, 운영 지표를 함께 관리합니다.
 - 필요한 경우 규칙 기반 처리와 LLM/VLM을 결합해 재현성과 유연성을 동시에 확보합니다.
 - 실험 결과가 실제 서비스 또는 데이터 파이프라인에 연결될 수 있도록 API·추론·모니터링까지 고려해 설계합니다.
-
