@@ -28,7 +28,6 @@ classes: wide
     color: var(--resume-ink);
   }
 
-  /* 상단 영역 */
   .resume-top {
     display: flex;
     align-items: center;
@@ -91,7 +90,6 @@ classes: wide
     border-bottom-color: var(--resume-accent);
   }
 
-  /* 메인 2열 */
   .resume-main {
     display: grid;
     grid-template-columns: minmax(290px, 34%) minmax(0, 1fr);
@@ -111,7 +109,6 @@ classes: wide
     padding-top: 1px;
   }
 
-  /* 섹션 공통 */
   .resume-section {
     margin-bottom: 24px;
   }
@@ -174,7 +171,6 @@ classes: wide
     margin-bottom: 8px;
   }
 
-  /* 프로젝트 블록 */
   .proj-block {
     position: relative;
     margin-bottom: 22px;
@@ -234,7 +230,6 @@ classes: wide
     margin-bottom: 16px;
   }
 
-  /* 인쇄 */
   @media print {
     .resume-wrapper {
       max-width: none;
@@ -252,7 +247,6 @@ classes: wide
     }
   }
 
-  /* 모바일 */
   @media (max-width: 900px) {
     .resume-wrapper {
       max-width: 100%;
@@ -306,7 +300,6 @@ classes: wide
 
 <div class="resume-wrapper">
 
-  <!-- 상단 헤더 -->
   <div class="resume-top">
     <div class="resume-top-left">
       <div class="resume-photo">
@@ -314,7 +307,7 @@ classes: wide
       </div>
       <div class="resume-name-block">
         <h1>이건민</h1>
-        <p>AI 연구원 · LLM/VLM · RAG · 파인튜닝</p>
+        <p>AI 연구원 · LLM/VLM · RAG · AI 서비스 개발</p>
       </div>
     </div>
     <div class="resume-top-right">
@@ -326,57 +319,55 @@ classes: wide
 
   <div class="resume-main">
 
-    <!-- LEFT COLUMN -->
     <div class="resume-col-left">
 
-      <!-- 자기소개 -->
       <section class="resume-section">
         <h2>자기소개</h2>
         <p>
-          문서·이미지 기반 멀티모달 AI와 생성형 QA를 중심으로,
-          <strong>LLM/VLM 파인튜닝 · RAG 기반 검색·추천 · 문서 구조화 · 서빙·운영</strong>의 전 과정을 수행해 온 AI 연구원입니다.
+          비정형 문서와 이미지 데이터를 실제 업무에 활용 가능한 AI 시스템으로 연결하는 일을 중심으로,
+          <strong>데이터 구축 · LLM/VLM 학습 및 활용 · RAG 검색·추천 · 평가 · 추론·서빙</strong>까지 End-to-End로 수행해 온 AI 연구원입니다.
         </p>
         <ul>
-          <li>규정·민원·엔지니어링 제안서 등 비정형 문서의 검색·QA·구조화 데이터 파이프라인 설계 경험</li>
-          <li>LoRA/QLoRA·DPO·LLM-as-a-Judge·Vision Prior 등 모델 학습·평가 및 개선 실험 경험</li>
-          <li>FastAPI·vLLM/Transformers·Azure AI 기반 추론 및 Claude 기반 AI-assisted Development 경험</li>
+          <li>규정·민원·엔지니어링 제안서 등 복잡한 문서를 분석해 검색·QA·구조화 데이터로 전환하는 파이프라인 설계</li>
+          <li>LoRA/QLoRA·DPO·LLM-as-a-Judge·Vision Prior를 활용한 LLM/VLM 학습·평가·성능 개선 실험 수행</li>
+          <li>Embedding·Vector Search·RAG와 FastAPI·vLLM/Transformers를 연결한 검색·생성·추론 시스템 구현</li>
+          <li>PoC에 그치지 않고 수집·전처리·모델링·평가·API·모니터링까지 실제 서비스 적용 관점에서 개발</li>
         </ul>
       </section>
 
-      <!-- 기술 역량 -->
       <section class="resume-section">
         <h2>기술 역량</h2>
 
-        <h3>머신러닝 / LLM / 멀티모달</h3>
+        <h3>LLM / VLM / 모델 학습</h3>
         <ul>
-          <li>LoRA / QLoRA 기반 LLM/VLM SFT, 커리큘럼 학습, Loss Masking, Vision Prior 설계</li>
-          <li>RAG, LLM-as-a-Judge, DPO 기반 성능 개선 실험 설계·운영</li>
-          <li>PyTorch, Hugging Face Transformers, PP-DocLayoutV3, PaddleOCR</li>
-          <li>GPT 계열 VLM, Qwen, DeepSeek 기반 문서 이해·구조화</li>
+          <li>LoRA / QLoRA 기반 LLM·VLM SFT, Curriculum Learning, Loss Masking, Vision Prior 설계</li>
+          <li>DPO 및 LLM-as-a-Judge 기반 선호 학습·자동 평가·오류 분석 및 데이터 개선 루프 구축</li>
+          <li>PyTorch, Hugging Face Transformers, Qwen, DeepSeek 기반 모델 학습·추론</li>
         </ul>
 
-        <h3>데이터 엔지니어링 / 검색</h3>
+        <h3>Document AI / 비정형 데이터</h3>
         <ul>
-          <li>문서 OCR·구조화, JSON Schema 기반 데이터 모델링 및 품질 검증</li>
-          <li>RAG 검색·추천, Vector Similarity Search, Retrieval 데이터 구축</li>
-          <li>웹 크롤링·스크래핑 및 수집·정제·색인 파이프라인 구축</li>
+          <li>PDF·표·이미지·차트·다이어그램 대상 OCR·Layout Detection·문서 구조화 파이프라인 구축</li>
+          <li>PP-DocLayoutV3, PaddleOCR, GPT 계열 VLM을 활용한 문서 이해 및 JSON Schema 기반 정보 추출</li>
+          <li>원문 대조·규칙 검증·LLM 평가를 결합한 누락·환각·구조 오류 품질 검증</li>
         </ul>
 
-        <h3>서빙 / MLOps</h3>
+        <h3>RAG / 검색·추천 / 데이터</h3>
         <ul>
-          <li>FastAPI 기반 모델 서빙 및 멀티 엔드포인트 구성</li>
-          <li>vLLM·Transformers 추론 엔진 비교·최적화</li>
-          <li>Azure AI, ClearML, Airflow, Prometheus, Grafana 활용</li>
+          <li>문서 분석 → Chunking → Embedding → Vector Similarity Search → Retrieval로 이어지는 검색 데이터 파이프라인 설계</li>
+          <li>RAG 기반 근거형 QA 및 의미 기반 검색·추천용 데이터 모델·메타데이터 스키마 설계</li>
+          <li>웹 크롤링·스크래핑·정제·색인 및 대규모 비정형 데이터 수집 파이프라인 구축</li>
         </ul>
 
-        <h3>개발</h3>
+        <h3>서빙 / 운영 / 개발</h3>
         <ul>
-          <li>Python 기반 데이터 처리·API·ML 파이프라인 개발</li>
-          <li>Claude 기반 AI-assisted Development 및 코드 구현·리팩터링</li>
+          <li>FastAPI 기반 모델·검색 API 및 멀티 엔드포인트 구성</li>
+          <li>vLLM·Transformers 추론 엔진 구성 및 Azure AI 기반 LLM/VLM 활용</li>
+          <li>Airflow·Prometheus·Grafana 기반 데이터 파이프라인 운영·모니터링</li>
+          <li>Python 기반 데이터·ML 파이프라인 개발 및 Claude 기반 AI-assisted Development</li>
         </ul>
       </section>
 
-      <!-- 특허 / 활동 -->
       <section class="resume-section">
         <h2>특허 및 활동</h2>
 
@@ -399,57 +390,54 @@ classes: wide
         </ul>
       </section>
 
-      <!-- 학력 -->
       <section class="resume-section">
         <h2>학력</h2>
         <p>조선대학교 수학과 졸업 (2014년)</p>
       </section>
 
-      <!-- 경력 -->
       <section class="resume-section">
         <h2>경력</h2>
 
         <h3>AX팀 / 도화엔지니어링</h3>
         <p>재직기간: 2026.06 ~ 현재</p>
         <ul>
-          <li>LLM/VLM 기반 엔지니어링 제안서 문서 구조화 및 검색·추천 데이터 파이프라인 개발</li>
-          <li>RAG 검색·추천용 데이터 모델 설계 및 이미지 검출·매핑 파이프라인 구축</li>
-          <li>Azure LLM/VLM 및 Claude 기반 AI-assisted Development 활용</li>
+          <li>엔지니어링 제안서의 비정형 정보를 LLM/VLM으로 추출·구조화하고 검색·추천에 활용하는 데이터 파이프라인 개발</li>
+          <li>문서 섹션 탐지·OCR·정보 추출·이미지 매핑·품질 검증을 연결한 End-to-End Document AI 파이프라인 구축</li>
+          <li>RAG Retrieval용 데이터 모델과 의미 검색·추천 구조를 설계하고 Azure LLM/VLM 기반 자동화 개발 수행</li>
         </ul>
 
         <h3>AI 연구원 / 유알피</h3>
         <p>재직기간: 2023.01 ~ 2026.06</p>
         <ul>
-          <li>도메인 문서 기반 검색·RAG·생성형 QA·멀티모달 PoC 기획 및 모델링</li>
-          <li>LLM/VLM LoRA/QLoRA Fine-tuning 및 DPO·자동 평가 기반 개선 루프 구축</li>
-          <li>FastAPI 기반 AI 서비스 및 추론·데이터 파이프라인 설계·운영</li>
+          <li>도메인 문서를 활용한 의미 검색·RAG·생성형 QA·멀티모달 문서 분석 PoC 기획 및 개발</li>
+          <li>LLM/VLM LoRA·QLoRA Fine-tuning, DPO, LLM-as-a-Judge를 활용한 모델 학습·평가·개선</li>
+          <li>데이터 수집·정제·학습 데이터 구축부터 FastAPI 기반 추론·검색 API와 운영 모니터링까지 AI 서비스 파이프라인 설계</li>
         </ul>
       </section>
     </div>
 
-    <!-- RIGHT COLUMN -->
     <div class="resume-col-right">
 
-      <!-- 주요 프로젝트 경험 -->
       <section class="resume-section">
         <h2>주요 프로젝트 경험</h2>
 
         <div class="proj-block">
           <div class="proj-title">1) LLM/VLM 기반 QBS 유사사업 검색·추천 데이터 파이프라인 개발</div>
           <div class="proj-period">2026.06 ~ 2026.08</div>
-          <p>엔지니어링 제안서(QBS)의 유사사업 정보를 LLM/VLM으로 구조화하여 신규 RFP 기반 유사사업 검색·추천에 활용할 RAG 데이터베이스를 구축한 프로젝트.</p>
+          <p>엔지니어링 제안서(QBS)의 비정형 정보를 추출·구조화하여 신규 RFP 기반 유사사업 검색·추천과 RAG Retrieval에 활용할 데이터베이스를 구축한 프로젝트.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>PyMuPDF·LLM 기반 섹션 탐지와 GPT 계열 VLM 기반 OCR·문서 구조 추출 파이프라인 구축</li>
-            <li>규칙 기반 경계 분리와 LLM 정보 추출을 결합해 복수 유사사업을 개별 검색 단위로 구조화</li>
-            <li>원문 대조 검증과 LLM 평가를 결합한 환각·누락·경계 오류 검증 체계 구축</li>
-            <li>PP-DocLayoutV3 Fine-tuning 및 Layout·OCR Anchor 기반 유사사업-이미지 자동 매핑 구조 설계</li>
-            <li>Claude 기반 AI-assisted Development 및 Azure LLM/VLM 활용</li>
+            <li>PyMuPDF·LLM 기반 섹션 탐지와 GPT 계열 VLM OCR을 결합한 문서 구조 추출 파이프라인 구축</li>
+            <li>규칙 기반 유사사업 경계 분리와 LLM 기반 공통 Schema 정보 추출을 결합해 복수 사업을 개별 검색 단위로 구조화</li>
+            <li>Layout Detection·OCR Anchor를 활용한 이미지 검출·매핑 및 PP-DocLayoutV3 Fine-tuning 수행</li>
+            <li>원문 대조와 규칙·LLM 평가를 결합한 환각·누락·경계 오류 품질 검증 체계 구축</li>
+            <li>구조화 데이터를 Chunking·Embedding·Retrieval로 연결하기 위한 검색·추천 데이터 구조 설계</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
             <li>유사사업 2,418건과 연계 이미지 6,356장으로 구성된 검색·추천용 데이터셋 구축</li>
-            <li>신규 RFP 기반 의미 검색 및 Top-K 유사사업 추천에 활용 가능한 Retrieval 데이터 구조 확보</li>
+            <li>비정형 PDF에서 검색 가능한 사업 단위 데이터로 변환하는 End-to-End Document AI 파이프라인 확보</li>
+            <li>신규 RFP 기반 의미 검색 및 Top-K 유사사업 추천에 활용 가능한 Retrieval 데이터 구조 구축</li>
             <li>이미지 검출 후처리를 통해 문서별 기대 이미지 수 대비 검출 일치율 54% → 84% 개선</li>
           </ul>
         </div>
@@ -457,72 +445,74 @@ classes: wide
         <div class="proj-block">
           <div class="proj-title">2) 문서 분석 기반 Multimodal PoC</div>
           <div class="proj-period">2025.03 ~ 2026.06</div>
-          <p>문서 내 표·이미지·차트·다이어그램·화학 구조를 인식해 HTML·Mermaid·SMILES·캡션으로 변환하는 멀티모달 문서 분석 PoC.</p>
+          <p>문서 내 표·이미지·차트·다이어그램·화학 구조를 인식하고 구조화된 텍스트와 데이터로 변환하는 멀티모달 문서 분석 PoC.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>데이터 구축부터 모델 Fine-tuning·추론·서빙까지 전체 멀티모달 파이프라인 설계 및 주도</li>
+            <li>학습 데이터 구축부터 VLM Fine-tuning·추론·API 서빙까지 전체 멀티모달 파이프라인 설계 및 주도</li>
             <li>Qwen·DeepSeek 기반 LoRA/QLoRA Fine-tuning 및 해상도 Curriculum·Loss Masking·Vision Prior 설계</li>
-            <li>FastAPI 엔드포인트와 상위 모델 라우팅 구조, vLLM·Transformers 추론 파이프라인 구성</li>
+            <li>표·차트·다이어그램·화학 구조를 HTML·Mermaid·SMILES·Caption으로 변환하는 태스크별 구조화 방식 설계</li>
+            <li>FastAPI 엔드포인트와 상위 모델 라우팅 구조, vLLM·Transformers 기반 추론 파이프라인 구성</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>문서 요소별 구조화 파이프라인과 공통 JSON/HTML 포맷을 정의하여 확장 가능한 문서 이해 아키텍처 확보</li>
-            <li>Vision Prior·Curriculum Learning·환각 억제 전략으로 구조·내용 오류를 단계적으로 감소</li>
-            <li>실제 서비스 연계가 가능한 멀티모달 AI 추론·서빙 구조 설계 경험 확보</li>
+            <li>서로 다른 문서 요소를 공통 JSON/HTML 구조로 처리할 수 있는 멀티모달 문서 이해 파이프라인 구현</li>
+            <li>Vision Prior·Curriculum Learning·Loss Masking·환각 억제 전략을 적용해 구조·내용 오류를 단계적으로 개선</li>
+            <li>Fine-tuning 모델을 FastAPI와 추론 엔진에 연결해 서비스 연계 가능한 멀티모달 AI 서빙 구조 구현</li>
           </ul>
         </div>
 
         <div class="proj-block">
           <div class="proj-title">3) 건축민원 AI 답변 생성 서비스</div>
           <div class="proj-period">2024.09 ~ 2025.02</div>
-          <p>건축법·지침·사례 데이터를 활용해 건축 민원 답변을 자동 작성·보조하는 생성형 AI 모델 구축.</p>
+          <p>건축법·지침·사례 데이터를 활용해 민원 질문을 분석하고 근거 기반 답변 생성을 지원하는 생성형 AI 서비스 개발.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>건축 민원 데이터 분석, 질문 유형 정의 및 QA 학습 데이터 구축</li>
-            <li>복수 질문 자동 분리 프롬프트·파이프라인 설계</li>
-            <li>LLM-as-a-Judge 기반 자동 평가 및 Fine-tuning 데이터 개선 루프 구축</li>
+            <li>건축 민원 데이터 분석, 질문 유형 정의 및 QA Fine-tuning 데이터 구축</li>
+            <li>하나의 민원에 포함된 복수 질문을 자동 분리하고 각각의 답변 생성 흐름으로 연결하는 프롬프트·파이프라인 설계</li>
+            <li>LLM-as-a-Judge 기반 자동 평가와 오류 유형 분석을 통해 학습 데이터 개선 루프 구축</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
+            <li>복합 민원을 질문 단위로 분리하고 관련 근거와 답변을 연결하는 생성형 QA 파이프라인 구현</li>
             <li>담당자 작성 답변 대비 응답 일관성 및 근거 명시 비율 개선</li>
-            <li>복수 질문 분리·근거 매핑 구조를 통해 타 민원·규제 도메인으로 확장 가능한 템플릿 확보</li>
-            <li>오류 패턴을 학습 데이터에 반영하는 평가·재학습 루프 구축</li>
+            <li>자동 평가 결과와 오류 패턴을 다음 학습 데이터에 반영하는 평가·재학습 프로세스 구축</li>
           </ul>
         </div>
 
         <div class="proj-block">
           <div class="proj-title">4) 발전사 업무 지원을 위한 생성형 AI 연구</div>
           <div class="proj-period">2024.05 ~ 2024.12</div>
-          <p>발전사 내부 규정·법령·업무 매뉴얼을 기반으로 근거 기반 RAG QA 챗봇의 적용 가능성을 검증한 프로젝트.</p>
+          <p>내부 규정·법령·업무 매뉴얼과 같은 전문 문서를 검색하고 근거와 함께 답변하는 RAG 기반 업무 지원 AI의 적용 가능성을 검증한 프로젝트.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>규정·법령·사규·OJT 문서 분석 및 청킹 기준·메타데이터 스키마 설계</li>
+            <li>규정·법령·사규·OJT 문서 분석 및 RAG를 위한 Chunking 기준·메타데이터 Schema 설계</li>
             <li>Markdown·LaTeX 문서 정제와 QA Fine-tuning을 위한 질문·답변·근거 데이터셋 구축</li>
+            <li>검색된 근거 문서와 생성 답변을 연결하는 RAG QA 흐름 구성</li>
             <li>DPO 기반 선호 학습 실험 설계 및 규정 답변 품질 기준 정의</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>주요 규정·내규 질의에 대해 근거 문서와 함께 답변하는 PoC 모델 구현</li>
-            <li>Markdown·LaTeX 학습을 통해 수식·원소 기호·각주 등 문서 서식 정보를 유지한 응답 생성</li>
-            <li>내부 PoC에서 규정 검색 시간 단축과 근거 기반 답변 측면의 적용 가능성 확인</li>
+            <li>주요 규정·내규 질의에 대해 관련 근거 문서를 검색하고 답변을 생성하는 RAG PoC 구현</li>
+            <li>Markdown·LaTeX 학습을 통해 수식·원소 기호·각주 등 전문 문서의 서식 정보를 유지한 응답 생성</li>
+            <li>문서 검색과 생성형 QA를 결합해 내부 규정 탐색·업무 지원 자동화에 활용 가능한 구조 검증</li>
           </ul>
         </div>
 
         <div class="proj-block">
           <div class="proj-title">5) 지능형 검색 서비스 개발</div>
           <div class="proj-period">2023.07 ~ 2023.12</div>
-          <p>약 380개 웹사이트를 대상으로 Vector Similarity Search와 데이터 수집·색인·모니터링을 자동화한 검색 플랫폼 개발.</p>
+          <p>약 380개 웹사이트의 데이터를 지속적으로 수집·정제·색인하고 Keyword Search와 Vector Similarity Search를 제공하는 검색 플랫폼 개발.</p>
           <div class="proj-label">주요 역할</div>
           <ul>
-            <li>FastAPI 검색 API 및 Keyword Search·Vector Similarity Search 검색 흐름 구성</li>
-            <li>웹 크롤러·스크래퍼와 Airflow 기반 수집·정제·색인 파이프라인 설계</li>
+            <li>FastAPI 기반 검색 API와 Keyword Search·Vector Similarity Search를 결합한 검색 흐름 구성</li>
+            <li>웹 크롤러·스크래퍼와 Airflow를 활용한 수집·정제·색인 파이프라인 자동화</li>
             <li>Prometheus·Grafana 기반 수집량·오류율·응답시간 모니터링 및 장애 알림 체계 구축</li>
           </ul>
           <div class="proj-label">성과</div>
           <ul>
-            <li>의미 기반 검색으로 키워드가 달라도 유사 문서를 탐색할 수 있는 검색 기반 구축</li>
-            <li>수집 실패 자동 감지·알림으로 데이터 수집 안정성과 운영 효율성 개선</li>
-            <li>수집 실패율 약 80% 이상 감소 및 검색 데이터 커버리지 향상</li>
+            <li>의미 기반 검색을 적용해 검색어와 표현이 다른 문서까지 탐색할 수 있는 Vector Search 기반 구축</li>
+            <li>데이터 수집부터 색인·검색·모니터링까지 연결된 운영형 검색 파이프라인 구현</li>
+            <li>수집 실패 자동 감지·알림 체계를 통해 수집 실패율 약 80% 이상 감소 및 검색 데이터 커버리지 향상</li>
           </ul>
         </div>
       </section>
