@@ -1,40 +1,45 @@
-{% comment %}Horizontal card without author/date. Pass `post`.{% endcomment %}
-<article class="card giana">
-  {% assign has_teaser = false %}
-  {% if post.header and post.header.teaser %}{% assign has_teaser = true %}{% endif %}
-  <div class="card-inner {% if has_teaser %}has-media{% endif %}">
+{% comment %}Shared portfolio card. Pass `post`.{% endcomment %}
+{% assign coll = post.collection | default: '' %}
+{% assign has_teaser = false %}
+{% if post.header and post.header.teaser %}{% assign has_teaser = true %}{% endif %}
+
+<article class="portfolio-card">
+  <div class="portfolio-card__inner">
     {% if has_teaser %}
-    <div class="card-media">
-      <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" decoding="async">
-    </div>
+      <div class="portfolio-card__media">
+        <img src="{{ post.header.teaser | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" decoding="async">
+      </div>
     {% endif %}
-    <div class="card-content">
-      <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      {% assign coll = post.collection | default: '' %}
-      
-      {% if coll == 'projects' %}
+
+    <div class="portfolio-card__body">
+      <div class="portfolio-card__meta">
+        <span class="portfolio-card__badge">
+          {% if coll == 'projects' %}Project{% elsif coll == 'tech' %}Tech Note{% elsif coll == 'patents' %}Patent{% else %}Post{% endif %}
+        </span>
+        {% if coll == 'projects' and post.period %}
+          <span>{{ post.period }}</span>
+        {% endif %}
+      </div>
+
+      <h3 class="portfolio-card__title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+
+      <div class="portfolio-card__excerpt">
         {% if post.excerpt %}
           {{ post.excerpt | markdownify }}
-        {% endif %}
-      
-      {% elsif coll == 'tech' %}
-        {% if post.tags %}
+        {% elsif coll == 'tech' and post.tags %}
           {{ post.tags | join: " · " }}
-        {% elsif post.excerpt %}
-          {{ post.excerpt | strip_html | truncatewords: 50 }}
         {% endif %}
-      
-      {% else %}
-        {% if post.excerpt %}
-          {{ post.excerpt | strip_html | truncatewords: 50 }}
-        {% endif %}
-      {% endif %}
-      <div class="card-meta">
-        <span class="card-cat">
-          {% assign coll = post.collection | default: '' %}
-          {% if coll == 'projects' %}Projects{% elsif coll == 'tech' %}Tech Notes{% elsif coll == 'patents' %}Patents{% else %}Post{% endif %}
-        </span>
       </div>
+
+      {% if coll == 'tech' and post.tags %}
+        <div class="portfolio-card__tags">
+          {% for tag in post.tags %}
+            <span class="portfolio-card__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </article>
