@@ -5,109 +5,53 @@ permalink: /about/
 classes: wide
 ---
 
-AI 엔지니어 **GEONMIN LEE**의 포트폴리오입니다.  
-문서·표·다이어그램을 이해하는 **RAG/LLM 파이프라인**을 설계·구현하고,  
-파인튜닝·강화학습·평가까지 **엔드투엔드로 책임지는 역할**을 수행해 왔습니다.
+<div class="about-intro">
+문서·이미지 기반 AI와 생성형 QA를 중심으로, <strong>LLM/VLM 파인튜닝 · RAG 검색·추천 · 문서 구조화 · 평가·검증 · 서빙·운영</strong>을 연결해 온 AI/AX 엔지니어입니다. 텍스트 검색에서 시작해 멀티모달 문서 이해와 현재의 엔지니어링 제안서 검색·추천까지, 실제 업무 흐름에 적용 가능한 데이터·모델·서비스 구조를 만드는 데 집중하고 있습니다.
+</div>
 
-## 요약
+## Core Capabilities
 
-- 도메인 스키마 설계 → 데이터 큐레이션 → 멀티모달 추출(표/차트/다이어그램) → 질의응답까지  
-  RAG/생성 파이프라인을 일관되게 설계·배포합니다.
-- LoRA/Full-FT, DPO 등 **모델 적응**과  
-  데이터 샘플을 직접 확인해 **오류 유형을 나누고 평가지표를 설계하는 작업**을 결합해  
-  LLM 품질을 반복적으로 개선합니다.
-- Airflow·ClearML·Prometheus·Grafana를 활용해  
-  수집/학습/추론 자동화와 모니터링을 구축하고 안정적으로 운영합니다.
+- **LLM / RAG**  
+  규정·법령·민원·엔지니어링 문서를 대상으로 검색, QA, 의미 검색, 추천용 데이터 구조를 설계합니다.
+- **Multimodal / Document AI**  
+  표·이미지·차트·다이어그램 등 비정형 문서를 OCR/VLM과 문서 레이아웃 모델로 구조화합니다.
+- **Fine-tuning / Evaluation**  
+  LoRA/QLoRA, DPO, LLM-as-a-Judge, Vision Prior, Curriculum Learning 등을 활용해 학습·평가·개선 루프를 설계합니다.
+- **Serving / Operations**  
+  FastAPI, vLLM/Transformers, Azure AI, Airflow, ClearML, Prometheus, Grafana 등을 활용해 추론·데이터 파이프라인을 서비스 환경에 연결합니다.
 
-## 주요 역량
+## Career / Growth Timeline
 
-- **텍스트/LLM**  
-  규정·법령·기술문서 처리, 프롬프트·시나리오 설계, 스타일 보존(LaTeX/수식), 파인튜닝·강화학습, 지식 정제.
-- **멀티모달**  
-  표 구조 HTML 복원, 차트/다이어그램 → Mermaid 변환, 이미지 Captioning 등 시각-텍스트 결합 전처리.
-- **평가 체계**  
-  데이터 기반 오류 유형 정의, 루브릭·샘플 설계, 자동 채점과 오답 클러스터링, Close-the-Loop 재학습 파이프라인.
-- **운영/신뢰성**  
-  데이터 파이프라인 자동화, 실험/모델 자산 관리, 모니터링·알림, 장애 대응 Runbook 정비.
+<div class="timeline">
 
-## 다루는 모델 & 데이터 한눈에 보기
+### 2023 — Search & Data Pipeline
 
-- **Text/LLM**
-  - 발전사 규정·법령 QA, 건축 민원 QA 등 도메인 특화 질의응답 모델 설계·파인튜닝
-  - RAG, DPO, LLM-as-a-Judge, 프롬프트 튜닝
-- **Multimodal/Vision**
-  - Qwen2.5-VL, Qwen3-VL, DeepSeek-OCR, PaddleOCR, DocLayout 등
-  - 표 → HTML, 차트·다이어그램 → Mermaid, 이미지 Captioning
-- **Chem/Structure**
-  - 분자 구조 이미지 → SMILES / InChI / CAS 추출 파이프라인 설계
-  - ViT 기반 cs/ncs/table 분류기로 Agent 라우팅에 활용
-- **데이터 표현**
-  - Table: 셀 단위 구조 + rowspan/colspan까지 보존하는 HTML
-  - Chart/Diagram: Mermaid(`xychart-beta`, `flowchart` 등)
-  - Chem: SMILES / InChI / InChIKey / CAS
+약 380개 웹사이트를 대상으로 크롤링·정제·색인 파이프라인을 구축하고, FastAPI 기반 검색 API와 Vector Similarity Search를 개발했습니다. Airflow 자동화와 Prometheus·Grafana 모니터링까지 포함해 검색 서비스의 데이터 수집과 운영 구조를 경험했습니다.
 
-## 성장 스토리 (From Text to Multimodal & Agents)
+### 2024 — RAG, Domain QA & DPO
 
-### 1단계 — 검색 · 데이터 파이프라인 (2023)
+발전사 내부 규정·법령·매뉴얼을 대상으로 청킹 기준과 메타데이터 스키마를 설계하고, RAG 기반 QA와 LLM 파인튜닝·DPO 실험을 수행했습니다. 단순 검색보다 질문에 맞는 근거와 답변을 함께 구성하는 구조에 집중했습니다.
 
-- **프로젝트:** 지능형 검색 서비스 개발 (`2023-intelligent-search`)
-- **내용:**
-  - 약 380개 웹사이트를 대상으로 하는 크롤러/스크래퍼 설계
-  - Elasticsearch 기반 의미 기반(Vector) 검색 API를 FastAPI로 구현
-  - Airflow로 수집·인덱싱 작업 자동화, Prometheus·Grafana로 모니터링 체계 구축
-- **이때 배운 것:**
-  - 모델 이전에 데이터 수집·지표·운영이 중요하다는 점
-  - 검색 품질을 유지하려면 파이프라인과 알림·모니터링까지 설계해야 한다는 점
+### 2024–2025 — Building-domain QA & Evaluation Loop
 
-### 2단계 — 규정/법령 LLM QA · RAG · DPO (2024 상반기)
+건축 민원 데이터를 분석해 질문 유형과 QA 데이터를 구축하고, 복수 질문 분리와 LLM-as-a-Judge 기반 자동 평가를 적용했습니다. 평가 결과를 다시 데이터 개선과 Fine-tuning에 반영하는 반복 구조를 설계했습니다.
 
-- **프로젝트:** 발전사 업무 지원 생성형 AI 연구 (`2024-power-gen-assistant`)
-- **내용:**
-  - 발전사 규정·법령·매뉴얼을 분석하고 chunk 기준과 스키마를 설계
-  - Markdown/LaTeX 문서를 포함한 도메인 QA 데이터셋 구축
-  - RAG 파이프라인과 LLM 파인튜닝, DPO(선호도 기반 학습) 실험
-- **이때 배운 것:**
-  - 단순 검색이 아니라 “질문에 맞는 근거 + 답변” 구조가 중요하다는 점
-  - LLM을 잘 쓰려면 도메인 데이터 정제와 스키마 설계가 핵심이라는 점
+### 2025–2026 — Multimodal Document AI
 
-### 3단계 — 건축 민원 QA · LLM-as-a-Judge · 평가 자동화 (2024 하반기 ~ 2025 초)
+문서 내 표·이미지·차트·다이어그램·화학 구조를 인식해 HTML·Mermaid·SMILES·캡션 등 구조화된 표현으로 변환하는 Multimodal PoC를 진행했습니다. Qwen·DeepSeek 계열 VLM, PaddleOCR, 문서 레이아웃 모델과 LoRA/QLoRA Fine-tuning을 결합하고, Vision Prior·해상도 커리큘럼·Loss Masking 등을 실험했습니다.
 
-- **프로젝트:** 건축민원 AI 답변생성 (`2024-2025-architect-qa`)
-- **내용:**
-  - 실제 민원 문장을 분석해 질문을 자동 분리하는 프롬프트 설계
-  - 데이터 오류 유형·루브릭·샘플을 정의하고, LLM-as-a-Judge 방식으로 모델 답변을 평가
-  - 평가 결과를 다시 학습에 반영하는 “Close-the-Loop” 구조 실험
-- **이때 배운 것:**
-  - LLM 품질은 모델 사이즈보다 평가·피드백 루프 설계에 크게 좌우된다는 점
-  - 도메인 전문가의 기준을 루브릭·샘플·스코어로 옮기는 작업의 중요성
+Chem OCR과 Agent Orchestration 역시 이 과정에서 다룬 세부 경험이며, 현재는 문서 구조화와 검색·추천 파이프라인을 중심으로 활용 범위를 확장하고 있습니다.
 
-### 4단계 — Multimodal 문서 분석 · Qwen-VL · Table/Chart/SMILES (2025~)
+### 2026 — Engineering Proposal / QBS Retrieval & Recommendation
 
-- **프로젝트:** 문서 분석 기반 Multimodal PoC (`2025-multimodal-docai`)
-- **내용:**
-  - 문서 내 표 → HTML, 차트/다이어그램 → Mermaid, 이미지 → Captioning으로 변환
-  - Qwen2.5-VL, Qwen3-VL, DeepSeek-OCR, ViT 분류기를 조합해 멀티모달 파이프라인 설계
-  - Vision Prior 강화, 해상도 커리큘럼 학습으로 hallucination을 줄이는 실험
-  - 분자 구조 이미지에서 SMILES / InChI / CAS를 추출하는 Chem OCR 파이프라인 설계
-  - cs / ncs / table 3-class ViT 분류기를 만들어 Agent 라우팅에 활용
-- **이때 배운 것:**
-  - 텍스트만이 아니라 표·차트·이미지·화학 구조를 함께 다뤄야 진짜 “문서 이해”가 된다는 점
-  - 여러 모델을 FastAPI 마이크로서비스와 Agent Orchestrator로 묶는 설계의 장점
+엔지니어링 제안서(QBS)의 유사사업 정보를 LLM/VLM으로 구조화해 신규 RFP 기반 검색·추천에 활용할 데이터베이스를 구축했습니다. 유사사업 2,418건과 연계 이미지 6,356장을 구조화하고, PP-DocLayoutV3 Fine-tuning과 Layout·OCR Anchor 기반 이미지 매핑을 적용했습니다. 이미지 검출 후처리에서는 문서별 기대 이미지 수 대비 검출 일치율을 54%에서 84%로 개선했습니다.
 
-### 지금 하는 일 — Text + Multimodal + Agent를 잇는 플랫폼
+</div>
 
-현재는 다음 네 가지를 하나의 흐름으로 연결하는 데 집중하고 있습니다.
+## Engineering Approach
 
-1. Text 기반: 규정·법령·민원 QA, RAG, DPO, LLM-as-a-Judge  
-2. Multimodal: 표(HTML), 차트·다이어그램(Mermaid), 화학 구조(SMILES) 추출  
-3. Agent/Orchestration: Qwen·DeepSeek-OCR·ViT 등을 도구(툴 에이전트)로 보고 상위 Agent에서 조합  
-4. 운영/평가: ClearML·모니터링·지표·실험 로그를 통해 끝까지 관리 가능한 형태로 만드는 것  
-
-텍스트 작업에서 시작해, 이제는 멀티모달 모델과 에이전트·파이프라인까지 연결하는 엔지니어로 성장해 왔습니다.
-
-## 협업 방식
-
-- 문제 정의 단계에서 정책/업무 맥락을 구조화하고, 이해관계자와 지표·샘플을 합의해 이후 개발·평가를 빠르게 반복합니다.
-- 실험 기록과 재현성을 중시해 실험 로그, 데이터/모델 버전, 파라미터를 체계적으로 남깁니다.
-- 제품 환경을 고려해 관찰 가능성과 운영 편의를 우선하며, 단순한 설계와 명료한 핸드오프 문서를 지향합니다.
+- 문제 정의 단계에서 문서 구조와 업무 기준을 먼저 정리하고, 이후 파싱·추출·검색·평가 단위를 명확하게 나눕니다.
+- 모델 성능만 보지 않고 원문 대조, 오류 유형, 데이터 품질, 운영 지표를 함께 관리합니다.
+- 필요한 경우 규칙 기반 처리와 LLM/VLM을 결합해 재현성과 유연성을 동시에 확보합니다.
+- 실험 결과가 실제 서비스 또는 데이터 파이프라인에 연결될 수 있도록 API·추론·모니터링까지 고려해 설계합니다.
 
