@@ -9,3 +9,5 @@ main:
     url: /patents/
   - title: "About"
     url: /about/
+  - title: "Resume"
+    url: /resume_new/
